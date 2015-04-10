@@ -1,0 +1,20 @@
+# others
+
+psubdir-$(ELBOX_PROGS_PRIV_DHCPXMLPATCH)	+= dhcpxmlpatch
+psubdir-$(ELBOX_PROGS_PRIV_UPDATELEASES)	+= updateleases
+psubdir-$(ELBOX_PROGS_PRIV_MTDTEST)			+= mtdtest
+psubdir-$(ELBOX_PROGS_PRIV_PORTT)			+= portt
+psubdir-$(ELBOX_PROGS_PRIV_NETSTAR)			+= netstar
+psubdir-$(ELBOX_PROGS_PRIV_RESOLVED)		+= resolved
+psubdir-$(ELBOX_PROGS_PRIV_PROXYD)			+= proxyd
+psubdir-$(ELBOX_PROGS_PRIV_DYNDNS)			+= dyndns
+psubdir-$(ELBOX_PROGS_PRIV_BDTOOL)			+= bdtool
+psubdir-$(ELBOX_PROGS_PRIV_BDCFG)			+= bdcfg
+psubdir-$(ELBOX_PROGS_PRIV_LLD2D)			+= lld2d
+psubdir-$(ELBOX_PROGS_PRIV_CMCGI)			+= cm_cgi
+psubdir-$(ELBOX_PROGS_PRIV_ART)				+= art
+psubdir-$(ELBOX_PROGS_PRIV_WIDGET)			+= widget
+psubdir-$(ELBOX_PROGS_PRIV_STARSPEED)		+= starspeed
+psubdir-$(ELBOX_PROGS_PRIV_PEANUT)			+= peanut
+psubdir-$(ELBOX_PROGS_PRIV_TR069_CLIENT)	+= tr069_client
+

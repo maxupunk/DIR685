@@ -1,0 +1,31 @@
+#
+# iptables
+#
+
+config ELBOX_ARP_SPOOF
+	bool "Anti-spoof(ARP-spoof) support"
+	default n
+	help
+		This Anti-spoof function just for 2.6.x kernel currently.
+		It utilize a tool called arptables like iptables to filter
+		packets on MAC layer. arptables needs kernel to support.
+		->Networking
+		-->[*]Networking Support
+		--->Networking Options
+		---->[*]Network packets filtering framework(Netfilter)
+		----->IP: Netfilter Configuration
+		------>ARP tables support
+
+choice
+	prompt "Selection Version"
+	depends ELBOX_ARP_SPOOF
+	default ELBOX_PROGS_GPL_ARPTABLES_0_0_3
+	help
+		Select the arptables version for the platform
+
+	config ELBOX_PROGS_GPL_ARPTABLES_0_0_3
+		bool "arppables-0.0.3-3"
+		help
+			arptables v0.0.3-3
+
+endchoice

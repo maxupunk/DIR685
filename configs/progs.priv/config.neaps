@@ -1,0 +1,28 @@
+#
+# Neap Server
+#
+
+config ELBOX_PROGS_PRIV_NEAPS 
+	bool "Neap Server"
+	default n
+
+menu "Neap Server Class Configuration"
+	depends ELBOX_PROGS_PRIV_NEAPS
+	config CONFIG_NEAPS_INTERNET
+		bool "wireless"
+		default n
+		help
+			The internet function.
+
+	config CONFIG_NEAPS_WIRELESS
+		bool "wireless"
+		default n
+		help
+			The wirelsee function.
+
+	config CONFIG_NEAPS_RESIDENTIAL_GATEWAY 
+		bool "residential gateway"
+		default n
+		help
+			The residential gateway function.
+endmenu

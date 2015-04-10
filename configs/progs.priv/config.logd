@@ -1,0 +1,25 @@
+#
+# logd
+#
+
+config ELBOX_PROGS_PRIV_LOGD
+	bool "logd"
+	default n
+	help
+		The syslog daemon implementation. The logd will use PHP of xmldb to process the log message.
+
+config CONFIG_LOGD_PHP_HELPER
+	depends ELBOX_PROGS_PRIV_LOGD
+	string "The PHP file of the logd helper"
+	default "/etc/services/LOG/logd_helper.php"
+	help
+		The logd helper PHP file. This helper will process the log, even store the message,
+		or start the smtp client to send the message out.
+
+config CONFIG_LOGD_KLOG_INF_TABLE_SIZE
+	depends ELBOX_PROGS_PRIV_LOGD
+	int "The interface table size in klogd"
+	default 8
+	help
+		The klogd will use a table to map ifdev name and the INF UID. This value define
+		the size the this table. INF UID is implemented in seattle.aries.

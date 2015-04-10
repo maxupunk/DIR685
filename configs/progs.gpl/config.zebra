@@ -1,0 +1,9 @@
+#
+# zebra
+#
+
+config ELBOX_PROGS_GPL_ZEBRA
+	bool "zebra"
+	default n
+	help
+		zebra-0.93(Broadcom modified)

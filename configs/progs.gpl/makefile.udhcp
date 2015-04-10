@@ -1,0 +1,4 @@
+# udhcp
+
+gsubdir-$(ELBOX_PROGS_GPL_UDHCP_0_9_8)	+= udhcp-0.9.8
+gsubdir-$(ELBOX_PROGS_GPL_UDHCPCD)		+= udhcpcd

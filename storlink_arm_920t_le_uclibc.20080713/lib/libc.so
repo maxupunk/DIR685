@@ -1,0 +1,4 @@
+/* GNU ld script
+ * Use the shared library, but some functions are only in
+ * the static library, so try that secondarily. */
+GROUP ( /opt/storlink_arm_920t_le_uclibc.20080713/lib/libc.so.0 /opt/storlink_arm_920t_le_uclibc.20080713/lib/uclibc_nonshared.a  )

@@ -1,0 +1,3 @@
+# dnrd
+
+gsubdir-$(ELBOX_PROGS_GPL_LPRNG_3_8_27)	+= LPRng-3.8.27

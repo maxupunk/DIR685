@@ -1,0 +1,23 @@
+<?
+//+++jana
+
+	//$schedule_enable = 
+	
+	echo "<scheduler>";
+	echo	"<schedule_enable>".$schedule_enable."</schedule_enable>";
+	for("/sys/schedule/entry")
+	{
+		echo	"<schedule_rule>";
+			echo	"<name>".get("x","description")."</name>";
+			echo	"<weekdays>".get("x","sun").get("x","mon").get("x","tue")
+			.get("x","wed").get("x","thu").get("x","fri").get("x","sat")
+			."</weekdays>";
+			echo	"<start_time>".get("x","starttime")."</start_time>";
+			echo	"<end_time>".get("x","endtime")."</end_time>";
+		echo	"</schedule_rule>";
+	
+	}
+	echo "</scheduler>";
+	
+//---jana
+?>

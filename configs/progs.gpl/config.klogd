@@ -1,0 +1,25 @@
+#
+# klogd
+#
+
+config ELBOX_KLOGD
+	bool "Kernel log daemon"
+	default y
+	help
+
+config ELBOX_PROGS_GPL_KLOGD
+	bool "Kernel log daemon - modified by AlphaNetworks (klogd)"
+	depends on ELBOX_KLOGD
+	default y
+	help
+		Kernel Log Daemon
+
+#  klogd_2007_01_30 , Jordan
+config ELBOX_PROGS_GPL_KLOGD_AP
+	bool "For AP Only (klogd.ap)"
+	depends on ELBOX_KLOGD
+	default n
+	help
+		Kernel Log Daemon by ALPHA AP style.
+		Instead of distinguishing between WAN and LAN,
+		event has been recorded in terms of its priority and facility.

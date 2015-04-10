@@ -1,0 +1,8 @@
+# freeradiusclient
+
+config ELBOX_RADIUSCLIENT
+	bool "radiusclient"
+	default n
+	help
+		Free RADIUS Client function
+

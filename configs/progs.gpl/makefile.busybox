@@ -1,0 +1,4 @@
+# busybox
+
+gsubdir-$(ELBOX_PROGS_GPL_BUSYBOX_1_00)		+= busybox-1.00
+gsubdir-$(ELBOX_PROGS_GPL_BUSYBOX_1_11_1)	+= busybox-1.11.1

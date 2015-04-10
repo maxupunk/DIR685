@@ -1,0 +1,10 @@
+#
+# email
+#
+
+config ELBOX_PROGS_GPL_EMAILCLIENT
+	bool "email"
+	default n
+	help
+		email
+

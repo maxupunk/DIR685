@@ -1,0 +1,7 @@
+#wake on lan
+config ELBOX_PROGS_GPL_WOL
+	bool "Wake On LAN ( AMD Magic Packet )"
+	default n
+	help
+		This tool is for WOL( Wake On LAN ) support.
+

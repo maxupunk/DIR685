@@ -1,0 +1,4 @@
+# wlxmlpatchv2
+
+psubdir-$(ELBOX_PROGS_PRIV_WLXMLPATCHV2_RALINK)			+= wlxmlpatchv2
+psubdir-$(ELBOX_PROGS_PRIV_WLXMLPATCHV2_MADWIFI)		+= wlxmlpatchv2

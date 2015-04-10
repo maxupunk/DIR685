@@ -1,0 +1,3 @@
+# upnp-av
+
+psubdir-$(ELBOX_PROGS_PRIV_UPNP_AV)	+= upnp_av_server

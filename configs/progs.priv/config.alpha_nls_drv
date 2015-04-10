@@ -1,0 +1,8 @@
+#
+# alpha_nls_drv
+#
+
+config ELBOX_PROGS_PRIV_ALPHA_NLS_DRV
+	bool "AlphaNetworks NLS Module"
+	default n
+

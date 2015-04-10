@@ -1,0 +1,4 @@
+# ipsec-pt
+
+psubdir-$(ELBOX_PROGS_PRIV_IPSEC_PT)	+= ipsec_pt
+psubdir-$(ELBOX_PROGS_PRIV_IPSEC_PT_26)	+= ipsec_pt.26

@@ -1,0 +1,9 @@
+#
+# scheduled
+#
+
+config ELBOX_PROGS_PRIV_SCHEDULED
+	bool "scheduled"
+	default n
+	help
+		schedule demon, created by alpha

@@ -1,0 +1,65 @@
+#
+# WM/System
+#wm           = sawman
+system        = fbdev 
+fbdev         = /dev/fb0
+#video-phys   = 87000000
+#video-length = 16777216
+no-vt
+#
+# Use 640x480 by default (all visible)
+#mode          = 640x480
+scaled        = 640x480
+depth          = 24
+pixelformat=ARGB
+#
+# Shared Memory Mount Point
+#tmpfs = /tmp
+dma 
+window-surface-policy = systemonly
+desktop-buffer-mode   = backsystem
+
+#
+# Disable Cursor
+no-cursor
+
+#
+# Disable Layer Initialization
+#no-init-layer = 0
+
+#
+# Graphics Layer
+#init-layer        = 0
+#layer-size        = 352x288
+#layer-size        = 720x576
+#layer-format      = ARGB
+#layer-format      = RGB32
+#layer-stacking    = middle,upper
+#layer-bg-color    = 000000
+#layer-src-key     = 000000
+#layer-buffer-mode = backvideo
+
+#
+# Video Layer
+#init-layer        = 1
+#layer-size        = 720x576
+#layer-format      = UYVY
+#layer-stacking    = lower
+#layer-bg-color    = 0000ff
+#layer-buffer-mode = frontonly
+#layer-bg-image    = /usr/local/share/images/bg_flower.jpg
+
+#
+# Scaling
+smooth-upscale
+smooth-downscale
+
+#
+# Debug domains
+#debug = Davinci/OSD
+#debug = LiTE/Window
+#debug = SaWMan/Auto
+debug = Core/GraphicsOps
+debug = Core/Layers
+debug = Core/Surface
+quiet

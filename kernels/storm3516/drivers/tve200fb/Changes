@@ -1,0 +1,63 @@
+
+Version 0.1.0  Dec 27, 2006	- Initial version.
+
+Version 0.1.1  Jan 15, 2007	- Remove dumy members in ffb_tve_mach_timer_t.
+				- Add setting BPP with color space setting in Reg(0x1C).
+
+Version 0.1.2  Jan 25, 2007	- Remove I2C reset in gmfb-i2c.c.
+				- Set TVE default mode to yuv422.
+				
+Version 0.1.3  Jan 31, 2007	- Force to reenable control schedule when probe.
+
+Version 0.1.4  Feb 01, 2007	- Add the software reset for TVE200 before enable it.
+				- Add version information for modinfo.
+
+Version 0.1.5  May 08, 2007     - Support TECHWALL 2835 for TVE driver.
+				- Add VBI insertion feature and interface.
+
+Version 0.1.6  May 09, 2007     - ffplay needs buffers at least 7.
+				- Fix the bug of base address setting whem buffer number equal 0.
+
+Version 0.1.7  May 10, 2007     - Fix the screen twinkling issue.
+
+Version 0.1.8  May 17, 2007     - Clean screen to block for YUV422.
+				- Move the lcd-config.h from lcd100-fb.c to lcd100-fb.h
+				- Move the tve-config.h from tve200-fb.c to tve200-fb.h
+				- Move the struct data that ioctl will use to ffb-api.h
+
+Version 0.1.9  May 25, 2007     - Remove the penguin logo that is initdata.
+				- Add the stdint.h in ffb-api.h for userspace's code.
+
+Version 0.1.10 May 28, 2007     - Remove the action of sys_kill when IRQ assert.
+
+Version 0.1.11 June 11, 2007    - Add CS4954 for GM8180
+				- Add timeout for TVE reset.
+				- Modify for compiler warring.
+				
+Version 0.1.12 June 12, 2007    - Add the feature of resolution switching for TVE200.
+
+Version 0.1.13 June 22, 2007    - Change RGB endian for TVE driver.
+
+Version 0.1.14 July 05, 2007    - Modify for insmod LCD and TVE modules at same time.
+
+Version 0.1.15 July 25, 2007    - Reduce LCD refreshing clock from 60Hz to 40Hz. 
+				- Modify LCD and TVE queue buffer's number for dual display performance.
+				- Disable TVE's feature of Y value clamp for YUV's image embedding in RGB's image by
+				  CT656.
+				- Modify VBI data struct.
+				- Add reseting CS4954 from GPIO 5.
+				- Add interface for CT656 color transform in TVE.
+				- Add invert clock setting in tve-info.c
+
+Version 0.1.16 July 30, 2007    - Fix the bug that VBI will be update when frame index is not update.
+				- Defferentiate between FFB_SET_FB_NUM and SSB_SET_SPECIAL_FB.
+				- Modify ioctl's name from LCD to FFB.
+
+Version 0.1.17 Aug  14, 2007    - Fix the bug that VBI will miss order.
+
+Version 0.2.0  Oct   1, 2007    - Add the ioctl for TVE buffer order of interlace or noninterlace.
+				- Change the VBI setting time.
+
+Version 0.2.1  Nov  08, 2007    - Change TVE ISR from irq to fiq for VBI will miss order when lose ISR.
+
+Version 0.2.2  Nov  20, 2007    - Modify TVE parameter from module's space to kernel space for FIQ data abort issue.

@@ -1,0 +1,891 @@
+/opt/storlink_arm_920t_le_uclibc/bin/arm-linux-g++  -c -pedantic -g -Werror -Werror -Wall -W -Wundef -Wno-long-long -pedantic -g -Werror -Werror -Wall -W -Wundef -Wno-long-long -D_REENTRANT -DNPT_DEBUG -DNPT_CONFIG_ENABLE_LOGGING -DNPT_CONFIG_ENABLE_ZIP -IThirdParty/Neptune/Source/Core -ISource/Core -ISource/Devices/MediaServer -ISource/Devices/MediaRenderer -ISource/Devices/MediaConnect -c -o PltEvent.o PltEvent.cpp
+In file included from PltEvent.cpp:13:
+PltTaskManager.h:16:21: Neptune.h: No such file or directory
+In file included from PltEvent.cpp:13:
+PltTaskManager.h:32: error: expected `)' before "max_items"
+PltTaskManager.h:36: error: `NPT_Result' does not name a type
+PltTaskManager.h:38: error: extra semicolon
+PltTaskManager.h:39: error: `NPT_Result' does not name a type
+PltTaskManager.h:39: error: extra semicolon
+PltTaskManager.h:42: error: `NPT_Result' does not name a type
+PltTaskManager.h:42: error: extra semicolon
+PltTaskManager.h:46: error: ISO C++ forbids declaration of `NPT_Mutex' with no type
+PltTaskManager.h:46: error: expected `;' before '&' token
+PltTaskManager.h:49: error: expected `;' before "NPT_Result"
+PltTaskManager.h:49: error: `NPT_Result' does not name a type
+PltTaskManager.h:49: error: extra semicolon
+PltTaskManager.h:50: error: `NPT_Result' does not name a type
+PltTaskManager.h:50: error: extra semicolon
+PltTaskManager.h:53: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltTaskManager.h:53: error: expected `;' before '<' token
+PltTaskManager.h:54: error: `NPT_Mutex' does not name a type
+PltTaskManager.h:54: error: extra semicolon
+PltTaskManager.h:55: error: `NPT_Mutex' does not name a type
+PltTaskManager.h:55: error: extra semicolon
+PltTaskManager.h:56: error: ISO C++ forbids declaration of `NPT_Queue' with no type
+PltTaskManager.h:56: error: expected `;' before '<' token
+In file included from PltHttpClientTask.h:17,
+                 from PltEvent.h:17,
+                 from PltEvent.cpp:14:
+PltHttp.h:23: error: `NPT_HttpMessage' has not been declared
+PltHttp.h:23: error: ISO C++ forbids declaration of `message' with no type
+PltHttp.h:24: error: `NPT_HttpMessage' has not been declared
+PltHttp.h:24: error: ISO C++ forbids declaration of `message' with no type
+PltHttp.h:26: error: `NPT_Result' does not name a type
+PltHttp.h:26: error: extra semicolon
+PltHttp.h:27: error: `NPT_Result' does not name a type
+PltHttp.h:27: error: extra semicolon
+PltHttp.h:29: error: `NPT_Result' does not name a type
+PltHttp.h:29: error: extra semicolon
+PltHttp.h:30: error: `NPT_HttpMessage' has not been declared
+PltHttp.h:30: error: ISO C++ forbids declaration of `message' with no type
+PltHttp.h:31: error: `NPT_Result' does not name a type
+PltHttp.h:31: error: extra semicolon
+PltHttp.h:32: error: `NPT_HttpMessage' has not been declared
+PltHttp.h:32: error: `NPT_Size' has not been declared
+PltHttp.h:32: error: ISO C++ forbids declaration of `message' with no type
+PltHttp.h:32: error: ISO C++ forbids declaration of `len' with no type
+PltHttp.h:34: error: `NPT_Result' does not name a type
+PltHttp.h:34: error: extra semicolon
+PltHttp.h:35: error: `NPT_HttpRequest' has not been declared
+PltHttp.h:35: error: ISO C++ forbids declaration of `request' with no type
+PltHttp.h:36: error: `NPT_Result' does not name a type
+PltHttp.h:36: error: extra semicolon
+PltHttp.h:37: error: `NPT_HttpRequest' has not been declared
+PltHttp.h:37: error: `NPT_Integer' has not been declared
+PltHttp.h:37: error: `NPT_Integer' has not been declared
+PltHttp.h:37: error: ISO C++ forbids declaration of `request' with no type
+PltHttp.h:37: error: ISO C++ forbids declaration of `start' with no type
+PltHttp.h:37: error: ISO C++ forbids declaration of `end' with no type
+PltHttp.h:39: error: `NPT_Result' does not name a type
+PltHttp.h:39: error: extra semicolon
+PltHttp.h:40: error: `NPT_Result' does not name a type
+PltHttp.h:40: error: extra semicolon
+PltHttp.h:42: error: `NPT_Result' does not name a type
+PltHttp.h:42: error: extra semicolon
+PltHttp.h:43: error: `NPT_Result' does not name a type
+PltHttp.h:43: error: extra semicolon
+PltHttp.h:44: error: `NPT_Result' does not name a type
+PltHttp.h:44: error: extra semicolon
+PltHttp.h:47: error: `NPT_Result' does not name a type
+PltHttp.h:47: error: extra semicolon
+PltHttp.h:48: error: `NPT_Result' does not name a type
+PltHttp.h:48: error: extra semicolon
+PltHttp.h:75: error: `NPT_Result' does not name a type
+PltHttp.h:77: error: extra semicolon
+PltHttp.h:79: error: `NPT_Result' does not name a type
+PltHttp.h:81: error: extra semicolon
+PltHttp.h:83: error: `NPT_Result' does not name a type
+PltHttp.h:86: error: extra semicolon
+PltHttp.h:97: error: expected class-name before '{' token
+PltHttp.h:103: error: `NPT_Result' does not name a type
+In file included from PltHttpClientTask.h:18,
+                 from PltEvent.h:17,
+                 from PltEvent.cpp:14:
+PltThreadTask.h:23: error: expected class-name before '{' token
+PltThreadTask.h:29: error: `NPT_Result' does not name a type
+PltThreadTask.h:29: error: extra semicolon
+PltThreadTask.h:31: error: `NPT_Timeout' has not been declared
+PltThreadTask.h:31: error: ISO C++ forbids declaration of `timeout' with no type
+PltThreadTask.h:36: error: `NPT_Result' does not name a type
+PltThreadTask.h:38: error: extra semicolon
+PltThreadTask.h:39: error: `NPT_Result' does not name a type
+PltThreadTask.h:39: error: extra semicolon
+PltThreadTask.h:60: error: `NPT_SharedVariable' does not name a type
+PltThreadTask.h:60: error: extra semicolon
+PltThreadTask.h:61: error: ISO C++ forbids declaration of `NPT_Thread' with no type
+PltThreadTask.h:61: error: expected `;' before '*' token
+PltThreadTask.h:63: error: `NPT_TimeInterval' does not name a type
+PltThreadTask.h:63: error: extra semicolon
+PltThreadTask.h:31: error: `NPT_TIMEOUT_INFINITE' was not declared in this scope
+PltThreadTask.h: In member function `virtual bool PLT_ThreadTask::IsAborting(int)':
+PltThreadTask.h:32: error: `m_Abort' was not declared in this scope
+PltThreadTask.h:32: error: `NPT_SUCCEEDED' was not declared in this scope
+PltThreadTask.h:32: warning: unused variable 'm_Abort'
+PltThreadTask.h:32: warning: unused variable 'NPT_SUCCEEDED'
+PltThreadTask.h: At global scope:
+PltThreadTask.h:72: error: expected `)' before '&' token
+PltThreadTask.h:75: error: `NPT_Result' does not name a type
+PltThreadTask.h:75: error: extra semicolon
+PltThreadTask.h:78: error: `NPT_Result' does not name a type
+PltThreadTask.h:78: error: extra semicolon
+PltThreadTask.h:81: error: ISO C++ forbids declaration of `NPT_Mutex' with no type
+PltThreadTask.h:81: error: expected `;' before '&' token
+In file included from PltEvent.h:17,
+                 from PltEvent.cpp:14:
+PltHttpClientTask.h:23: error: `NPT_HttpClient' has not been declared
+PltHttpClientTask.h:24: error: expected class-name before '{' token
+PltHttpClientTask.h:26: error: `NPT_Result' does not name a type
+PltHttpClientTask.h:32: error: extra semicolon
+PltHttpClientTask.h:35: error: `NPT_SocketInfo' has not been declared
+PltHttpClientTask.h:35: error: ISO C++ forbids declaration of `info' with no type
+PltHttpClientTask.h:39: error: `NPT_String' does not name a type
+PltHttpClientTask.h:39: error: extra semicolon
+PltHttpClientTask.h:40: error: `NPT_UInt16' does not name a type
+PltHttpClientTask.h:40: error: extra semicolon
+PltHttpClientTask.h:41: error: `NPT_InputStreamReference' does not name a type
+PltHttpClientTask.h:41: error: extra semicolon
+PltHttpClientTask.h:42: error: `NPT_OutputStreamReference' does not name a type
+PltHttpClientTask.h:42: error: extra semicolon
+PltHttpClientTask.h:43: error: `NPT_SocketInfo' does not name a type
+PltHttpClientTask.h:43: error: extra semicolon
+PltHttpClientTask.h:44: error: ISO C++ forbids declaration of `NPT_Reference' with no type
+PltHttpClientTask.h:44: error: expected `;' before '<' token
+PltHttpClientTask.h: In member function `void PLT_HttpTcpConnector::GetInfo(int&)':
+PltHttpClientTask.h:35: error: `m_SocketInfo' was not declared in this scope
+PltHttpClientTask.h:35: warning: unused variable 'm_SocketInfo'
+PltHttpClientTask.h: In member function `void PLT_HttpTcpConnector::Abort()':
+PltHttpClientTask.h:36: error: `m_Socket' was not declared in this scope
+PltHttpClientTask.h: At global scope:
+PltHttpClientTask.h:55: error: expected `)' before '*' token
+PltHttpClientTask.h:58: error: `NPT_Result' does not name a type
+PltHttpClientTask.h:58: error: extra semicolon
+PltHttpClientTask.h:68: error: `NPT_Result' does not name a type
+PltHttpClientTask.h:71: error: extra semicolon
+PltHttpClientTask.h:74: error: `NPT_Result' does not name a type
+PltHttpClientTask.h:74: error: extra semicolon
+PltHttpClientTask.h:77: error: `NPT_HttpClient' does not name a type
+PltHttpClientTask.h:77: error: extra semicolon
+PltHttpClientTask.h:79: error: ISO C++ forbids declaration of `NPT_Queue' with no type
+PltHttpClientTask.h:79: error: expected `;' before '<' token
+PltHttpClientTask.h:90: error: expected `,' or `...' before '&' token
+PltHttpClientTask.h:90: error: ISO C++ forbids declaration of `NPT_HttpUrl' with no type
+PltHttpClientTask.h:98: error: `NPT_Result' does not name a type
+PltHttpClientTask.h: In constructor `PLT_HttpClientTask<T>::PLT_HttpClientTask(int)':
+PltHttpClientTask.h:91: error: `NPT_HttpRequest' has not been declared
+PltHttpClientTask.h:91: error: `url' was not declared in this scope
+PltHttpClientTask.h:92: error: `data' was not declared in this scope
+PltHttpClientTask.h: At global scope:
+PltHttpClientTask.h:115: error: expected `,' or `...' before '&' token
+PltHttpClientTask.h:115: error: ISO C++ forbids declaration of `NPT_HttpUrl' with no type
+PltHttpClientTask.h:123: error: `NPT_Result' does not name a type
+PltHttpClientTask.h:126: error: extra semicolon
+PltHttpClientTask.h: In constructor `PLT_FileHttpClientTask::PLT_FileHttpClientTask(int)':
+PltHttpClientTask.h:116: error: `NPT_HttpRequest' has not been declared
+PltHttpClientTask.h:116: error: `url' was not declared in this scope
+PltHttpClientTask.h:116: warning: unused variable 'url'
+PltHttpClientTask.h: At global scope:
+PltHttpClientTask.h:115: warning: unused parameter 'NPT_HttpUrl'
+PltHttpClientTask.h:115: warning: unused parameter 'NPT_HttpUrl'
+In file included from PltEvent.cpp:14:
+PltEvent.h:37: error: `NPT_Ordinal' does not name a type
+PltEvent.h:37: error: extra semicolon
+PltEvent.h:38: error: `NPT_Result' does not name a type
+PltEvent.h:38: error: extra semicolon
+PltEvent.h:39: error: `NPT_SocketAddress' does not name a type
+PltEvent.h:39: error: extra semicolon
+PltEvent.h:40: error: `NPT_Result' does not name a type
+PltEvent.h:40: error: extra semicolon
+PltEvent.h:41: error: `NPT_TimeStamp' does not name a type
+PltEvent.h:41: error: extra semicolon
+PltEvent.h:42: error: `NPT_Result' does not name a type
+PltEvent.h:42: error: extra semicolon
+PltEvent.h:43: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltEvent.h:43: error: expected `;' before '&' token
+PltEvent.h:44: error: expected `;' before "NPT_Result"
+PltEvent.h:44: error: `NPT_Result' does not name a type
+PltEvent.h:44: error: extra semicolon
+PltEvent.h:45: error: `NPT_Result' does not name a type
+PltEvent.h:45: error: extra semicolon
+PltEvent.h:46: error: `NPT_Result' does not name a type
+PltEvent.h:46: error: extra semicolon
+PltEvent.h:47: error: `NPT_Result' does not name a type
+PltEvent.h:47: error: extra semicolon
+PltEvent.h:57: error: `NPT_Ordinal' does not name a type
+PltEvent.h:57: error: extra semicolon
+PltEvent.h:59: error: `NPT_String' does not name a type
+PltEvent.h:59: error: extra semicolon
+PltEvent.h:60: error: `NPT_SocketAddress' does not name a type
+PltEvent.h:60: error: extra semicolon
+PltEvent.h:61: error: ISO C++ forbids declaration of `NPT_Array' with no type
+PltEvent.h:61: error: expected `;' before '<' token
+PltEvent.h:62: error: `NPT_TimeStamp' does not name a type
+PltEvent.h:62: error: extra semicolon
+PltEvent.h: In member function `void PLT_EventSubscriber::Cancel()':
+PltEvent.h:49: error: 'class PLT_TaskManager' has no member named 'StopTask'
+PltEvent.h:50: error: `NULL' was not declared in this scope
+PltEvent.h:50: warning: unused variable 'NULL'
+PltEvent.h: At global scope:
+PltEvent.h:80: error: `NPT_String' does not name a type
+PltEvent.h:80: error: extra semicolon
+PltEvent.h: In constructor `PLT_EventSubscriberFinderBySID::PLT_EventSubscriberFinderBySID(const char*)':
+PltEvent.h:72: error: class `PLT_EventSubscriberFinderBySID' does not have any field named `m_SID'
+PltEvent.h: In member function `bool PLT_EventSubscriberFinderBySID::operator()(PLT_EventSubscriber* const&) const':
+PltEvent.h:75: error: `m_SID' was not declared in this scope
+PltEvent.h:75: error: 'class PLT_EventSubscriber' has no member named 'GetSID'
+PltEvent.h:75: warning: unused variable 'm_SID'
+PltEvent.h: At global scope:
+PltEvent.h:99: error: `NPT_String' does not name a type
+PltEvent.h:99: error: extra semicolon
+PltEvent.h: In constructor `PLT_EventSubscriberFinderByCallbackURL::PLT_EventSubscriberFinderByCallbackURL(const char*)':
+PltEvent.h:91: error: class `PLT_EventSubscriberFinderByCallbackURL' does not have any field named `m_CallbackURL'
+PltEvent.h: In member function `bool PLT_EventSubscriberFinderByCallbackURL::operator()(PLT_EventSubscriber* const&) const':
+PltEvent.h:94: error: 'class PLT_EventSubscriber' has no member named 'FindCallbackURL'
+PltEvent.h:94: error: `m_CallbackURL' was not declared in this scope
+PltEvent.h:94: error: `NPT_SUCCEEDED' was not declared in this scope
+PltEvent.h:94: warning: unused variable 'm_CallbackURL'
+PltEvent.h:94: warning: unused variable 'NPT_SUCCEEDED'
+In file included from PltService.h:18,
+                 from PltEvent.cpp:15:
+PltArgument.h: At global scope:
+PltArgument.h:24: error: expected initializer before '<' token
+PltArgument.h:38: error: `NPT_Result' does not name a type
+PltArgument.h:38: error: extra semicolon
+PltArgument.h:39: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltArgument.h:39: error: expected `;' before '&' token
+PltArgument.h:40: error: expected `;' before "const"
+PltArgument.h:40: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltArgument.h:40: error: expected `;' before '&' token
+PltArgument.h:41: error: expected `;' before "PLT_StateVariable"
+PltArgument.h:45: error: `NPT_String' does not name a type
+PltArgument.h:45: error: extra semicolon
+PltArgument.h:46: error: `NPT_String' does not name a type
+PltArgument.h:46: error: extra semicolon
+PltArgument.h:34: error: `NULL' was not declared in this scope
+PltArgument.h:60: error: `NPT_Result' does not name a type
+PltArgument.h:63: error: extra semicolon
+PltArgument.h:67: error: `NPT_Result' does not name a type
+PltArgument.h:67: error: extra semicolon
+PltArgument.h:68: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltArgument.h:68: error: expected `;' before '&' token
+PltArgument.h:71: error: `NPT_Result' does not name a type
+PltArgument.h:71: error: extra semicolon
+PltArgument.h:75: error: `NPT_String' does not name a type
+PltArgument.h:75: error: extra semicolon
+PltArgument.h:93: error: `NPT_String' does not name a type
+PltArgument.h:93: error: extra semicolon
+PltArgument.h: In constructor `PLT_ArgumentNameFinder::PLT_ArgumentNameFinder(const char*)':
+PltArgument.h:85: error: class `PLT_ArgumentNameFinder' does not have any field named `m_Name'
+PltArgument.h: In member function `bool PLT_ArgumentNameFinder::operator()(PLT_Argument* const&) const':
+PltArgument.h:88: error: 'class PLT_ArgumentDesc' has no member named 'GetName'
+PltArgument.h:88: error: `m_Name' was not declared in this scope
+PltArgument.h:88: warning: unused variable 'm_Name'
+PltArgument.h: At global scope:
+PltArgument.h:111: error: `NPT_String' does not name a type
+PltArgument.h:111: error: extra semicolon
+PltArgument.h: In constructor `PLT_ArgumentDescNameFinder::PLT_ArgumentDescNameFinder(const char*)':
+PltArgument.h:103: error: class `PLT_ArgumentDescNameFinder' does not have any field named `m_Name'
+PltArgument.h: In member function `bool PLT_ArgumentDescNameFinder::operator()(PLT_ArgumentDesc* const&) const':
+PltArgument.h:106: error: 'class PLT_ArgumentDesc' has no member named 'GetName'
+PltArgument.h:106: error: `m_Name' was not declared in this scope
+PltArgument.h:106: warning: unused variable 'm_Name'
+In file included from PltService.h:19,
+                 from PltEvent.cpp:15:
+PltStateVariable.h: At global scope:
+PltStateVariable.h:42: error: `NPT_Result' does not name a type
+PltStateVariable.h:42: error: extra semicolon
+PltStateVariable.h:45: error: `NPT_Result' does not name a type
+PltStateVariable.h:45: error: extra semicolon
+PltStateVariable.h:46: error: `NPT_Result' does not name a type
+PltStateVariable.h:46: error: extra semicolon
+PltStateVariable.h:47: error: `NPT_Result' does not name a type
+PltStateVariable.h:47: error: extra semicolon
+PltStateVariable.h:49: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltStateVariable.h:49: error: expected `;' before '&' token
+PltStateVariable.h:50: error: expected `;' before "const"
+PltStateVariable.h:50: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltStateVariable.h:50: error: expected `;' before '&' token
+PltStateVariable.h:51: error: expected `;' before "const"
+PltStateVariable.h:51: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltStateVariable.h:51: error: expected `;' before '&' token
+PltStateVariable.h:53: error: expected `;' before "protected"
+PltStateVariable.h:62: error: `NPT_String' does not name a type
+PltStateVariable.h:62: error: extra semicolon
+PltStateVariable.h:63: error: `NPT_String' does not name a type
+PltStateVariable.h:63: error: extra semicolon
+PltStateVariable.h:64: error: `NPT_String' does not name a type
+PltStateVariable.h:64: error: extra semicolon
+PltStateVariable.h:66: error: `NPT_TimeInterval' does not name a type
+PltStateVariable.h:66: error: extra semicolon
+PltStateVariable.h:67: error: `NPT_TimeStamp' does not name a type
+PltStateVariable.h:67: error: extra semicolon
+PltStateVariable.h:68: error: ISO C++ forbids declaration of `NPT_Array' with no type
+PltStateVariable.h:68: error: expected `;' before '<' token
+PltStateVariable.h:69: error: `NPT_String' does not name a type
+PltStateVariable.h:69: error: extra semicolon
+PltStateVariable.h:88: error: `NPT_String' does not name a type
+PltStateVariable.h:88: error: extra semicolon
+PltStateVariable.h: In constructor `PLT_StateVariableNameFinder::PLT_StateVariableNameFinder(const char*)':
+PltStateVariable.h:79: error: class `PLT_StateVariableNameFinder' does not have any field named `m_Name'
+PltStateVariable.h: In member function `bool PLT_StateVariableNameFinder::operator()(const PLT_StateVariable* const&) const':
+PltStateVariable.h:83: error: 'const class PLT_StateVariable' has no member named 'GetName'
+PltStateVariable.h:83: error: `m_Name' was not declared in this scope
+PltStateVariable.h:83: warning: unused variable 'm_Name'
+PltStateVariable.h: At global scope:
+PltStateVariable.h:107: error: `NPT_String' does not name a type
+PltStateVariable.h:107: error: extra semicolon
+PltStateVariable.h: In constructor `PLT_ListStateVariableNameFinder::PLT_ListStateVariableNameFinder(const char*)':
+PltStateVariable.h:98: error: class `PLT_ListStateVariableNameFinder' does not have any field named `m_Name'
+PltStateVariable.h: In member function `bool PLT_ListStateVariableNameFinder::operator()(const PLT_StateVariable* const&) const':
+PltStateVariable.h:102: error: 'const class PLT_StateVariable' has no member named 'GetName'
+PltStateVariable.h:102: error: `m_Name' was not declared in this scope
+PltStateVariable.h:102: warning: unused variable 'm_Name'
+In file included from PltService.h:20,
+                 from PltEvent.cpp:15:
+PltAction.h: At global scope:
+PltAction.h:33: error: ISO C++ forbids declaration of `NPT_Array' with no type
+PltAction.h:33: error: expected `;' before '<' token
+PltAction.h:37: error: expected `;' before "const"
+PltAction.h:37: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltAction.h:37: error: expected `;' before '&' token
+PltAction.h:38: error: expected `;' before "PLT_ArgumentDesc"
+PltAction.h:39: error: `NPT_Result' does not name a type
+PltAction.h:39: error: extra semicolon
+PltAction.h:44: error: `NPT_String' does not name a type
+PltAction.h:44: error: extra semicolon
+PltAction.h:46: error: ISO C++ forbids declaration of `NPT_Array' with no type
+PltAction.h:46: error: expected `;' before '<' token
+PltAction.h:60: error: `NPT_Result' does not name a type
+PltAction.h:60: error: extra semicolon
+PltAction.h:61: error: `NPT_Result' does not name a type
+PltAction.h:61: error: extra semicolon
+PltAction.h:62: error: `NPT_Result' does not name a type
+PltAction.h:62: error: extra semicolon
+PltAction.h:63: error: `NPT_Result' does not name a type
+PltAction.h:63: error: extra semicolon
+PltAction.h:64: error: `NPT_Result' does not name a type
+PltAction.h:64: error: extra semicolon
+PltAction.h:65: error: `NPT_Result' does not name a type
+PltAction.h:65: error: extra semicolon
+PltAction.h:66: error: `NPT_Result' does not name a type
+PltAction.h:66: error: extra semicolon
+PltAction.h:67: error: `NPT_Result' does not name a type
+PltAction.h:67: error: extra semicolon
+PltAction.h:69: error: `NPT_Result' does not name a type
+PltAction.h:69: error: extra semicolon
+PltAction.h:73: error: `NPT_Result' does not name a type
+PltAction.h:73: error: extra semicolon
+PltAction.h:74: error: `NPT_Result' does not name a type
+PltAction.h:74: error: extra semicolon
+PltAction.h:76: error: `NPT_Result' does not name a type
+PltAction.h:78: error: extra semicolon
+PltAction.h:81: error: `NPT_Result' does not name a type
+PltAction.h:81: error: extra semicolon
+PltAction.h:87: error: `PLT_Arguments' does not name a type
+PltAction.h:87: error: extra semicolon
+PltAction.h:89: error: `NPT_String' does not name a type
+PltAction.h:89: error: extra semicolon
+PltAction.h:92: error: expected initializer before '<' token
+PltAction.h:101: error: expected `)' before '*' token
+PltAction.h:104: error: ISO C++ forbids declaration of `NPT_Result' with no type
+PltAction.h:104: error: expected `;' before "operator"
+PltAction.h:108: error: expected `;' before "private"
+PltAction.h:109: error: ISO C++ forbids declaration of `NPT_XmlElementNode' with no type
+PltAction.h:109: error: expected `;' before '*' token
+PltAction.h:130: error: `NPT_String' does not name a type
+PltAction.h:130: error: extra semicolon
+PltAction.h: In constructor `PLT_ActionDescNameFinder::PLT_ActionDescNameFinder(PLT_Service*, const char*)':
+PltAction.h:120: error: class `PLT_ActionDescNameFinder' does not have any field named `m_Name'
+PltAction.h: In member function `bool PLT_ActionDescNameFinder::operator()(const PLT_ActionDesc* const&) const':
+PltAction.h:124: error: 'const class PLT_ActionDesc' has no member named 'GetName'
+PltAction.h:124: error: `m_Name' was not declared in this scope
+PltAction.h:124: warning: unused variable 'm_Name'
+In file included from PltEvent.cpp:15:
+PltService.h: At global scope:
+PltService.h:40: error: `NPT_Result' does not name a type
+PltService.h:40: error: extra semicolon
+PltService.h:46: error: `NPT_String' has not been declared
+PltService.h:46: error: ISO C++ forbids declaration of `value' with no type
+PltService.h:56: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltService.h:56: error: expected `;' before '&' token
+PltService.h:57: error: expected `;' before "const"
+PltService.h:57: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltService.h:57: error: expected `;' before '&' token
+PltService.h:58: error: expected `;' before "const"
+PltService.h:58: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltService.h:58: error: expected `;' before '&' token
+PltService.h:59: error: expected `;' before "const"
+PltService.h:59: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltService.h:59: error: expected `;' before '&' token
+PltService.h:60: error: expected `;' before "const"
+PltService.h:60: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltService.h:60: error: expected `;' before '&' token
+PltService.h:61: error: expected `;' before "PLT_DeviceData"
+PltService.h:64: error: `NPT_Result' does not name a type
+PltService.h:64: error: extra semicolon
+PltService.h:65: error: `NPT_Result' does not name a type
+PltService.h:65: error: extra semicolon
+PltService.h:66: error: `NPT_Result' does not name a type
+PltService.h:66: error: extra semicolon
+PltService.h:69: error: `NPT_Result' does not name a type
+PltService.h:69: error: extra semicolon
+PltService.h:70: error: `NPT_Result' does not name a type
+PltService.h:70: error: extra semicolon
+PltService.h:71: error: `NPT_Result' does not name a type
+PltService.h:71: error: extra semicolon
+PltService.h:80: error: `NPT_Result' does not name a type
+PltService.h:80: error: extra semicolon
+PltService.h:81: error: `NPT_Result' does not name a type
+PltService.h:81: error: extra semicolon
+PltService.h:82: error: `NPT_Result' does not name a type
+PltService.h:82: error: extra semicolon
+PltService.h:102: error: `NPT_Result' does not name a type
+PltService.h:107: error: extra semicolon
+PltService.h:109: error: `NPT_Result' does not name a type
+PltService.h:113: error: extra semicolon
+PltService.h:115: error: `NPT_Result' does not name a type
+PltService.h:118: error: extra semicolon
+PltService.h:128: error: `NPT_String' does not name a type
+PltService.h:128: error: extra semicolon
+PltService.h:129: error: `NPT_String' does not name a type
+PltService.h:129: error: extra semicolon
+PltService.h:130: error: `NPT_String' does not name a type
+PltService.h:130: error: extra semicolon
+PltService.h:131: error: `NPT_String' does not name a type
+PltService.h:131: error: extra semicolon
+PltService.h:132: error: `NPT_String' does not name a type
+PltService.h:132: error: extra semicolon
+PltService.h:135: error: ISO C++ forbids declaration of `NPT_Array' with no type
+PltService.h:135: error: expected `;' before '<' token
+PltService.h:136: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltService.h:136: error: expected `;' before '<' token
+PltService.h:137: error: `NPT_Mutex' does not name a type
+PltService.h:137: error: extra semicolon
+PltService.h:138: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltService.h:138: error: expected `;' before '<' token
+PltService.h:139: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltService.h:139: error: expected `;' before '<' token
+PltService.h:140: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltService.h:140: error: expected `;' before '<' token
+PltService.h:35: error: `NULL' was not declared in this scope
+PltService.h:36: error: `NULL' was not declared in this scope
+PltService.h: In member function `bool PLT_Service::IsInitted()':
+PltService.h:42: error: `m_ActionDescs' was not declared in this scope
+PltService.h:42: warning: unused variable 'm_ActionDescs'
+PltService.h: In static member function `static bool PLT_Service::IsTrue(int&)':
+PltService.h:47: error: request for member `Compare' in `value', which is of non-class type `int'
+PltService.h:48: error: request for member `Compare' in `value', which is of non-class type `int'
+PltService.h:49: error: request for member `Compare' in `value', which is of non-class type `int'
+PltService.h: In member function `virtual void PLT_Service::PLT_ServiceEventTask::DoRun()':
+PltService.h:94: error: 'class PLT_Service' has no member named 'NotifyChanged'
+PltService.h: At global scope:
+PltService.h:156: error: `NPT_String' does not name a type
+PltService.h:156: error: extra semicolon
+PltService.h: In constructor `PLT_ServiceSCPDURLFinder::PLT_ServiceSCPDURLFinder(const char*)':
+PltService.h:150: error: class `PLT_ServiceSCPDURLFinder' does not have any field named `m_URL'
+PltService.h: At global scope:
+PltService.h:172: error: `NPT_String' does not name a type
+PltService.h:172: error: extra semicolon
+PltService.h: In constructor `PLT_ServiceControlURLFinder::PLT_ServiceControlURLFinder(const char*)':
+PltService.h:166: error: class `PLT_ServiceControlURLFinder' does not have any field named `m_URL'
+PltService.h: At global scope:
+PltService.h:188: error: `NPT_String' does not name a type
+PltService.h:188: error: extra semicolon
+PltService.h: In constructor `PLT_ServiceEventSubURLFinder::PLT_ServiceEventSubURLFinder(const char*)':
+PltService.h:182: error: class `PLT_ServiceEventSubURLFinder' does not have any field named `m_URL'
+PltService.h: At global scope:
+PltService.h:204: error: `NPT_String' does not name a type
+PltService.h:204: error: extra semicolon
+PltService.h: In constructor `PLT_ServiceIDFinder::PLT_ServiceIDFinder(const char*)':
+PltService.h:198: error: class `PLT_ServiceIDFinder' does not have any field named `m_Id'
+PltService.h: At global scope:
+PltService.h:220: error: `NPT_String' does not name a type
+PltService.h:220: error: extra semicolon
+PltService.h: In constructor `PLT_ServiceTypeFinder::PLT_ServiceTypeFinder(const char*)':
+PltService.h:214: error: class `PLT_ServiceTypeFinder' does not have any field named `m_Type'
+PltService.h: At global scope:
+PltService.h:230: error: expected `)' before '*' token
+PltService.h:233: error: ISO C++ forbids declaration of `NPT_Result' with no type
+PltService.h:233: error: expected `;' before "operator"
+PltService.h:236: error: ISO C++ forbids declaration of `NPT_XmlElementNode' with no type
+PltService.h:236: error: expected `;' before '*' token
+In file included from PltCtrlPoint.h:18,
+                 from PltUPnP.h:17,
+                 from PltEvent.cpp:16:
+PltHttpServerListener.h:26: error: `NPT_Result' does not name a type
+PltHttpServerListener.h:29: error: extra semicolon
+In file included from PltCtrlPoint.h:19,
+                 from PltUPnP.h:17,
+                 from PltEvent.cpp:16:
+PltSsdpListener.h:25: error: `NPT_Result' does not name a type
+PltSsdpListener.h:26: error: extra semicolon
+PltSsdpListener.h:36: error: `NPT_Result' does not name a type
+PltSsdpListener.h:38: error: extra semicolon
+In file included from PltCtrlPoint.h:20,
+                 from PltUPnP.h:17,
+                 from PltEvent.cpp:16:
+PltDeviceData.h:27: error: expected initializer before '<' token
+PltDeviceData.h:28: error: expected initializer before '<' token
+PltDeviceData.h:34: error: `NPT_String' does not name a type
+PltDeviceData.h:34: error: extra semicolon
+PltDeviceData.h:35: error: `NPT_Integer' does not name a type
+PltDeviceData.h:35: error: extra semicolon
+PltDeviceData.h:36: error: `NPT_Integer' does not name a type
+PltDeviceData.h:36: error: extra semicolon
+PltDeviceData.h:37: error: `NPT_Integer' does not name a type
+PltDeviceData.h:37: error: extra semicolon
+PltDeviceData.h:38: error: `NPT_String' does not name a type
+PltDeviceData.h:38: error: extra semicolon
+PltDeviceData.h:48: error: expected `)' before "description_url"
+PltDeviceData.h:54: error: `NPT_Result' does not name a type
+PltDeviceData.h:54: error: extra semicolon
+PltDeviceData.h:55: error: `NPT_String' does not name a type
+PltDeviceData.h:55: error: extra semicolon
+PltDeviceData.h:56: error: `NPT_HttpUrl' does not name a type
+PltDeviceData.h:56: error: extra semicolon
+PltDeviceData.h:57: error: `NPT_Result' does not name a type
+PltDeviceData.h:57: error: extra semicolon
+PltDeviceData.h:58: error: `NPT_String' does not name a type
+PltDeviceData.h:58: error: extra semicolon
+PltDeviceData.h:60: error: ISO C++ forbids declaration of `NPT_TimeInterval' with no type
+PltDeviceData.h:60: error: expected `;' before '&' token
+PltDeviceData.h:61: error: expected `;' before "const"
+PltDeviceData.h:61: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltDeviceData.h:61: error: expected `;' before '&' token
+PltDeviceData.h:62: error: expected `;' before "const"
+PltDeviceData.h:62: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltDeviceData.h:62: error: expected `;' before '&' token
+PltDeviceData.h:63: error: expected `;' before "const"
+PltDeviceData.h:63: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltDeviceData.h:63: error: expected `;' before '&' token
+PltDeviceData.h:64: error: expected `;' before "const"
+PltDeviceData.h:64: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltDeviceData.h:64: error: expected `;' before '&' token
+PltDeviceData.h:66: error: expected `;' before "NPT_Result"
+PltDeviceData.h:66: error: `NPT_Result' does not name a type
+PltDeviceData.h:66: error: extra semicolon
+PltDeviceData.h:67: error: `NPT_Result' does not name a type
+PltDeviceData.h:67: error: extra semicolon
+PltDeviceData.h:68: error: `NPT_Result' does not name a type
+PltDeviceData.h:68: error: extra semicolon
+PltDeviceData.h:69: error: `NPT_Result' does not name a type
+PltDeviceData.h:69: error: extra semicolon
+PltDeviceData.h:70: error: `NPT_Result' does not name a type
+PltDeviceData.h:70: error: extra semicolon
+PltDeviceData.h:72: error: `NPT_Result' does not name a type
+PltDeviceData.h:72: error: extra semicolon
+PltDeviceData.h:75: error: `NPT_TimeStamp' does not name a type
+PltDeviceData.h:75: error: extra semicolon
+PltDeviceData.h:76: error: `NPT_Result' does not name a type
+PltDeviceData.h:76: error: extra semicolon
+PltDeviceData.h:77: error: `NPT_Result' does not name a type
+PltDeviceData.h:77: error: extra semicolon
+PltDeviceData.h:78: error: `NPT_Result' does not name a type
+PltDeviceData.h:78: error: extra semicolon
+PltDeviceData.h:79: error: `NPT_Result' does not name a type
+PltDeviceData.h:79: error: extra semicolon
+PltDeviceData.h:80: error: `NPT_Result' does not name a type
+PltDeviceData.h:80: error: extra semicolon
+PltDeviceData.h:83: error: `NPT_Result' does not name a type
+PltDeviceData.h:83: error: extra semicolon
+PltDeviceData.h:86: error: `NPT_String' does not name a type
+PltDeviceData.h:86: error: extra semicolon
+PltDeviceData.h:87: error: `NPT_String' does not name a type
+PltDeviceData.h:87: error: extra semicolon
+PltDeviceData.h:88: error: `NPT_String' does not name a type
+PltDeviceData.h:88: error: extra semicolon
+PltDeviceData.h:89: error: `NPT_String' does not name a type
+PltDeviceData.h:89: error: extra semicolon
+PltDeviceData.h:90: error: `NPT_String' does not name a type
+PltDeviceData.h:90: error: extra semicolon
+PltDeviceData.h:91: error: `NPT_String' does not name a type
+PltDeviceData.h:91: error: extra semicolon
+PltDeviceData.h:92: error: `NPT_String' does not name a type
+PltDeviceData.h:92: error: extra semicolon
+PltDeviceData.h:93: error: `NPT_String' does not name a type
+PltDeviceData.h:93: error: extra semicolon
+PltDeviceData.h:94: error: `NPT_String' does not name a type
+PltDeviceData.h:94: error: extra semicolon
+PltDeviceData.h:95: error: `NPT_String' does not name a type
+PltDeviceData.h:95: error: extra semicolon
+PltDeviceData.h:99: error: `NPT_Reference' is not a template
+PltDeviceData.h:107: error: `NPT_String' does not name a type
+PltDeviceData.h:107: error: extra semicolon
+PltDeviceData.h:108: error: `NPT_HttpUrl' does not name a type
+PltDeviceData.h:108: error: extra semicolon
+PltDeviceData.h:109: error: `NPT_String' does not name a type
+PltDeviceData.h:109: error: extra semicolon
+PltDeviceData.h:110: error: `NPT_String' does not name a type
+PltDeviceData.h:110: error: extra semicolon
+PltDeviceData.h:111: error: `NPT_String' does not name a type
+PltDeviceData.h:111: error: extra semicolon
+PltDeviceData.h:112: error: `NPT_TimeInterval' does not name a type
+PltDeviceData.h:112: error: extra semicolon
+PltDeviceData.h:113: error: `NPT_TimeStamp' does not name a type
+PltDeviceData.h:113: error: extra semicolon
+PltDeviceData.h:114: error: ISO C++ forbids declaration of `NPT_Array' with no type
+PltDeviceData.h:114: error: expected `;' before '<' token
+PltDeviceData.h:115: error: ISO C++ forbids declaration of `NPT_Array' with no type
+PltDeviceData.h:115: error: expected `;' before '<' token
+PltDeviceData.h:128: error: expected `,' or `...' before '&' token
+PltDeviceData.h:128: error: ISO C++ forbids declaration of `PLT_DeviceDataReference' with no type
+PltDeviceData.h:134: error: `NPT_String' does not name a type
+PltDeviceData.h:134: error: extra semicolon
+PltDeviceData.h: In constructor `PLT_DeviceDataFinder::PLT_DeviceDataFinder(const char*)':
+PltDeviceData.h:125: error: class `PLT_DeviceDataFinder' does not have any field named `m_UUID'
+PltDeviceData.h: In member function `bool PLT_DeviceDataFinder::operator()(int) const':
+PltDeviceData.h:129: error: `data' was not declared in this scope
+PltDeviceData.h:129: error: `m_UUID' was not declared in this scope
+PltDeviceData.h:129: warning: unused variable 'data'
+PltDeviceData.h:129: warning: unused variable 'm_UUID'
+PltDeviceData.h: At global scope:
+PltDeviceData.h:128: warning: unused parameter 'PLT_DeviceDataReference'
+In file included from PltUPnP.h:17,
+                 from PltEvent.cpp:16:
+PltCtrlPoint.h:38: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:38: error: extra semicolon
+PltCtrlPoint.h:39: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:39: error: extra semicolon
+PltCtrlPoint.h:40: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:40: error: extra semicolon
+PltCtrlPoint.h:41: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:41: error: extra semicolon
+PltCtrlPoint.h:44: error: expected initializer before '<' token
+PltCtrlPoint.h:55: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:55: error: extra semicolon
+PltCtrlPoint.h:56: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:56: error: extra semicolon
+PltCtrlPoint.h:59: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:61: error: extra semicolon
+PltCtrlPoint.h:62: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:65: error: extra semicolon
+PltCtrlPoint.h:66: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:66: error: extra semicolon
+PltCtrlPoint.h:67: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:67: error: extra semicolon
+PltCtrlPoint.h:70: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:72: error: extra semicolon
+PltCtrlPoint.h:75: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:77: error: extra semicolon
+PltCtrlPoint.h:79: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:80: error: extra semicolon
+PltCtrlPoint.h:83: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:83: error: extra semicolon
+PltCtrlPoint.h:88: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:88: error: extra semicolon
+PltCtrlPoint.h:89: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:89: error: extra semicolon
+PltCtrlPoint.h:91: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:92: error: extra semicolon
+PltCtrlPoint.h:93: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:95: error: extra semicolon
+PltCtrlPoint.h:96: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:98: error: extra semicolon
+PltCtrlPoint.h:99: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:102: error: extra semicolon
+PltCtrlPoint.h:103: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:106: error: extra semicolon
+PltCtrlPoint.h:107: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:110: error: extra semicolon
+PltCtrlPoint.h:114: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:114: error: extra semicolon
+PltCtrlPoint.h:115: error: `NPT_Result' does not name a type
+PltCtrlPoint.h:115: error: extra semicolon
+PltCtrlPoint.h:116: error: expected `,' or `...' before '&' token
+PltCtrlPoint.h:119: error: ISO C++ forbids declaration of `NPT_HttpUrl' with no type
+PltCtrlPoint.h:122: error: `NPT_Reference' is not a template
+PltCtrlPoint.h:133: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltCtrlPoint.h:133: error: expected `;' before '<' token
+PltCtrlPoint.h:134: error: ISO C++ forbids declaration of `NPT_Lock' with no type
+PltCtrlPoint.h:134: error: expected `;' before '<' token
+PltCtrlPoint.h:136: error: ISO C++ forbids declaration of `NPT_HttpRequestHandler' with no type
+PltCtrlPoint.h:136: error: expected `;' before '*' token
+PltCtrlPoint.h:138: error: ISO C++ forbids declaration of `NPT_Lock' with no type
+PltCtrlPoint.h:138: error: expected `;' before '<' token
+PltCtrlPoint.h:139: error: ISO C++ forbids declaration of `NPT_Lock' with no type
+PltCtrlPoint.h:139: error: expected `;' before '<' token
+PltCtrlPoint.h:140: error: `NPT_String' does not name a type
+PltCtrlPoint.h:140: error: extra semicolon
+PltCtrlPoint.h:143: error: `NPT_Reference' is not a template
+In file included from PltUPnP.h:18,
+                 from PltEvent.cpp:16:
+PltDeviceHost.h:43: error: `NPT_UInt16' has not been declared
+PltDeviceHost.h:43: error: ISO C++ forbids declaration of `port' with no type
+PltDeviceHost.h:48: error: `NPT_Result' does not name a type
+PltDeviceHost.h:49: error: extra semicolon
+PltDeviceHost.h:52: error: `NPT_Result' does not name a type
+PltDeviceHost.h:54: error: extra semicolon
+PltDeviceHost.h:57: error: `NPT_Result' does not name a type
+PltDeviceHost.h:60: error: extra semicolon
+PltDeviceHost.h:62: error: `NPT_Result' does not name a type
+PltDeviceHost.h:69: error: `NPT_Result' does not name a type
+PltDeviceHost.h:70: error: extra semicolon
+PltDeviceHost.h:73: error: `NPT_Result' does not name a type
+PltDeviceHost.h:74: error: extra semicolon
+PltDeviceHost.h:77: error: `NPT_Result' does not name a type
+PltDeviceHost.h:81: error: extra semicolon
+PltDeviceHost.h:82: error: `NPT_Result' does not name a type
+PltDeviceHost.h:92: error: `NPT_Result' does not name a type
+PltDeviceHost.h:92: error: extra semicolon
+PltDeviceHost.h:93: error: `NPT_Result' does not name a type
+PltDeviceHost.h:93: error: extra semicolon
+PltDeviceHost.h:95: error: `NPT_Result' does not name a type
+PltDeviceHost.h:97: error: extra semicolon
+PltDeviceHost.h:99: error: `NPT_Result' does not name a type
+PltDeviceHost.h:101: error: extra semicolon
+PltDeviceHost.h:108: error: `NPT_Reference' is not a template
+PltDeviceHost.h:114: error: `NPT_UInt16' does not name a type
+PltDeviceHost.h:114: error: extra semicolon
+PltDeviceHost.h:115: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltDeviceHost.h:115: error: expected `;' before '<' token
+PltDeviceHost.h:118: error: `NPT_Reference' is not a template
+In file included from PltUPnP.h:19,
+                 from PltEvent.cpp:16:
+PltUPnPHelper.h:29: error: expected `,' or `...' before '*' token
+PltUPnPHelper.h:29: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:32: error: expected `,' or `...' before '&' token
+PltUPnPHelper.h:32: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:32: error: `bool NPT_StringFinder::operator()(int) const' and `bool NPT_StringFinder::operator()(int) const' cannot be overloaded
+PltUPnPHelper.h:38: error: `NPT_String' does not name a type
+PltUPnPHelper.h:38: error: extra semicolon
+PltUPnPHelper.h: In constructor `NPT_StringFinder::NPT_StringFinder(const char*)':
+PltUPnPHelper.h:27: error: class `NPT_StringFinder' does not have any field named `m_Value'
+PltUPnPHelper.h: In member function `bool NPT_StringFinder::operator()(int) const':
+PltUPnPHelper.h:30: error: `value' was not declared in this scope
+PltUPnPHelper.h:30: error: `m_Value' was not declared in this scope
+PltUPnPHelper.h:30: warning: unused variable 'value'
+PltUPnPHelper.h:30: warning: unused variable 'm_Value'
+PltUPnPHelper.h: At global scope:
+PltUPnPHelper.h:29: warning: unused parameter 'NPT_String'
+PltUPnPHelper.h: In member function `bool NPT_StringFinder::operator()(int) const':
+PltUPnPHelper.h:33: error: `value' was not declared in this scope
+PltUPnPHelper.h:33: error: `m_Value' was not declared in this scope
+PltUPnPHelper.h:33: warning: unused variable 'value'
+PltUPnPHelper.h:33: warning: unused variable 'm_Value'
+PltUPnPHelper.h: At global scope:
+PltUPnPHelper.h:32: warning: unused parameter 'NPT_String'
+PltUPnPHelper.h:48: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:48: error: expected `;' before '*' token
+PltUPnPHelper.h:49: error: expected `;' before "static"
+PltUPnPHelper.h:49: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:51: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:51: error: expected `;' before '*' token
+PltUPnPHelper.h:52: error: expected `;' before "static"
+PltUPnPHelper.h:52: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:54: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:54: error: expected `;' before '*' token
+PltUPnPHelper.h:55: error: expected `;' before "static"
+PltUPnPHelper.h:55: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:57: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:57: error: expected `;' before '*' token
+PltUPnPHelper.h:58: error: expected `;' before "static"
+PltUPnPHelper.h:58: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:60: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:60: error: expected `;' before '*' token
+PltUPnPHelper.h:61: error: expected `;' before "static"
+PltUPnPHelper.h:61: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:63: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:63: error: expected `;' before '*' token
+PltUPnPHelper.h:64: error: expected `;' before "static"
+PltUPnPHelper.h:64: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:66: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:66: error: expected `;' before '*' token
+PltUPnPHelper.h:67: error: expected `;' before "static"
+PltUPnPHelper.h:67: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:69: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:69: error: expected `;' before '*' token
+PltUPnPHelper.h:70: error: expected `;' before "static"
+PltUPnPHelper.h:70: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:72: error: ISO C++ forbids declaration of `NPT_String' with no type
+PltUPnPHelper.h:72: error: expected `;' before '*' token
+PltUPnPHelper.h:73: error: expected `;' before "static"
+PltUPnPHelper.h:73: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:75: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:81: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:85: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:91: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:99: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:105: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:109: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:115: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:119: error: `NPT_String' has not been declared
+PltUPnPHelper.h:119: error: ISO C++ forbids declaration of `uuid' with no type
+PltUPnPHelper.h:127: error: expected `;' before '(' token
+PltUPnPHelper.h:139: error: expected `;' before "static"
+PltUPnPHelper.h:139: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:148: error: `NPT_Result' does not name a type
+PltUPnPHelper.h:161: error: `NPT_Result' does not name a type
+PltUPnPHelper.h: In static member function `static const char* PLT_UPnPMessageHelper::GenerateUUID(int, int&)':
+PltUPnPHelper.h:120: error: invalid conversion from `const char*' to `int'
+PltUPnPHelper.h:122: error: `NPT_System' has not been declared
+PltUPnPHelper.h:122: error: `GetRandomInteger' was not declared in this scope
+PltUPnPHelper.h:122: warning: unused variable 'GetRandomInteger'
+PltUPnPHelper.h:125: error: invalid conversion from `int' to `const char*'
+In file included from PltEvent.cpp:16:
+PltUPnP.h: At global scope:
+PltUPnP.h:32: error: expected `)' before "ssdp_port"
+PltUPnP.h:35: error: `NPT_Result' does not name a type
+PltUPnP.h:35: error: extra semicolon
+PltUPnP.h:36: error: `NPT_Result' does not name a type
+PltUPnP.h:36: error: extra semicolon
+PltUPnP.h:38: error: `NPT_Result' does not name a type
+PltUPnP.h:38: error: extra semicolon
+PltUPnP.h:39: error: `NPT_Result' does not name a type
+PltUPnP.h:39: error: extra semicolon
+PltUPnP.h:41: error: `NPT_Result' does not name a type
+PltUPnP.h:41: error: extra semicolon
+PltUPnP.h:42: error: `NPT_Result' does not name a type
+PltUPnP.h:42: error: extra semicolon
+PltUPnP.h:46: error: `NPT_Mutex' does not name a type
+PltUPnP.h:46: error: extra semicolon
+PltUPnP.h:47: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltUPnP.h:47: error: expected `;' before '<' token
+PltUPnP.h:48: error: ISO C++ forbids declaration of `NPT_List' with no type
+PltUPnP.h:48: error: expected `;' before '<' token
+PltUPnP.h:55: error: `NPT_UInt32' does not name a type
+PltUPnP.h:55: error: extra semicolon
+In file included from PltEvent.cpp:18:
+PltXmlHelper.h:26: error: expected `,' or `...' before '&' token
+PltXmlHelper.h:28: error: ISO C++ forbids declaration of `NPT_XmlElementNode' with no type
+PltXmlHelper.h:31: error: expected `,' or `...' before '*' token
+PltXmlHelper.h:31: error: ISO C++ forbids declaration of `NPT_XmlAttribute' with no type
+PltXmlHelper.h:54: error: ISO C++ forbids declaration of `NPT_XmlElementNode' with no type
+PltXmlHelper.h:54: error: expected `;' before '&' token
+PltXmlHelper.h: In constructor `PLT_XmlAttributeFinder::PLT_XmlAttributeFinder(int)':
+PltXmlHelper.h:29: error: class `PLT_XmlAttributeFinder' does not have any field named `m_Element'
+PltXmlHelper.h:29: error: `element' was not declared in this scope
+PltXmlHelper.h:29: error: `name' was not declared in this scope
+PltXmlHelper.h:29: error: `namespc' was not declared in this scope
+PltXmlHelper.h:29: warning: unused variable 'element'
+PltXmlHelper.h:29: warning: unused variable 'name'
+PltXmlHelper.h:29: warning: unused variable 'namespc'
+PltXmlHelper.h: At global scope:
+PltXmlHelper.h:28: warning: unused parameter 'NPT_XmlElementNode'
+PltXmlHelper.h:28: warning: unused parameter 'NPT_XmlElementNode'
+PltXmlHelper.h: In member function `bool PLT_XmlAttributeFinder::operator()(int) const':
+PltXmlHelper.h:32: error: `attribute' was not declared in this scope
+PltXmlHelper.h:34: error: expected initializer before '&' token
+PltXmlHelper.h:37: error: `prefix' was not declared in this scope
+PltXmlHelper.h:37: warning: unused variable 'prefix'
+PltXmlHelper.h:41: error: expected initializer before '*' token
+PltXmlHelper.h:42: error: `namespc' was not declared in this scope
+PltXmlHelper.h:32: warning: unused variable 'attribute'
+PltXmlHelper.h: At global scope:
+PltXmlHelper.h:31: warning: unused parameter 'NPT_XmlAttribute'
+PltXmlHelper.h:67: error: `NPT_Result' does not name a type
+PltXmlHelper.h:87: error: `NPT_Result' does not name a type
+PltXmlHelper.h:107: error: `NPT_Result' does not name a type
+PltXmlHelper.h:121: error: `NPT_Result' does not name a type
+PltXmlHelper.h:131: error: expected `,' or `...' before '*' token
+PltXmlHelper.h:131: error: ISO C++ forbids declaration of `NPT_XmlNode' with no type
+PltXmlHelper.h:159: error: `NPT_Result' does not name a type
+PltXmlHelper.h:184: error: ISO C++ forbids declaration of `NPT_XmlElementNode' with no type
+PltXmlHelper.h:184: error: expected `;' before '*' token
+PltXmlHelper.h:195: error: expected `;' before "static"
+PltXmlHelper.h:195: error: `NPT_Result' does not name a type
+PltXmlHelper.h:216: error: `NPT_Result' does not name a type
+PltXmlHelper.h: In static member function `static bool PLT_XmlHelper::IsMatch(int)':
+PltXmlHelper.h:136: error: expected initializer before '*' token
+PltXmlHelper.h:138: error: `element' was not declared in this scope
+PltXmlHelper.h:138: error: `tag' was not declared in this scope
+PltXmlHelper.h:139: error: `namespc_mapped' was not declared in this scope
+PltXmlHelper.h:141: error: expected initializer before '*' token
+PltXmlHelper.h:142: error: `namespc' was not declared in this scope
+PltXmlHelper.h:138: warning: unused variable 'tag'
+PltXmlHelper.h: At global scope:
+PltXmlHelper.h:131: warning: unused parameter 'NPT_XmlNode'
+PltEvent.cpp:20: error: expected constructor, destructor, or type conversion before '(' token
+PltEvent.cpp:52: error: `NPT_Ordinal' does not name a type
+PltEvent.cpp:61: error: `NPT_Result' does not name a type
+PltEvent.cpp:71: error: `NPT_SocketAddress' does not name a type
+PltEvent.cpp:80: error: `NPT_Result' does not name a type
+PltEvent.cpp:91: error: `NPT_TimeStamp' does not name a type
+PltEvent.cpp:100: error: `NPT_Result' does not name a type
+PltEvent.cpp:110: error: `NPT_Result' does not name a type
+PltEvent.cpp:120: error: `NPT_Result' does not name a type
+PltEvent.cpp:132: error: `NPT_Result' does not name a type
+PltEvent.cpp:141: error: `NPT_Result' does not name a type
+PltEvent.cpp: In member function `bool PLT_EventSubscriberFinderByService::operator()(PLT_EventSubscriber* const&) const':
+PltEvent.cpp:216: error: 'class PLT_DeviceData' has no member named 'GetUUID'
+PltEvent.cpp:217: error: 'class PLT_DeviceData' has no member named 'GetUUID'
+make: *** [PltEvent.o] Error 1

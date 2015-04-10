@@ -1,0 +1,2 @@
+
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_DUALBAND)	+= madwifi.ar7100

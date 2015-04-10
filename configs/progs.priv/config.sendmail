@@ -1,0 +1,9 @@
+#
+# smtp-client
+#
+
+config ELBOX_PROGS_PRIV_SENDMAIL
+	bool "sendmail"
+	default n
+	help
+		Smtp client (needs GPL Library SASL).

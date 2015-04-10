@@ -1,0 +1,3 @@
+# madwifi cavium
+
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_CAVIUM)	+= madwifi_cavium

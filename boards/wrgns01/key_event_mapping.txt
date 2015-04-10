@@ -1,0 +1,22 @@
+Key event mapping
+
+KEY_A - usb port 1 is plugged
+KEY_B - usb port 1 is unplugged
+KEY_C - usb port 2 is plugged
+KEY_D - usb port 2 is unplugged
+KEY_E - usb mount error
+KEY_F - sata hd is plugged and format is needed (for panel)
+KEY_G - sata hd is plugged and format is needed (for website)
+KEY_H - update screen saver, display, hard drive timeout (for website)
+KEY_I - detected sata hd for panel
+KEY_J - start detecting hd
+KEY_K - start unmounting hd 
+KEY_L - unmounting success
+KEY_M - unmounting failed
+KEY_N - NTP server update systime
+KEY_S - init fcrss_server finish
+KEY_V - slide show
+KEY_U - upgrade firmware
+KEY_W - wps button
+KEY_P - show pin code from client(for wps.sh)
+KEY_O - ethernet linkup event

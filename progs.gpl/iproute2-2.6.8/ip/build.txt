@@ -1,0 +1,15 @@
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o ip.o ip.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o ipaddress.o ipaddress.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o iproute.o iproute.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o iprule.o iprule.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o rtm_map.o rtm_map.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o iptunnel.o iptunnel.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o ipneigh.o ipneigh.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o iplink.o iplink.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o ipmaddr.o ipmaddr.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o ipmonitor.o ipmonitor.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o ipmroute.o ipmroute.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o ipxfrm.o ipxfrm.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o xfrm_state.o xfrm_state.c
+mipsel-linux-uclibc-gcc -DNDEBUG -O2 -DLINUX -Wall -DLOGNUM=1 -I../include   -c -o xfrm_policy.o xfrm_policy.c
+mipsel-linux-uclibc-gcc   ip.o ipaddress.o iproute.o iprule.o rtm_map.o iptunnel.o ipneigh.o iplink.o ipmaddr.o ipmonitor.o ipmroute.o ipxfrm.o xfrm_state.o xfrm_policy.o   -o ip

@@ -1,0 +1,78 @@
+latin1.lo latin1.o: latin1.c config.h global.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdlib.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/features.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_arch_features.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/include/stddef.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/types.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/types.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/wordsize.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/kernel_types.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/typesizes.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/pthreadtypes.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sched.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/time.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/endian.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/endian.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/select.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/select.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sigset.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/time.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/sysmacros.h \
+  /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/alloca.h \
+  id3tag.h latin1.h ucs4.h
+
+config.h:
+
+global.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdlib.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/features.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_arch_features.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/include/stddef.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/types.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/types.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/wordsize.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/kernel_types.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/typesizes.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/pthreadtypes.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sched.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/time.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/endian.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/endian.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/select.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/select.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sigset.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/time.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/sysmacros.h:
+
+/spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/alloca.h:
+
+id3tag.h:
+
+latin1.h:
+
+ucs4.h:

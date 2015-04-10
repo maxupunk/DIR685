@@ -1,0 +1,10 @@
+#
+# Netbios
+#
+
+config ELBOX_PROGS_PRIV_AUTOREKEY
+	bool "Periodrical change key"
+	default n
+	help
+		Periodrical change key
+

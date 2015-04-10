@@ -1,0 +1,103 @@
+config ELBOX_PROGS_PRIV_CLI
+	bool "Command-line interface with AP3X style"
+	default n
+	help
+		A get/set command-line interface for telnet and ssh.
+
+config ELBOX_PROGS_PRIV_CLI_PROMPT
+	string "CLI prompt"
+	default "WAP-> "
+	depends on ELBOX_PROGS_PRIV_CLI
+	help
+		Customize CLI prompt.
+
+config ELBOX_PROGS_PRIV_CLI_SUPER
+	bool "Super user mode to upgrade firmware"
+	default n
+	depends on ELBOX_PROGS_PRIV_CLI
+	help
+		Upgrade firmware without checking.
+
+config ELBOX_FIRMWARE_HEADER_VERSION_CONTROL
+	bool "Firmware header version control"
+	default n
+
+config ELBOX_FIRMWARE_HEADER_VERSION
+	depends on ELBOX_FIRMWARE_HEADER_VERSION_CONTROL
+	int "Image Header version"
+	default 2
+
+config ELBOX_FIRMWARE_CONTROL_FLAG1
+	depends ELBOX_FIRMWARE_HEADER_VERSION = 3
+	int "Control Flag 1 in v3 Image Header (0~(2^32)-1)"
+	default 0
+
+config ELBOX_FIRMWARE_CONTROL_FLAG2
+	depends ELBOX_FIRMWARE_HEADER_VERSION = 3
+	int "Control Flag 2 in v3 Image Header (0~(2^32)-1)"
+	default 0
+
+config ELBOX_FIRMWARE_RESERVED_FLAG1
+	depends ELBOX_FIRMWARE_HEADER_VERSION = 3
+	int "Reserved Flag 1 in v3 Image Header (0~(2^32)-1)"
+	default 0
+
+config ELBOX_FIRMWARE_RESERVED_FLAG2
+	depends ELBOX_FIRMWARE_HEADER_VERSION = 3
+	int "Reserved Flag 2 in v3 Image Header (0~(2^32)-1)"
+	default 0
+
+config ELBOX_FIRMWARE_FLASH_SP_MX
+	depends ELBOX_FIRMWARE_HEADER_VERSION = 3
+	bool "Flash support for Spansion/MXIC"
+	default n
+	help
+		Describe flash support using bit 0 of flag[0].
+		ELBOX_FIRMWARE_CONTROL_FLAG1 should be (ELBOX_FIRMWARE_CONTROL_FLAG1+0x00000001) if this option is enabled.
+
+config ELBOX_PROGS_PRIV_CLI_TAB_COMPLETION
+	bool "Tab completion"
+	default n
+	depends on ELBOX_PROGS_PRIV_CLI
+	help
+		Tab completion functionality.
+
+config ELBOX_PROGS_PRIV_CLI_HISTORY
+	bool "Command history"
+	default n
+	depends on ELBOX_PROGS_PRIV_CLI
+	help
+		Command history functionality.
+
+config ELBOX_PROGS_PRIV_CLI_MAX_HISTORY
+	string "Maximum entries of command history"
+	default 5
+	depends on ELBOX_PROGS_PRIV_CLI && ELBOX_PROGS_PRIV_CLI_HISTORY
+	help
+
+config ELBOX_PROGS_PRIV_CLI_MFC_COMMAND
+	bool "cli provide mfc command"
+	default n
+	depends on ELBOX_PROGS_PRIV_CLI 
+	help
+	   cli provide mfc command
+	   
+config ELBOX_PROGS_PRIV_CLI_WANMAC_COMMAND
+	bool "cli provide wanmac command"
+	default n
+	depends on ELBOX_PROGS_PRIV_CLI 
+	help 
+
+config ELBOX_PROGS_PRIV_CLI_OUTDOOR_COMMAND
+	bool "cli outdoor AP command "
+	default n
+	depends on ELBOX_PROGS_PRIV_CLI 
+	help 
+
+
+config ELBOX_PROGS_PRIV_CLI_DEBUG
+	bool "Debug Mode"
+	default n
+	depends on ELBOX_PROGS_PRIV_CLI
+	help
+

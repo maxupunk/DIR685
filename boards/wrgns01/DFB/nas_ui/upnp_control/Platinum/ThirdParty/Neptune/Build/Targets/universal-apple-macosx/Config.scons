@@ -1,0 +1,16 @@
+LoadTool('gcc-generic', env)
+
+### Special for the MAC: universal flags
+universal_flags = ' -arch ppc -arch i386 -mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.4u.sdk'
+
+env['CCFLAGS']   += ' -fno-common' + universal_flags
+env['CXXFLAGS']  += universal_flags
+env['LINKFLAGS'] += universal_flags
+
+### Force the dynamic libraries to be bundles
+env['SHLINKFLAGS'] = '$LINKFLAGS -bundle -twolevel_namespace'
+env['SHLIBSUFFIX'] = '.so' # we need to override the scons default on the mac which is '.dylib'
+
+### Neptune System Files
+env['NPT_SYSTEM_SOURCES']={'System/StdC':'*.cpp', 'System/Bsd':'*.cpp', 'System/Posix':'*.cpp', 'System/Null':'NptNullSerialPort.cpp'} 
+

@@ -1,0 +1,16 @@
+#
+# ddnsd
+#
+
+config ELBOX_PROGS_PRIV_DDNSD
+	bool "ddnsd"
+	default n
+	help
+		The dynamic DNS updater. DDNSD is only a daemon, the command is issue via susockc.
+
+config ELBOX_PROGS_PRIV_DDNSD_HELPER
+	depends ELBOX_PROGS_PRIV_DDNSD
+	string "The helper script of DDNSD"
+	default "/etc/scripts/ddnsd_helper.sh"
+	help
+		DDNSD helper script. DDNSD will execute this scripts to deliver the events.

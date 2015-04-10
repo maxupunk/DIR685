@@ -1,0 +1,3 @@
+# nsbbox
+
+gsubdir-$(ELBOX_PROGS_GPL_NSBBOX)	+= nsbbox

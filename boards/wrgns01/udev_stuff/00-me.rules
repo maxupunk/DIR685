@@ -1,0 +1,36 @@
+
+ACTION=="add", KERNEL=="mtdblock*", NAME="mtdblock/%n"
+
+#ACTION=="add",KERNEL=="sd*",SUBSYSTEM=="block", ATTRS{removable}=="0",ENV{KERNEL_NAME}="%k",GOTO="HD_START"
+#LABEL="HD_START"
+#SUBSYSTEM=="scsi",DRIVER=="sd",WAIT_FOR_SYSFS="model",RUN+="/usr/sbin/mnt_dev $env{KERNEL_NAME} 0 %s{model}"
+
+#for usb 3g device
+ACTION=="add",KERNEL=="ttyUSB0",SUBSYSTEM=="usb-serial",RUN+="/etc/scripts/misc/usb3ghotplug.sh restart %s{idVendor} %s{idProduct} %k %s{model}"
+ACTION=="add",KERNEL=="ttyACM0",SUBSYSTEM=="tty",SUBSYSTEMS=="usb",DRIVERS=="cdc_acm",RUN+="/bin/sh /etc/scripts/misc/usb3ghotplug.sh restart %s{idVendor} %s{idProduct} %k %s{model}"
+ACTION=="add",KERNEL=="sr*",SUBSYSTEM=="block",SUBSYSTEMS=="usb",DRIVERS=="usb",RUN+="/bin/sh /etc/scripts/misc/usb3ghotplug.sh switch %s{idVendor} %s{idProduct} %k %s{model}"
+
+# why we put here because 3G DWM156 will have attr removable == 0, which will cause it to match rule as a sata hd, and 
+# giving OPTIONS+="last_rule" is a must, since we don't want device to match sata hd rule. 
+ACTION=="add",KERNEL=="sd*",SUBSYSTEM=="block", ATTRS{removable}=="0",ATTRS{idVendor}=="07d1",ATTRS{idProduct}=="a800",RUN+="/bin/sh /etc/scripts/misc/usb3ghotplug.sh switch %s{idVendor} %s{idProduct} %k %s{model}"
+
+#for sata hd
+SUBSYSTEM=="scsi",DRIVER=="sd",WAIT_FOR_SYSFS="model",GOTO="HD_START"
+LABEL="HD_START"
+ACTION=="add",KERNEL=="sd*",SUBSYSTEM=="block", ATTRS{removable}=="0",RUN+="/usr/sbin/mnt_dev %k 0 %s{model}"
+
+#for usb flash drive
+SUBSYSTEMS=="usb",DRIVERS=="usb",ENV{usb_serial}="%s{serial}",GOTO="USB_START"
+LABEL="USB_START"
+ACTION=="add",KERNEL=="sd*",SUBSYSTEM=="block", SUBSYSTEMS=="block",ATTRS{removable}=="1",RUN+="/usr/sbin/mnt_dev %k 1 %s{model}-->$env{usb_serial}"
+
+
+ACTION=="add", KERNEL=="event*", NAME="input/%k"
+
+#remove usb hd and sata hd
+ACTION=="remove",KERNEL=="sd*",RUN+="/usr/sbin/umnt_dev %k"
+ACTION=="remove", KERNEL=="lp*", RUN+="/usr/sbin/usb_printer_hotplug"
+
+#remove usb 3g device
+ACTION=="remove",KERNEL=="ttyUSB0",SUBSYSTEM=="usb-serial",RUN+="/etc/scripts/misc/usb3ghotplug.sh stop &"
+ACTION=="remove",KERNEL=="ttyACM0",SUBSYSTEM=="tty",SUBSYSTEMS=="usb",DRIVERS=="cdc_acm",RUN+="/etc/scripts/misc/usb3ghotplug.sh stop &"

@@ -1,0 +1,13 @@
+#
+# xsupplicant
+#
+
+config ELBOX_PROGS_GPL_STUPID_FTPD
+	bool "Stupid_ftpd"
+	default n
+	help
+		ftp daemon
+		
+
+
+

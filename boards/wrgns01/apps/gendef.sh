@@ -1,0 +1,1 @@
+/home/joely/gpl/dir685-gpl/templates/gw.wifi/dlwbr/dir685/customer_dusa/gendef.sh

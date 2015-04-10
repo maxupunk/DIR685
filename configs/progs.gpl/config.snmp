@@ -1,0 +1,27 @@
+#
+# snmp
+#
+
+config ELBOX_PROGS_GPL_NET_SNMP
+	bool "net-snmp"
+	default n
+
+choice
+	prompt "version selection"
+	depends ELBOX_PROGS_GPL_NET_SNMP
+	default ELBOX_PROGS_GPL_NET_SNMP_5_4_1
+	help
+		Select the net-snmp version for the platform
+
+	config ELBOX_PROGS_GPL_NET_SNMP_5_4_1
+		bool "net-snmp-5.4.1"
+		help
+			net-snmp-5.4.1
+endchoice
+
+config ELBOX_PROGS_GPL_SNMP_TRAP_V110
+	bool "Enable Specific trap V1.10"
+	depends on ELBOX_PROGS_GPL_NET_SNMP
+	default n
+	help
+		Enable Specific trap V1.10

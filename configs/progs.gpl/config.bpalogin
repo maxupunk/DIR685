@@ -1,0 +1,8 @@
+# bpalogin
+
+config ELBOX_PROGS_GPL_BPALOGIN
+	bool "Big Pond Client (bpalogin)"
+	default y
+	help
+		Telstra's Big Pond Client daemon
+

@@ -1,0 +1,4 @@
+﻿<strong>Sugerencias útiles.</strong><br><br>
+&nbsp;&#149;&nbsp; <strong>Conexión a Internet</strong>: Al configurar el router para acceder a Internet, asegúrese de elegir el Tipo de conexión a Internet correcto en el menú desplegable. Si no está seguro de la opción que debe elegir, póngase en contacto con su Proveedor de servicios de Internet (ISP).<br><br>
+&nbsp;&#149;&nbsp; <strong>Soporte: </strong><br>Si tiene problemas para acceder a Internet a través del router, compruebe de nuevo los parámetros que ha introducido en esta página y verifíquelos con su ISP si es necesario.
+double check any settings you have entered on this page and verify them with your ISP if needed.

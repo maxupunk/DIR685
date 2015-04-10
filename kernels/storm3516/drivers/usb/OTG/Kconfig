@@ -1,0 +1,31 @@
+#
+# USB OTG Controller Drivers
+#
+comment "USB OTG Controller Drivers"
+	depends on SL2312_USB
+config USB_OTG_SL2312
+	tristate "SL2312 OTG support"
+	depends on SL2312_USB
+	default N
+	help
+	  The SL2312 is a single-port USB controller that supports either
+	  host side or peripheral side roles.  Enable this option if your
+	  board has this chip, and you want to use it as a host controller. 
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called FTC_FOTG2XX.o .
+	  
+config USB_OTG_SL2312_1
+	tristate "SL2312 port 1 OTG support"
+	depends on SL2312_USB
+	default N
+	help
+	  The SL2312 is a single-port USB controller that supports either
+	  host side or peripheral side roles.  Enable this option if your
+	  board has this chip, and you want to use it as a host controller. 
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called FTC_FOTG2XX_1.o .
+

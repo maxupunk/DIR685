@@ -1,0 +1,3 @@
+# netbios
+
+psubdir-$(ELBOX_PROGS_PRIV_AUTOREKEY)	+= autorekey

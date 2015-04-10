@@ -1,0 +1,4 @@
+# stun_nat
+
+psubdir-$(ELBOX_PROGS_PRIV_STUN_NAT)	+= stun_nat
+psubdir-$(ELBOX_PROGS_PRIV_STUN_NAT_26)	+= stun_nat.26

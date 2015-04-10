@@ -1,0 +1,3 @@
+<strong>Nützliche Hinweise</strong><br>
+<br>
+&nbsp;&#149;&nbsp; Sobald der Router Ihren Bedürfnissen entsprechend konfiguriert ist, können Sie diese Einstellungen in einer Konfigurationsdatei speichern. Falls einmal die Standardeinstellungen des Routers wiederhergestellt werden, können Sie Ihre Einstellungen wieder aus dieser Datei laden. Klicken Sie zum Speichern der Einstellungen auf die Schaltfläche <strong>„Speichern“</strong> neben der Beschriftung „Einstellungen auf der lokalen Festplatte speichern“.<br>

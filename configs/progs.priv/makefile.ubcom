@@ -1,0 +1,4 @@
+# smtp-client
+ifeq ($(strip $(ELBOX_PROGS_PRIV_TURBONAT_UBCOM)),y)
+psubdir-y += ubcom
+endif

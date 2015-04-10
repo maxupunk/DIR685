@@ -1,0 +1,419 @@
+#
+# rgbin
+#
+
+config ELBOX_PROGS_PRIV_RGBIN
+	bool "RGBIN"
+	default y
+
+menu "RGBIN configuration"
+	depends ELBOX_PROGS_PRIV_RGBIN
+
+	comment "GPL tools - DO NOT use the GPL code here, use PROG.GPL/NSBBOX instead !!"
+
+	config CONFIG_RGBIN_BASE64
+		bool "base64"
+		default n
+		help
+			base64 encoder/decoder
+
+	config CONFIG_RGBIN_BRCTL
+		bool "brctl"
+		default y
+		help
+			Bridge Control usermode program
+
+	config CONFIG_RGBIN_BRCTL_IOAPNL
+		bool "IO-Data AP Network Limitation"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Access limitation on secondary SSID for IO-Data R3.
+
+	config CONFIG_RGBIN_BRCTL_BWCTRL
+		bool "Multicast packet bandwidth control"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Set multicast packet bandwidth in kernel bridge module.
+			CONFIG_BRIDGE_MULTICAST_BWCTRL in kernel configuration must be set.
+
+    config CONFIG_RGBIN_BRCTL_PORTFORWARD
+        bool "bridge port forwarding control"
+        default n
+        depends on CONFIG_RGBIN_BRCTL
+		help
+			Set bridge port forwarding on/off in kernel bridge module.
+			CONFIG_BRIDGE_PORT_FORWARD in kernel configuration must be set.
+	config CONFIG_RGBIN_BRCTL_PORTDENYLIST
+		bool "bridge port deny list support"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Add/remove port bridge member to.from deny list in kernel bridge module.
+			CONFIG_BRIDGE_REJECT_FORWARD_LIST in kernel configuration must be set.
+	
+	config CONFIG_RGBIN_BRCTL_IGMP
+		bool "IGMP Snooping"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			IGMP Snooping mode in bridge.
+
+	config CONFIG_RGBIN_BRCTL_AP_OPERATION_MODE
+		bool "Pass AP operation mode to bridge"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Pass AP operation mode to bridge
+
+	config CONFIG_RGBIN_BRCTL_APC_OPERATION_MODE
+		bool "Pass AP Clinet mode to bridge"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Pass AP Client mode to bridge
+
+	config ELBOX_PROGS_PRIV_WLAN_WISP
+		bool "Pass WISP mode"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Pass WISP mode			
+		
+	config CONFIG_RGBIN_BRCTL_DHCP_SERVER_ENABLE
+		bool "Pass DHCP Server Enable message to Bridge "
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Pass DHCP Server Enable message to Bridge
+	config  CONFIG_RGBIN_BRCTL_E_PARTITION
+		bool "Ethernet Partition status control"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Ethernet Partition  status control
+	config  CONFIG_RGBIN_BRCTL_W_PARTITION
+		bool "Wlan Partition status control"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Wlan Partition  status control
+	config  CONFIG_RGBIN_BRCTL_ETHLINK
+		bool "Ethernet integration status control"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Ethernet integration status control
+
+	config CONFIG_RGBIN_LIMITED_ADMIN
+		bool "Limited Administration"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Limited user who fits in with administration rules can contrl device
+
+	config CONFIG_RGBIN_PING_CONTROL
+		bool "Ping Control"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			Reply ping request or not
+
+	config CONFIG_RGBIN_MULTI_VLAN
+		bool "VLAN"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			VLAN
+
+	config CONFIG_RGBIN_BRCTL_MAC_CLONE
+		bool "MAC CLONE"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			MAC CLONE
+
+	config CONFIG_RGBIN_BRCTL_MACADDR_CLONE_ATH
+		bool "MAC address clone for Atheros driver"
+		default n
+		depends on CONFIG_RGBIN_BRCTL
+		help
+			MAC address clone for Atheros driver
+
+	config CONFIG_RGBIN_NTPCLIENT
+		bool "ntpclient"
+		default y
+		help
+			NTP client (Network Time Protocol)
+
+	config CONFIG_RGBIN_SMTPCLIENT
+		bool "smtpclient"
+		default y
+		help
+			SMTP client program
+
+	config CONFIG_RGBIN_VCONFIG
+		bool "vconfig"
+		default n
+		help
+			VLAN (802.1q) configuration program.
+
+	config CONFIG_RGBIN_BRCTL_WEB_REDIRECT
+		bool "webredirect"
+		default n
+		help
+			Web Redirect.				
+
+	############################################################################
+	#
+	comment "Private tools - ONLY use the private code here !!"
+
+	config CONFIG_RGBIN_SEAMA
+		bool "seama"
+		default n
+		help
+			The utility to pack image file.
+
+	config CONFIG_RGBIN_HTTPC
+		bool "httpc"
+		help
+			A simple HTTP client implementation. This applet is initialized for UPnP.
+
+	config CONFIG_RGBIN_GENUUID
+		bool "genuuid"
+		default n
+		help
+			An utility to generate the UUID. It is moved from upnpkits since it can
+			be used anywhere, not only for UPnP implementation.
+
+	config CONFIG_RGBIN_PFILE
+		bool "pfile"
+		default y
+		help
+			pfile usermode program.
+
+	config CONFIG_RGBIN_SCUT
+		bool "scut"
+		default y
+		help
+			scut usermode program
+
+	config CONFIG_RGBIN_TLOGS
+		bool "tlogs"
+		default y
+		help
+			A LOG translation program.
+
+	config CONFIG_RGBIN_ASESSION
+		bool "asession"
+		default n
+		help
+			Active session runtime program used for generating active session info.
+
+	config CONFIG_RGBIN_MPCONVERT
+		bool "mpconvert"
+		default n
+		help
+			Convert ports string to iptables mport command.
+
+	config CONFIG_RGBIN_DAYCONVERT
+		bool "dayconvert"
+		default n
+		help
+			Convert index number of days to iptables time command.
+
+	config CONFIG_RGBIN_CHNET
+		bool "chnet"
+		default y
+		help
+			A simple program to change an IP address to the specified net ID.
+
+	config CONFIG_RGBIN_ROUTETABLE
+		bool "routetable"
+		default n
+		help
+			A simple program to get kernel routing table and set into xmldb
+
+	config CONFIG_RGBIN_PARSEINFO
+		bool "parseinfo"
+		default n
+		help
+			A simple program to parse xml node in php file and set into xmldb.
+
+	config CONFIG_RGBIN_LOGIN
+		bool "login"
+		default n
+		help
+			A simple program for tty login check.
+
+	config CONFIG_RGBIN_ARPPING
+		bool "arpping"
+		default n
+		help
+			A simple arpping program to query MAC address from IP address.
+
+	config CONFIG_RGBIN_GETHOSTIP
+		bool "gethostip"
+		default n
+		help
+			gethostip -- Convert an IP address into various formats
+
+	config CONFIG_RGBIN_COREDE
+		bool "corede"
+		default n
+		help
+			A simple program to parse xml node and set into xmldb for Corega DDNS.
+
+	config CONFIG_RGBIN_USOCKC
+		bool "usockc"
+		default n
+		help
+			A client program of usock. usock is a module in comlib.
+
+	config CONFIG_RGBIN_SUSOCKC
+		bool "susockc"
+		default n
+		help
+			A client program of susock. susock is a module in comlib.
+
+    config CONFIG_RGBIN_RSTRCMP
+		bool "rstrcmp"
+		default n
+		help
+			A simple program of string comparsion.
+
+    config CONFIG_RGBIN_GETSYS
+		bool "getsys"
+		default n
+		help
+			A simple program to get status of cpu and memory 
+
+	############################################################################
+	# devdata
+	comment "DevData - Permanent Data"
+	config CONFIG_RGBIN_DEVDATA
+		bool "devdata"
+		default n
+		help
+			A program used to get/save the device data.
+			This program should be used to replace the env part of rgcfg.
+
+	config CONFIG_RGBIN_DEVDATA_MTDBLOCK
+		depends CONFIG_RGBIN_DEVDATA
+		string "mtdblock of devdata"
+		default "/dev/mtdblock/4"
+		help
+			The dev file name of the MTD block for the storage of device data.
+
+	config CONFIG_RGBIN_DEVDATA_OFFSET
+		depends CONFIG_RGBIN_DEVDATA
+		hex "offset of devdata"
+		default 0
+		help
+			The beginning of the device data in the MTD block.
+
+	config CONFIG_RGBIN_DEVDATA_SIZE
+		depends CONFIG_RGBIN_DEVDATA
+		hex "size of devdata"
+		default 0x8000
+		help
+			The size of the device data.
+			Not the size of MTD block and should be smaller than the MTD block.
+
+	############################################################################
+	# devconf
+	comment "DevConf - User Configuration"
+	config CONFIG_RGBIN_DEVCONF
+		bool "devconf"
+		default n
+		help
+			A program used to get/save the device config.
+			This program should be used to replace the config part of rgcfg.
+
+	config CONFIG_RGBIN_DEVCONF_MTDBLOCK
+		depends CONFIG_RGBIN_DEVCONF
+		string "mtdblock of devconf"
+		default "/dev/mtdblock/3"
+		help
+			The dev file name of the MTD block for the storage of device config.
+
+	config CONFIG_RGBIN_DEVCONF_OFFSET
+		depends CONFIG_RGBIN_DEVCONF
+		hex "offset of devconf"
+		default 0
+		help
+			The beginning of the device config in the MTD block.
+
+	config CONFIG_RGBIN_DEVCONF_SIZE
+		depends CONFIG_RGBIN_DEVCONF
+		hex "size of devconf"
+		default 0x10000
+		help
+			The size of the device config.
+			Not the size of MTD block and should be the smaller or equal tp the MTD block.
+
+	############################################################################
+	# outdated utilities.
+	comment "outdated utilities"
+	config ELBOX_RGBIN_RGCFG
+		bool "rgcfg"
+		default y
+		help
+			A usermode program to read/write configuration from/to flash (mtd device).
+
+	choice
+		prompt "Selection implementation"
+		depends ELBOX_RGBIN_RGCFG
+		default CONFIG_RGBIN_RGCFG
+
+		config CONFIG_RGBIN_RGCFG
+			bool "rgcfg"
+			help
+				A usermode program to read/write configuration from/to flash (mtd device).
+
+		config CONFIG_RGBIN_RGCFG2
+			bool "rgcfg version 2"
+			help
+				A simplified version of rgcfg.
+		config CONFIG_RGBIN_testflash
+			bool "test flash"
+			help
+				A test flash.		
+
+	endchoice
+
+	config CONFIG_RGDB_BLOCK_OFFSET
+		depends on CONFIG_RGBIN_RGCFG
+		int "RGDB offset in mtdblock"
+		default 0
+		help
+			Set the offset of the RGCFG block in a mtdblock.
+
+	config CONFIG_RGCFG_BLOCK_OFFSET
+		depends on CONFIG_RGBIN_RGCFG2
+		int "RGDB offset in mtdblock"
+		default 0
+		help
+			Set the offset of the RGCFG block in a mtdblock.
+
+	config CONFIG_RGCFG_BLOCK_SIZE
+		depends on CONFIG_RGBIN_RGCFG2
+		int "RGDB mtdblock size"
+		default 65536
+		help
+			Set the size of the RGCFG mtdblock.
+
+	config CONFIG_RGBIN_RGDB
+		bool "rgdb"
+		default y
+		help
+			A usermode program to get/set data from/to datavase (xmldb).
+
+	config CONFIG_RGBIN_TCPREQUEST
+		bool "tcprequest"
+		default n
+		help
+			Send TCP request to remote server.
+
+endmenu

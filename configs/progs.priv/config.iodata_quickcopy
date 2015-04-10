@@ -1,0 +1,9 @@
+#
+# iodata_quickcopy
+#
+
+config ELBOX_PROGS_PRIV_IODATA_QUICKCOPY
+	bool "IO DATA Quick Copy for Host Device"
+	default n
+	help
+		iodata_quickcopy used for recive and send packets

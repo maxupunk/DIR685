@@ -1,0 +1,23 @@
+#
+# stun_nat
+#
+
+config ELBOX_STUN_NAT
+	bool "STUN NAT support"
+	default y
+
+choice
+	prompt "Select implementation"
+	default ELBOX_PROGS_PRIV_STUN_NAT
+	depends ELBOX_STUN_NAT
+	help
+		STUN NAT 2 kernel module selection.
+
+	config ELBOX_PROGS_PRIV_STUN_NAT
+		bool "STUN NAT for kernel 2.4.x"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 4
+	config ELBOX_PROGS_PRIV_STUN_NAT_26
+		bool "STUN NAT for kernel 2.6.x"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 6
+
+endchoice

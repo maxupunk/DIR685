@@ -1,0 +1,82 @@
+#
+# dns
+#
+
+config ELBOX_USE_DNS
+	bool "DNS daemon"
+	default y
+
+choice
+	prompt "Selection dns daemon"
+	depends ELBOX_USE_DNS
+	default ELBOX_PROGS_GPL_DNRD_2_10
+	help
+		Select the dns daemon for the platform
+
+	config ELBOX_PROGS_GPL_DNRD_2_10
+		bool "DNS relay daemon v2.10 (dnrd-2.10)"
+		help
+			DNS relay daemon version 2.10
+
+	config ELBOX_PROGS_GPL_DNSMASQ
+		bool "Dnsmasq"
+		help
+			dnsmasq v2.45.
+			Dnsmasq is a lightweight, easy to configure DNS forwarder and DHCP server.
+			It is designed to provide DNS and, optionally, DHCP, to a small network.
+			On IPv6-enabled boxes, dnsmasq can both talk to upstream servers via IPv6
+			and offer DNS service via IPv6. On dual-stack (IPv4 and IPv6) boxes it
+			talks both protocols and can even act as IPv6-to-IPv4 or IPv4-to-IPv6
+			forwarder.
+endchoice
+
+menu "   Dnsmasq configuration"
+	depends ELBOX_PROGS_GPL_DNSMASQ
+
+	config ELBOX_PROGS_GPL_DNSMASQ_HAVE_BROKEN_RTC
+		bool "Disable RTC support"
+		default y
+		help
+			define this on embedded systems which don't have an RTC
+			which keeps time over reboots. Causes dnsmasq to use uptime
+			for timing, and keep lease lengths rather than expiry times
+			in its leases file. This also make dnsmasq "flash disk friendly".
+			Normally, dnsmasq tries very hard to keep the on-disk leases file
+			up-to-date: rewriting it after every renewal.  When HAVE_BROKEN_RTC
+			is in effect, the lease file is only written when a new lease is
+			created, or an old one destroyed. (Because those are the only times
+			it changes.) This vastly reduces the number of file writes, and makes
+			it viable to keep the lease file on a flash filesystem.
+			NOTE: when enabling or disabling this, be sure to delete any old
+			leases file, otherwise dnsmasq may get very confused.
+
+	config ELBOX_PROGS_GPL_DNSMASQ_NO_TFTP
+		bool "Disable TFTP"
+		default y
+		help
+			disable tftp support	
+
+	config ELBOX_PROGS_GPL_DNSMASQ_NOUSER_ALPHA
+		bool "Disable user and group name support"
+		default y
+		help
+			ignore uid and gid check.
+
+	config ELBOX_PROGS_GPL_DNSMASQ_NOPRCTL_ALPHA
+		bool "Disable prctl support"
+		default y
+		help
+			ignore prctl code.		
+
+	config ELBOX_PROGS_GPL_DNSMASQ_HELPER_SUPPORT_ALPHA
+		bool "dnsmasq helper support"
+		default y
+		help
+			dnsmasq helper function
+
+	config ELBOX_PROGS_GPL_DNSMASQ_ADVANCE_DNS_SERVICE_ALPHA
+        bool "Enable advance dns service"
+        default n 
+        help
+           enable advance dns service support 
+endmenu

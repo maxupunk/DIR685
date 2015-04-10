@@ -1,0 +1,3 @@
+# ipt-string
+
+gsubdir-$(ELBOX_PROGS_GPL_IPT_STRING)	+= ipt-string

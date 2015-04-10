@@ -1,0 +1,3 @@
+# alpha_nls_drv
+
+psubdir-$(ELBOX_PROGS_PRIV_ALPHA_NLS_DRV)	+= alpha_nls_drv

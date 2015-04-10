@@ -1,0 +1,224 @@
+set -e; echo '  CHK     include/linux/version.h'; mkdir -p include/linux/; 	if [ `echo -n "2.6.15" | wc -c ` -gt 64 ]; then echo '"2.6.15" exceeds 64 characters' >&2; exit 1; fi; (echo \#define UTS_RELEASE \"2.6.15\"; echo \#define LINUX_VERSION_CODE `expr 2 \\* 65536 + 6 \\* 256 + 15`; echo '#define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))'; ) < /home/marco/joely_test/kernels/storm3516/Makefile > include/linux/version.h.tmp; if [ -r include/linux/version.h ] && cmp -s include/linux/version.h include/linux/version.h.tmp; then rm -f include/linux/version.h.tmp; else echo '  UPD     include/linux/version.h'; mv -f include/linux/version.h.tmp include/linux/version.h; fi
+  CHK     include/linux/version.h
+make -f scripts/Makefile.build obj=scripts/basic
+make -f scripts/Makefile.build obj=arch/arm/tools include/asm-arm/mach-types.h
+make[1]: `include/asm-arm/mach-types.h' is up to date.
+if test ! /home/marco/joely_test/kernels/storm3516 -ef /home/marco/joely_test/kernels/storm3516; then \
+/bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mkmakefile              \
+    /home/marco/joely_test/kernels/storm3516 /home/marco/joely_test/kernels/storm3516 2 6         \
+    > /home/marco/joely_test/kernels/storm3516/Makefile;                                 \
+    echo '  GEN    /home/marco/joely_test/kernels/storm3516/Makefile';                   \
+fi
+rm -rf .tmp_versions
+mkdir -p .tmp_versions
+make -f scripts/Makefile.build obj=.
+mkdir -p arch/arm/kernel/
+make -f scripts/Makefile.build obj=scripts
+make -f scripts/Makefile.build obj=scripts/mod
+make -f scripts/Makefile.build obj=init
+  CHK     include/linux/compile.h
+/bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mkcompile_h include/linux/compile.h \
+"arm" "" "" "arm-linux-gcc -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -ffreestanding -O2     -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mapcs-32 -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4  -malignment-traps -msoft-float -Uarm -Wdeclaration-after-statement "
+make -f scripts/Makefile.build obj=usr
+set -e; echo '  CHK     usr/initramfs_list'; mkdir -p usr/; /bin/sh /home/marco/joely_test/kernels/storm3516/scripts/gen_initramfs_list.sh   < usr/Makefile > usr/initramfs_list.tmp; if [ -r usr/initramfs_list ] && cmp -s usr/initramfs_list usr/initramfs_list.tmp; then rm -f usr/initramfs_list.tmp; else echo '  UPD     usr/initramfs_list'; mv -f usr/initramfs_list.tmp usr/initramfs_list; fi
+  CHK     usr/initramfs_list
+make -f scripts/Makefile.build obj=arch/arm/kernel
+make -f scripts/Makefile.build obj=arch/arm/mm
+make -f scripts/Makefile.build obj=arch/arm/common
+make -f scripts/Makefile.build obj=arch/arm/mach-sl2312
+make -f scripts/Makefile.build obj=arch/arm/nwfpe
+make -f scripts/Makefile.build obj=kernel
+make -f scripts/Makefile.build obj=mm
+make -f scripts/Makefile.build obj=fs
+make -f scripts/Makefile.build obj=fs/autofs4
+make -f scripts/Makefile.build obj=fs/cifs
+make -f scripts/Makefile.build obj=fs/devpts
+make -f scripts/Makefile.build obj=fs/exportfs
+make -f scripts/Makefile.build obj=fs/ext2
+make -f scripts/Makefile.build obj=fs/ext3
+make -f scripts/Makefile.build obj=fs/fat
+make -f scripts/Makefile.build obj=fs/isofs
+make -f scripts/Makefile.build obj=fs/jbd
+make -f scripts/Makefile.build obj=fs/jffs
+make -f scripts/Makefile.build obj=fs/jffs2
+make -f scripts/Makefile.build obj=fs/lockd
+make -f scripts/Makefile.build obj=fs/msdos
+make -f scripts/Makefile.build obj=fs/nfs
+make -f scripts/Makefile.build obj=fs/nfs_common
+make -f scripts/Makefile.build obj=fs/nfsd
+make -f scripts/Makefile.build obj=fs/nls
+make -f scripts/Makefile.build obj=fs/ntfs
+make -f scripts/Makefile.build obj=fs/partitions
+make -f scripts/Makefile.build obj=fs/proc
+make -f scripts/Makefile.build obj=fs/ramfs
+make -f scripts/Makefile.build obj=fs/squashfs
+make -f scripts/Makefile.build obj=fs/sysfs
+make -f scripts/Makefile.build obj=fs/vfat
+make -f scripts/Makefile.build obj=fs/xfs
+make -f scripts/Makefile.build obj=ipc
+make -f scripts/Makefile.build obj=security
+make -f scripts/Makefile.build obj=crypto
+make -f scripts/Makefile.build obj=crypto/ocf
+arm-linux-strip -g -S -d -X crypto/ocf/ocf.o
+make -f scripts/Makefile.build obj=block
+make -f scripts/Makefile.build obj=drivers
+make -f scripts/Makefile.build obj=drivers/base
+make -f scripts/Makefile.build obj=drivers/base/power
+make -f scripts/Makefile.build obj=drivers/block
+make -f scripts/Makefile.build obj=drivers/cdrom
+make -f scripts/Makefile.build obj=drivers/char
+make -f scripts/Makefile.build obj=drivers/char/watchdog
+make -f scripts/Makefile.build obj=drivers/crypto
+make -f scripts/Makefile.build obj=drivers/firmware
+make -f scripts/Makefile.build obj=drivers/i2c_alpha
+make -f scripts/Makefile.build obj=drivers/input
+make -f scripts/Makefile.build obj=drivers/media
+make -f scripts/Makefile.build obj=drivers/media/common
+make -f scripts/Makefile.build obj=drivers/mfd
+make -f scripts/Makefile.build obj=drivers/misc
+make -f scripts/Makefile.build obj=drivers/mtd
+make -f scripts/Makefile.build obj=drivers/mtd/chips
+make -f scripts/Makefile.build obj=drivers/mtd/devices
+make -f scripts/Makefile.build obj=drivers/mtd/maps
+make -f scripts/Makefile.build obj=drivers/mtd/nand
+make -f scripts/Makefile.build obj=drivers/mtd/onenand
+make -f scripts/Makefile.build obj=drivers/net
+make -f scripts/Makefile.build obj=drivers/net/arm
+make -f scripts/Makefile.build obj=drivers/net/rtl8366s
+make -f scripts/Makefile.build obj=drivers/net/wireless
+  arm-linux-gcc -Wp,-MD,drivers/net/.sl351x_gmac.o.d  -nostdinc -isystem /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -ffreestanding -O2     -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mapcs-32 -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4  -malignment-traps -msoft-float -Uarm -Wdeclaration-after-statement     -DKBUILD_BASENAME=sl351x_gmac -DKBUILD_MODNAME=sl351x_gmac -c -o drivers/net/sl351x_gmac.o drivers/net/sl351x_gmac.c
+In file included from drivers/net/rtl8366s/rtl8366s_asicdrv.h:4,
+                 from drivers/net/sl351x_gmac.c:50:
+drivers/net/rtl8366s/rtl8366s_types.h:36:1: warning: "ntohs" redefined
+In file included from include/linux/byteorder/little_endian.h:104,
+                 from include/asm/byteorder.h:29,
+                 from include/linux/kernel.h:16,
+                 from include/linux/spinlock.h:54,
+                 from include/linux/capability.h:45,
+                 from include/linux/sched.h:7,
+                 from include/linux/module.h:10,
+                 from drivers/net/sl351x_gmac.c:17:
+include/linux/byteorder/generic.h:169:1: warning: this is the location of the previous definition
+In file included from drivers/net/rtl8366s/rtl8366s_asicdrv.h:4,
+                 from drivers/net/sl351x_gmac.c:50:
+drivers/net/rtl8366s/rtl8366s_types.h:37:1: warning: "ntohl" redefined
+In file included from include/linux/byteorder/little_endian.h:104,
+                 from include/asm/byteorder.h:29,
+                 from include/linux/kernel.h:16,
+                 from include/linux/spinlock.h:54,
+                 from include/linux/capability.h:45,
+                 from include/linux/sched.h:7,
+                 from include/linux/module.h:10,
+                 from drivers/net/sl351x_gmac.c:17:
+include/linux/byteorder/generic.h:167:1: warning: this is the location of the previous definition
+In file included from drivers/net/rtl8366s/rtl8366s_asicdrv.h:4,
+                 from drivers/net/sl351x_gmac.c:50:
+drivers/net/rtl8366s/rtl8366s_types.h:38:1: warning: "htons" redefined
+In file included from include/linux/byteorder/little_endian.h:104,
+                 from include/asm/byteorder.h:29,
+                 from include/linux/kernel.h:16,
+                 from include/linux/spinlock.h:54,
+                 from include/linux/capability.h:45,
+                 from include/linux/sched.h:7,
+                 from include/linux/module.h:10,
+                 from drivers/net/sl351x_gmac.c:17:
+include/linux/byteorder/generic.h:168:1: warning: this is the location of the previous definition
+In file included from drivers/net/rtl8366s/rtl8366s_asicdrv.h:4,
+                 from drivers/net/sl351x_gmac.c:50:
+drivers/net/rtl8366s/rtl8366s_types.h:39:1: warning: "htonl" redefined
+In file included from include/linux/byteorder/little_endian.h:104,
+                 from include/asm/byteorder.h:29,
+                 from include/linux/kernel.h:16,
+                 from include/linux/spinlock.h:54,
+                 from include/linux/capability.h:45,
+                 from include/linux/sched.h:7,
+                 from include/linux/module.h:10,
+                 from drivers/net/sl351x_gmac.c:17:
+include/linux/byteorder/generic.h:166:1: warning: this is the location of the previous definition
+drivers/net/sl351x_gmac.c: In function `mac_init_drv':
+drivers/net/sl351x_gmac.c:634: warning: implicit declaration of function `smi_reset'
+drivers/net/sl351x_gmac.c: In function `gmac_open':
+drivers/net/sl351x_gmac.c:2916: warning: implicit declaration of function `request_gpio_irq'
+drivers/net/sl351x_gmac.c: In function `gmac_close':
+drivers/net/sl351x_gmac.c:2999: warning: implicit declaration of function `free_gpio_irq'
+drivers/net/sl351x_gmac.c:2957: warning: unused variable `ret'
+drivers/net/sl351x_gmac.c: In function `gmac_get_rtl8366sr_status':
+drivers/net/sl351x_gmac.c:4472: warning: unused variable `phyA'
+drivers/net/sl351x_gmac.c:4473: warning: unused variable `nwayStatus'
+drivers/net/sl351x_gmac.c: In function `gmac_rx_poll':
+drivers/net/sl351x_gmac.c:5328: warning: unused variable `classq_pkts_num'
+drivers/net/sl351x_gmac.c: At top level:
+drivers/net/sl351x_gmac.c:4416: warning: 'gmac_phy_thread' defined but not used
+drivers/net/sl351x_gmac.c:6974: warning: 'sl351x_nat_workaround_handler' defined but not used
+   arm-linux-ld -EL   -r -o drivers/net/built-in.o drivers/net/Space.o drivers/net/loopback.o drivers/net/ppp_generic.o drivers/net/slhc.o drivers/net/ppp_async.o drivers/net/ppp_synctty.o drivers/net/ppp_deflate.o drivers/net/bsd_comp.o drivers/net/pppox.o drivers/net/pppoe.o drivers/net/arm/built-in.o drivers/net/wireless/built-in.o drivers/net/sl351x_nat.o drivers/net/sl351x_hash.o drivers/net/sl351x_crc16.o drivers/net/sl351x_proc.o drivers/net/sl351x_ioctl.o drivers/net/sl_switch.o drivers/net/sl351x_gmac.o drivers/net/rtl8366s/built-in.o drivers/net/sl351x_fast_net.o
+make -f scripts/Makefile.build obj=drivers/pci
+make -f scripts/Makefile.build obj=drivers/scsi
+make -f scripts/Makefile.build obj=drivers/scsi/arm
+make -f scripts/Makefile.build obj=drivers/scsi/qla2xxx
+make -f scripts/Makefile.build obj=drivers/serial
+make -f scripts/Makefile.build obj=drivers/tve200fb
+make -f scripts/Makefile.build obj=drivers/usb
+make -f scripts/Makefile.build obj=drivers/usb/OTG
+make -f scripts/Makefile.build obj=drivers/usb/class
+make -f scripts/Makefile.build obj=drivers/usb/core
+make -f scripts/Makefile.build obj=drivers/usb/host
+make -f scripts/Makefile.build obj=drivers/usb/storage
+make -f scripts/Makefile.build obj=drivers/video
+make -f scripts/Makefile.build obj=drivers/video/backlight
+   arm-linux-ld -EL   -r -o drivers/built-in.o drivers/pci/built-in.o drivers/video/built-in.o drivers/char/built-in.o drivers/serial/built-in.o drivers/base/built-in.o drivers/block/built-in.o drivers/misc/built-in.o drivers/mfd/built-in.o drivers/net/built-in.o drivers/media/built-in.o drivers/scsi/built-in.o drivers/cdrom/built-in.o drivers/mtd/built-in.o drivers/usb/built-in.o drivers/input/built-in.o drivers/firmware/built-in.o drivers/crypto/built-in.o drivers/i2c_alpha/built-in.o drivers/tve200fb/built-in.o
+make -f scripts/Makefile.build obj=sound
+make -f scripts/Makefile.build obj=net
+make -f scripts/Makefile.build obj=net/802
+make -f scripts/Makefile.build obj=net/bridge
+make -f scripts/Makefile.build obj=net/core
+make -f scripts/Makefile.build obj=net/ethernet
+make -f scripts/Makefile.build obj=net/ipv4
+make -f scripts/Makefile.build obj=net/ipv4/netfilter
+make -f scripts/Makefile.build obj=net/key
+make -f scripts/Makefile.build obj=net/netfilter
+make -f scripts/Makefile.build obj=net/netlink
+make -f scripts/Makefile.build obj=net/packet
+make -f scripts/Makefile.build obj=net/sched
+make -f scripts/Makefile.build obj=net/sunrpc
+make -f scripts/Makefile.build obj=net/unix
+make -f scripts/Makefile.build obj=net/xfrm
+make -f scripts/Makefile.build obj=arch/arm/lib
+make -f scripts/Makefile.build obj=lib
+make -f scripts/Makefile.build obj=lib/zlib_deflate
+make -f scripts/Makefile.build obj=lib/zlib_inflate
+  set -e; if [ ! -r .version ]; then rm -f .version; echo 1 >.version; else mv .version .old_version; expr 0$(cat .old_version) + 1 >.version; fi; make -f scripts/Makefile.build obj=init
+  CHK     include/linux/compile.h
+/bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mkcompile_h include/linux/compile.h \
+"arm" "" "" "arm-linux-gcc -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -ffreestanding -O2     -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mapcs-32 -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4  -malignment-traps -msoft-float -Uarm -Wdeclaration-after-statement "
+  UPD     include/linux/compile.h
+  arm-linux-gcc -Wp,-MD,init/.version.o.d  -nostdinc -isystem /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -ffreestanding -O2     -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mapcs-32 -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4  -malignment-traps -msoft-float -Uarm -Wdeclaration-after-statement     -DKBUILD_BASENAME=version -DKBUILD_MODNAME=version -c -o init/version.o init/version.c
+   arm-linux-ld -EL   -r -o init/built-in.o init/main.o init/version.o init/mounts.o init/initramfs.o init/calibrate.o
+  arm-linux-ld -EL  -p --no-undefined -X -o .tmp_vmlinux1 -T arch/arm/kernel/vmlinux.lds arch/arm/kernel/head.o arch/arm/kernel/init_task.o  init/built-in.o --start-group  usr/built-in.o  arch/arm/kernel/built-in.o  arch/arm/mm/built-in.o  arch/arm/common/built-in.o  arch/arm/mach-sl2312/built-in.o  arch/arm/nwfpe/built-in.o  kernel/built-in.o  mm/built-in.o  fs/built-in.o  ipc/built-in.o  security/built-in.o  crypto/built-in.o  block/built-in.o  arch/arm/lib/lib.a  lib/lib.a  arch/arm/lib/built-in.o  lib/built-in.o  drivers/built-in.o  sound/built-in.o  net/built-in.o --end-group 
+echo 'cmd_.tmp_vmlinux1 := arm-linux-ld -EL  -p --no-undefined -X -o .tmp_vmlinux1 -T arch/arm/kernel/vmlinux.lds arch/arm/kernel/head.o arch/arm/kernel/init_task.o  init/built-in.o --start-group  usr/built-in.o  arch/arm/kernel/built-in.o  arch/arm/mm/built-in.o  arch/arm/common/built-in.o  arch/arm/mach-sl2312/built-in.o  arch/arm/nwfpe/built-in.o  kernel/built-in.o  mm/built-in.o  fs/built-in.o  ipc/built-in.o  security/built-in.o  crypto/built-in.o  block/built-in.o  arch/arm/lib/lib.a  lib/lib.a  arch/arm/lib/built-in.o  lib/built-in.o  drivers/built-in.o  sound/built-in.o  net/built-in.o --end-group ' > ./..tmp_vmlinux1.cmd
+  arm-linux-nm -n .tmp_vmlinux1 | scripts/kallsyms  > .tmp_kallsyms1.S
+  arm-linux-gcc -Wp,-MD,./..tmp_kallsyms1.o.d -D__ASSEMBLY__ -mapcs-32 -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4  -msoft-float   -nostdinc -isystem /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -mlittle-endian    -c -o .tmp_kallsyms1.o .tmp_kallsyms1.S
+  arm-linux-ld -EL  -p --no-undefined -X -o .tmp_vmlinux2 -T arch/arm/kernel/vmlinux.lds arch/arm/kernel/head.o arch/arm/kernel/init_task.o  init/built-in.o --start-group  usr/built-in.o  arch/arm/kernel/built-in.o  arch/arm/mm/built-in.o  arch/arm/common/built-in.o  arch/arm/mach-sl2312/built-in.o  arch/arm/nwfpe/built-in.o  kernel/built-in.o  mm/built-in.o  fs/built-in.o  ipc/built-in.o  security/built-in.o  crypto/built-in.o  block/built-in.o  arch/arm/lib/lib.a  lib/lib.a  arch/arm/lib/built-in.o  lib/built-in.o  drivers/built-in.o  sound/built-in.o  net/built-in.o --end-group .tmp_kallsyms1.o
+  arm-linux-nm -n .tmp_vmlinux2 | scripts/kallsyms  > .tmp_kallsyms2.S
+  arm-linux-gcc -Wp,-MD,./..tmp_kallsyms2.o.d -D__ASSEMBLY__ -mapcs-32 -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4  -msoft-float   -nostdinc -isystem /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -mlittle-endian    -c -o .tmp_kallsyms2.o .tmp_kallsyms2.S
+  arm-linux-ld -EL  -p --no-undefined -X -o vmlinux -T arch/arm/kernel/vmlinux.lds arch/arm/kernel/head.o arch/arm/kernel/init_task.o  init/built-in.o --start-group  usr/built-in.o  arch/arm/kernel/built-in.o  arch/arm/mm/built-in.o  arch/arm/common/built-in.o  arch/arm/mach-sl2312/built-in.o  arch/arm/nwfpe/built-in.o  kernel/built-in.o  mm/built-in.o  fs/built-in.o  ipc/built-in.o  security/built-in.o  crypto/built-in.o  block/built-in.o  arch/arm/lib/lib.a  lib/lib.a  arch/arm/lib/built-in.o  lib/built-in.o  drivers/built-in.o  sound/built-in.o  net/built-in.o --end-group .tmp_kallsyms2.o
+echo 'cmd_vmlinux := arm-linux-ld -EL  -p --no-undefined -X -o vmlinux -T arch/arm/kernel/vmlinux.lds arch/arm/kernel/head.o arch/arm/kernel/init_task.o  init/built-in.o --start-group  usr/built-in.o  arch/arm/kernel/built-in.o  arch/arm/mm/built-in.o  arch/arm/common/built-in.o  arch/arm/mach-sl2312/built-in.o  arch/arm/nwfpe/built-in.o  kernel/built-in.o  mm/built-in.o  fs/built-in.o  ipc/built-in.o  security/built-in.o  crypto/built-in.o  block/built-in.o  arch/arm/lib/lib.a  lib/lib.a  arch/arm/lib/built-in.o  lib/built-in.o  drivers/built-in.o  sound/built-in.o  net/built-in.o --end-group .tmp_kallsyms2.o' > ./.vmlinux.cmd
+echo '  /bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mksysmap System.map' && /bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mksysmap vmlinux System.map; if [ $? -ne 0 ]; then rm -f vmlinux; /bin/false; fi;
+  /bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mksysmap System.map
+echo '  /bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mksysmap .tmp_System.map' && /bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mksysmap .tmp_vmlinux2 .tmp_System.map
+  /bin/sh /home/marco/joely_test/kernels/storm3516/scripts/mksysmap .tmp_System.map
+cmp -s System.map .tmp_System.map || (echo Inconsistent kallsyms data; echo Try setting CONFIG_KALLSYMS_EXTRA_PASS; rm .tmp_kallsyms* ; /bin/false )
+rm -f .old_version
+make -f scripts/Makefile.build obj=arch/arm/boot MACHINE=arch/arm/mach-sl2312/ arch/arm/boot/zImage
+  arm-linux-objcopy -O binary -R .note -R .comment -S  vmlinux arch/arm/boot/Image
+  Kernel: arch/arm/boot/Image is ready
+make -f scripts/Makefile.build obj=arch/arm/boot/compressed arch/arm/boot/compressed/vmlinux
+  /home/marco/joely_test/kernels/storm3516/../../tools/7zip arch/arm/boot/compressed/../Image arch/arm/boot/compressed/piggy.gz -k little 
+File compression: 4644560 to 1696529
+  arm-linux-gcc -Wp,-MD,arch/arm/boot/compressed/.piggy.o.d  -nostdinc -isystem /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -mlittle-endian -D__ASSEMBLY__ -mapcs-32 -mno-thumb-interwork -D__LINUX_ARM_ARCH__=4 -march=armv4  -msoft-float    -c -o arch/arm/boot/compressed/piggy.o arch/arm/boot/compressed/piggy.S
+  arm-linux-ld -EL   --defsym zreladdr=0x00008000 --defsym initrd_phys=0x00800000 --defsym params_phys=0x00508100 -p --no-undefined -X -T arch/arm/boot/compressed/vmlinux.lds arch/arm/boot/compressed/head.o arch/arm/boot/compressed/piggy.o arch/arm/boot/compressed/misc.o arch/arm/boot/compressed/head-sl2312.o /spaces/opt/storlink_arm_920t_le_uclibc.20080713/bin/../lib/gcc/arm-linux-uclibc/3.4.6/libgcc.a -o arch/arm/boot/compressed/vmlinux 
+  arm-linux-objcopy -O binary -R .note -R .comment -S  arch/arm/boot/compressed/vmlinux arch/arm/boot/zImage
+  Kernel: arch/arm/boot/zImage is ready
+  Building modules, stage 2.
+make -rR -f /home/marco/joely_test/kernels/storm3516/scripts/Makefile.modpost
+  scripts/mod/modpost   -o /home/marco/joely_test/kernels/storm3516/Module.symvers vmlinux crypto/ocf/cryptodev.o crypto/ocf/ocf.o drivers/scsi/sata0_storlink.o drivers/scsi/sata1_storlink.o
+  arm-linux-ld -EL  -r -o crypto/ocf/ocf.ko crypto/ocf/ocf.o crypto/ocf/ocf.mod.o

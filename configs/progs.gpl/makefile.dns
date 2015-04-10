@@ -1,0 +1,6 @@
+# dns daemon 
+
+#dnrd
+gsubdir-$(ELBOX_PROGS_GPL_DNRD_2_10)    += dnrd-2.10
+#dnsmasq
+gsubdir-$(ELBOX_PROGS_GPL_DNSMASQ)      += dnsmasq

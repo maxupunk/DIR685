@@ -1,0 +1,3 @@
+# radvd
+
+gsubdir-$(ELBOX_PROGS_GPL_RADVD)	+= radvd

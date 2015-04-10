@@ -1,0 +1,1 @@
+cmd_/home/jana/20090522/progs.priv/ifresetcnt/ifresetcnt.ko := arm-linux-ld -EL  -r -o /home/jana/20090522/progs.priv/ifresetcnt/ifresetcnt.ko /home/jana/20090522/progs.priv/ifresetcnt/ifresetcnt.o /home/jana/20090522/progs.priv/ifresetcnt/ifresetcnt.mod.o

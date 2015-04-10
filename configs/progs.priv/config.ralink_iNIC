@@ -1,0 +1,40 @@
+#
+# xmldb
+#
+
+config ELBOX_PROGS_PRIV_RALINK_INIC
+	bool "RALINK iNIC"
+	default n
+
+choice
+	prompt "Select version"
+	depends ELBOX_PROGS_PRIV_RALINK_INIC
+	default ELBOX_PROGS_PRIV_RALINK_INIC_RT2880_1181
+	help
+		Select the RALINK wireless driver version.
+
+	#
+	# Ralink wireless for EWC(RT2860)
+	#
+	config ELBOX_PROGS_PRIV_RALINK_INIC_RT2880_1170
+		bool "Ralink wireless iNIC RT2880 Driver 1.1.7.0"
+		help
+			Ralink wireless iNIC driver for RT2880, version 1.1.7.0
+			
+	config ELBOX_PROGS_PRIV_RALINK_INIC_RT2880_1180
+		bool "Ralink wireless iNIC RT2880 Driver 1.1.8.0"
+		help
+			Ralink wireless iNIC driver for RT2880, version 1.1.8.0
+
+	config ELBOX_PROGS_PRIV_RALINK_INIC_RT2880_1181
+		bool "Ralink wireless iNIC RT2880 Driver 1.1.8.1"
+		help
+			Ralink wireless iNIC driver for RT2880, version 1.1.8.1
+
+	config ELBOX_PROGS_PRIV_RALINK_INIC_RT2880_1183
+		bool "Ralink wireless iNIC RT2880 Driver 1.1.8.3"
+		help
+			Ralink wireless iNIC driver for RT2880, version 1.1.8.3
+
+endchoice
+

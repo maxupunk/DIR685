@@ -1,0 +1,3 @@
+# ITunes Server
+
+gsubdir-$(ELBOX_PROGS_GPL_ITUNES_SERVER)	+= itunes_server/

@@ -1,0 +1,54 @@
+#
+# wlxmlpatchv2
+#
+
+config ELBOX_WLXMLPATCHV2
+	bool "wlxmlpatch v2"
+	default n
+	help
+		new version wlxmlpatch.  This daemon updates the runtime info of wireless part.
+
+choice
+	prompt "Select vendor"
+	depends ELBOX_WLXMLPATCHV2
+	help
+		Select the vendor of wireless.
+
+	#
+	# Ralink
+	#
+	config ELBOX_PROGS_PRIV_WLXMLPATCHV2_RALINK
+		bool "Ralink"
+
+	#
+	# Atheros
+	#
+	config ELBOX_PROGS_PRIV_WLXMLPATCHV2_MADWIFI
+		bool "Atheros"
+
+	#
+	# others
+	#
+
+endchoice
+
+
+# ralink model 
+menu "Ralink model selection"
+	depends ELBOX_WLXMLPATCHV2
+	depends ELBOX_PROGS_PRIV_WLXMLPATCHV2_RALINK
+
+	config ELBOX_PROGS_PRIV_WLXMLPATCHV2_RALINK_RT2800
+		bool "RT2800"
+
+	config ELBOX_PROGS_PRIV_WLXMLPATCHV2_RALINK_RT61
+		bool "RT61"
+	config ELBOX_PROGS_PRIV_WLXMLPATCHV2_RALINK_RT2880
+		bool "RT2880 iNIC"
+	config ELBOX_PROGS_PRIV_WLXMLPATCHV2_RALINK_RT2880_v1183
+		bool "RT2880 iNIC v1.1.8.3"
+
+endmenu
+
+
+

@@ -1,0 +1,11 @@
+#
+# udev
+#
+
+config ELBOX_PROGS_GPL_QUOTA
+	bool "quota"
+	default n
+	help
+		Set disk quota.
+		
+		

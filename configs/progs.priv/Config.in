@@ -1,0 +1,59 @@
+#
+# Config.in for progs.priv
+#
+
+menu "Private Programs (developed by AlphaNetworks)"
+
+source configs/progs.priv/config.xmldb
+source configs/progs.priv/config.rgbin
+source configs/progs.priv/config.alphaxgi
+source configs/progs.priv/config.ipsec-pt
+source configs/progs.priv/config.ifresetcnt
+source configs/progs.priv/config.stun_nat
+source configs/progs.priv/config.turbonat
+source configs/progs.priv/config.appex
+source configs/progs.priv/config.log
+source configs/progs.priv/config.madwifi
+source configs/progs.priv/config.art_ap83
+source configs/progs.priv/config.madwifi_ap83
+source configs/progs.priv/config.madwifi_cavium
+source configs/progs.priv/config.madwifi_fusion_cavium
+source configs/progs.priv/config.ralink_wifi
+source configs/progs.priv/config.ralink_iNIC
+source configs/progs.priv/config.rt2860v2
+source configs/progs.priv/config.rt2561
+source configs/progs.priv/config.broadcom_wifi
+source configs/progs.priv/config.upnpkits
+source configs/progs.priv/config.neaps
+source configs/progs.priv/config.apneap
+source configs/progs.priv/config.igmp
+source configs/progs.priv/config.igmpproxy
+source configs/progs.priv/config.scheduled
+source configs/progs.priv/config.common_scripts
+source configs/progs.priv/config.others
+source configs/progs.priv/config.alpha_hotplug
+source configs/progs.priv/config.madwifi_dband
+source configs/progs.priv/config.alpha_nls_drv
+source configs/progs.priv/config.wpstools
+source configs/progs.priv/config.wpa_supplicant
+source configs/progs.priv/config.capwap
+source configs/progs.priv/config.cli
+source configs/progs.priv/config.wlxmlpatchv2
+source configs/progs.priv/config.updatewifistats
+source configs/progs.priv/config.netbios
+source configs/progs.priv/config.ethlink
+source configs/progs.priv/config.sendmail
+source configs/progs.priv/config.static_dhcp
+source configs/progs.priv/config.servd
+source configs/progs.priv/config.cgibin.aries
+source configs/progs.priv/config.upnp_av_server
+source configs/progs.priv/config.alpha_gd
+source configs/progs.priv/config.cloned
+source configs/progs.priv/config.logd
+source configs/progs.priv/config.iodata_quickcopy
+source configs/progs.priv/config.iodata_quickcopy_client
+source configs/progs.priv/config.ddnsd
+source configs/progs.priv/config.dhcpplus
+source configs/progs.priv/config.trap_monitor
+source configs/progs.priv/config.autorekey
+endmenu

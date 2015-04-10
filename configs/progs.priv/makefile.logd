@@ -1,0 +1,3 @@
+# logd
+
+psubdir-$(ELBOX_PROGS_PRIV_LOGD)	+= logd

@@ -1,0 +1,51 @@
+#
+# httpd
+#
+
+config ELBOX_HTTPD
+	bool "HTTP daemon"
+	default y
+
+choice
+	prompt "Select implementation"
+	depends ELBOX_HTTPD
+	default ELBOX_PROGS_GPL_MATHOPD
+	help
+		Select HTTPD.
+
+	config ELBOX_PROGS_GPL_MATHOPD
+		bool "mathopd"
+		help
+			mathopd, a http daemon.
+
+	config ELBOX_PROGS_GPL_MATHOPD_STANDARD
+		bool "mathopd(Standard)"
+		help
+			mathopd, a http daemon(with full post method support).
+
+	config ELBOX_PROGS_GPL_MATHOPD_16
+		bool "mathopd 1.6"
+		help
+			mathopd v1.6, http server.
+endchoice
+
+menu "Upload externel file"
+	depends ELBOX_HTTPD
+
+config ELBOX_PROGS_GPL_MATHOPD_EXTERNAL_FILE
+	bool "Upload externel file(e.g. certificate or private key)."
+	default n
+	help
+		1. Define a type of upload operation in mathopd.h(e.g. TYPE_STUNNEL_CERT).
+		2. Add a code session that correspons to type in internal.c.
+		3. Add a member of file handling table in upload.c.
+
+config ELBOX_PROGS_GPL_MATHOPD_EXTERNAL_BT_FILE
+	bool "Upload externel file(e.g. torrent file)."
+	default n
+	help
+		1. Add a code session that correspons to type in internal.c.
+		2. Add a member of file handling table in upload.c.
+		
+endmenu
+

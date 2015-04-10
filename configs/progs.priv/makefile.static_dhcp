@@ -1,0 +1,3 @@
+# ehtlink
+
+psubdir-$(ELBOX_PROGS_PRIV_STATIC_DHCP)	+= static_dhcp

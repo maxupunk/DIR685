@@ -1,0 +1,39 @@
+body {
+	font-size: smaller;
+}
+
+td {
+	font-size: smaller;
+	border-bottom: 1px solid #BBBBBB;
+	padding-right: 8px;
+}
+
+td.hdr, td.fhdr {
+	font-weight: bold;
+	background: #eee;
+}
+
+td.cap, td.fname {
+	color: #33a;
+}
+
+td.tn { color: #a33; }
+td.tv { 
+	color: #3a3; 
+	empty-cells: show;
+}
+
+td.size, td.fsize { color: #a33; }
+td.done, td.fdone { color: #3a3; }
+td.dlrate, td.ulrate, td.status, td.avail, td.peers, td.seeds, td.remove { color: #222; }
+
+td.totalulrate, td.totaldlrate { 
+	color: #333;
+	border-bottom: 0px; 
+}
+
+td.eta { coloar: #456; }
+
+input {
+	font-size: smaller;
+}

@@ -1,0 +1,55 @@
+#
+# xsupplicant
+#
+
+config ELBOX_PROGS_GPL_XSUPPLICANT
+	bool "XSupplicant"
+	default n
+	help
+		XSupplicant 1.2.8 with openSSL 0.9.7a
+		
+menu "XSupplicant configuration"
+	depends ELBOX_PROGS_GPL_XSUPPLICANT
+
+	config CONFIG_XSUPPLICANT_USE_SHARED_OPENSSL
+		bool "Use shared openssl library."
+		default n
+		help
+			If more daemons use openssl, we should use this option and select one openssl from progs.gpl.
+
+	config CONFIG_XSUPPLICANT_BIG_ENDIAN
+		bool "Generate Big Endian Code"
+		default n
+		help
+			This is used by the program of XSupplicant for telling the endian.
+	
+	choice		
+		prompt "Selection Addon"
+		depends ELBOX_PROGS_GPL_XSUPPLICANT
+		default CONFIG_XSUPPLCIANT_NONE
+		help
+			Select the iptables version for the platform
+
+		config CONFIG_XSUPPLICANT_NONE
+			bool "No addon protocol"
+			help
+				No additional protocols enwrapping the eap packets.		
+				
+		config CONFIG_XSUPPLICANT_THP
+			bool "THP protocol"
+			help
+				An extra protocol wrap around the EAP and EAPOL packets for communication with Wimax over ethernet.
+				
+		config CONFIG_XSUPPLICANT_THP_SQN_4_4_0
+			bool "THP Sequans 4.4.0 protocol"
+			help
+				As Seqans upgrade to 4.4.0 the entire THP protocol is renewed and is NOT backward competible
+				
+		config CONFIG_XSUPPLICANT_BECEEM
+			bool "Beceem API"
+			help
+				Using Beceem API library to process the EAP packets
+	endchoice	
+endmenu
+
+

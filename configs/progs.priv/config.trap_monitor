@@ -1,0 +1,7 @@
+#
+# trap daemon
+#
+
+config ELBOX_PROGS_PRIV_TRAP_MONITOR
+	bool "Daemon to monitor system status and send trap"
+	default n

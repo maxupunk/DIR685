@@ -1,0 +1,3 @@
+# rgbin
+
+psubdir-$(ELBOX_PROGS_PRIV_RGBIN)	+= rgbin

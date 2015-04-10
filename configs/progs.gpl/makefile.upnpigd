@@ -1,0 +1,3 @@
+# upnpigd
+
+gsubdir-$(ELBOX_PROGS_GPL_UPNPIGD)	+= upnpigd

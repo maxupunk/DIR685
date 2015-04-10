@@ -1,0 +1,3 @@
+# bpalogin
+
+gsubdir-$(ELBOX_PROGS_GPL_BPALOGIN)	+= bpalogin-2.0.2

@@ -1,0 +1,54 @@
+#
+# Makefile.in for progs.gpl
+#
+
+gsubdir-y :=
+gsubdir-n :=
+gsubdir-  :=
+
+-include configs/progs.gpl/makefile.busybox
+-include configs/progs.gpl/makefile.nsbbox
+-include configs/progs.gpl/makefile.iptables
+-include configs/progs.gpl/makefile.arptables
+-include configs/progs.gpl/makefile.ipt-string
+-include configs/progs.gpl/makefile.httpd
+-include configs/progs.gpl/makefile.udhcp
+-include configs/progs.gpl/makefile.pppd
+-include configs/progs.gpl/makefile.klogd
+-include configs/progs.gpl/makefile.syslogd
+-include configs/progs.gpl/makefile.telnetd
+-include configs/progs.gpl/makefile.tzdir
+-include configs/progs.gpl/makefile.wireless_tools
+-include configs/progs.gpl/makefile.upnpigd
+-include configs/progs.gpl/makefile.bpalogin
+-include configs/progs.gpl/makefile.hostapd
+-include configs/progs.gpl/makefile.zebra
+-include configs/progs.gpl/makefile.iproute2
+-include configs/progs.gpl/makefile.igmpproxy
+-include configs/progs.gpl/makefile.lprng
+-include configs/progs.gpl/makefile.samba
+-include configs/progs.gpl/makefile.zlib
+-include configs/progs.gpl/makefile.openssl
+-include configs/progs.gpl/makefile.stunnel
+-include configs/progs.gpl/makefile.openssh
+-include configs/progs.gpl/makefile.xsupplicant
+-include configs/progs.gpl/makefile.chillispot
+-include configs/progs.gpl/makefile.ippersonality
+-include configs/progs.gpl/makefile.snmp
+-include configs/progs.gpl/makefile.libgsasl
+-include configs/progs.gpl/makefile.udev
+-include configs/progs.gpl/makefile.stupid_ftpd
+-include configs/progs.gpl/makefile.wakeonlan
+-include configs/progs.gpl/makefile.itunes_server
+-include configs/progs.gpl/makefile.pure_ftpd
+-include configs/progs.gpl/makefile.tinylogin
+-include configs/progs.gpl/makefile.dns
+-include configs/progs.gpl/makefile.quota
+-include configs/progs.gpl/makefile.radvd
+-include configs/progs.gpl/makefile.dibbler
+-include configs/progs.gpl/makefile.libtorrent
+-include configs/progs.gpl/makefile.usb_modeswitch
+-include configs/progs.gpl/makefile.wide-dhcpv6
+-include configs/progs.gpl/makefile.radiusclient
+-include configs/progs.gpl/makefile.email
+PROGS_GPL_SUBDIRS=$(gsubdir-y)

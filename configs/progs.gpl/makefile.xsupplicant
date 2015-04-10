@@ -1,0 +1,3 @@
+# xsupplicant
+
+gsubdir-$(ELBOX_PROGS_GPL_XSUPPLICANT)	+= xsupplicant-1.2.8

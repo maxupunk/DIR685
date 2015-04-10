@@ -1,0 +1,9 @@
+# madwifi
+
+psubdir-$(ELBOX_PROGS_PRIV_RALINK_WIFI_EWC)			+= ralink_wifi.ewc
+psubdir-$(ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1400)	+= ralink_wifi.ewc
+psubdir-$(ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1500)	+= ralink_wifi.ewc
+psubdir-$(ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1600)	+= ralink_wifi.ewc
+psubdir-$(ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1810)	+= ralink_wifi.ewc
+psubdir-$(ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1850)	+= ralink_wifi.ewc
+psubdir-$(ELBOX_PROGS_PRIV_WLXMLPATCH_RALINK)  		+= wlxmlpatch.ralink

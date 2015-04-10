@@ -1,0 +1,21 @@
+#
+# alpha_xgi
+#
+
+config ELBOX_ALPHA_XGI
+	bool "AlphaNetworks xgi tag parser for HTTPD (mathopd)"
+	default y
+
+choice
+	prompt "Select implementation"
+	depends ELBOX_ALPHA_XGI
+	default ELBOX_PROGS_PRIV_ALPHA_XGI
+	help
+		Tag parser for mathopd.
+
+	config ELBOX_PROGS_PRIV_ALPHA_XGI
+		bool "alpha_xgi"
+		help
+			Tag parser for mathopd (support PHP).
+endchoice
+

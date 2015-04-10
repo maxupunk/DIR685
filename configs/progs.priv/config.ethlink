@@ -1,0 +1,6 @@
+config ELBOX_PROGS_PRIV_ETHLINK
+	bool "Ethetnet Link Intergration"
+	default n
+	help
+		When Ethernet is not link on ap then Wireless driver will show down.
+

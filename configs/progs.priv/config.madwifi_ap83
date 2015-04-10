@@ -1,0 +1,8 @@
+config ELBOX_PROGS_PRIV_MADWIFI_AP83
+	bool "MADWIFI_AP83"
+	default n
+	help
+		AP83 Wireless module.
+
+source configs/progs.priv/config.enhanced_wireless
+

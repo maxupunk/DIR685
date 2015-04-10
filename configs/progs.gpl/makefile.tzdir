@@ -1,0 +1,3 @@
+# telnetd
+
+gsubdir-$(ELBOX_PROGS_GPL_TZCOMPILER)	+= tzdir

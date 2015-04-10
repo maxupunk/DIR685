@@ -1,0 +1,22 @@
+#
+# igmpproxy
+#
+
+config ELBOX_PROGS_PRIV_IGMPPROXY
+	bool "igmpproxy"
+	default n
+	help
+		IGMP proxy, created by alpha
+
+menu "igmpproxy configuration"
+	depends ELBOX_PROGS_PRIV_IGMPPROXY
+
+	config ELBOX_PROGS_PRIV_IGMPPROXY_IGMPV3
+		bool "Enable IGMPv3 support (experiment)"
+		default n
+		help
+			Support IGMPv3, but not quite up to standard(RFC 3376),
+			only receive/send IGMPv3 packet. Use IGMPv3 as default
+			also compatible with older version (IGMPv2).
+	
+endmenu

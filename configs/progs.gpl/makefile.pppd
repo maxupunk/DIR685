@@ -1,0 +1,3 @@
+# pppd
+
+gsubdir-$(ELBOX_PROGS_GPL_PPPD_ALPHA)	+= pppd.alpha

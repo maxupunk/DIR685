@@ -1,0 +1,4 @@
+<?
+$xml_head = fread("/www/widgetV2/__xml_head.php");
+echo $xml_head;
+?>

@@ -1,0 +1,125 @@
+#
+# CGI BIN of Aries
+#
+
+config ELBOX_PROGS_PRIV_CGIBIN_ARIES
+	bool "CGI bin of Aries"
+	default n
+
+menu "CGI bin of Aries"
+	depends ELBOX_PROGS_PRIV_CGIBIN_ARIES
+
+	comment "CGI Programs"
+
+	config CONFIG_CGIBIN_ARIES_PHPCGI
+		bool "phpcgi"
+		default n
+		help
+			The implementation of PHP wrapper cgi.
+
+	config CONFIG_CGIBIN_ARIES_PHPCGI_MAXFILESIZE
+		depends CONFIG_CGIBIN_ARIES_PHPCGI
+		hex "Maximum upload file size of PHP"
+		default 0x80000
+		help
+			The maximum file size when uploading file to PHP.
+
+	config CONFIG_CGIBIN_ARIES_SESSIONCGI
+		bool "session.cgi"
+		default n
+		help
+			The implementation of session control cgi.
+
+	config CONFIG_CGIBIN_ARIES_CAPTCHACGI
+		depends CONFIG_CGIBIN_ARIES_SESSIONCGI
+		bool "captcha.cgi"
+		default n
+		help
+			The implementation of captcha support in session control.
+
+	config CONFIG_CGIBIN_ARIES_HEDWIGCGI
+		bool "hedwig.cgi"
+		default n
+		help
+			The handler of XML file of settings that send from UI.
+
+	config CONFIG_CGIBIN_ARIES_PIGWIDGEONCGI
+		bool "pigwidgeon.cgi"
+		default n
+		help
+			The handler of saving settings and restarting services.
+
+	config CONFIG_CGIBIN_ARIES_SERVICECGI
+		bool "service.cgi"
+		default n
+		help
+			CGI for service/event handler.
+
+	config CONFIG_CGIBIN_ARIES_FILELOAD
+		bool "fileload (dlcfg.cgi, seama.cgi & fwup.cgi)"
+		default n
+		help
+			CGIs for upload/download config file, upload seama files and upload firmware file.
+
+	config CONFIG_CGIBIN_ARIES_FILELOAD_MAXCODESIZE
+		depends CONFIG_CGIBIN_ARIES_FILELOAD
+		hex "Maximum file size accepted by seama.cgi"
+		default 0x100000
+		help
+			The maximum firmware code size accepted.
+
+	config CONFIG_CGIBIN_ARIES_FWUPDATE_MAXCODESIZE
+		depends CONFIG_CGIBIN_ARIES_FILELOAD
+		hex "Maximum firmware size accepted by fwup.cgi"
+		default 0x300000
+		help
+			The maximum firmware code size accepted.
+
+	config CONFIG_CGIBIN_ARIES_FWUPDATE_MTDBLOCK
+		depends CONFIG_CGIBIN_ARIES_FILELOAD
+		string "The mtdblock which firmware is"
+		default "/dev/mtdblock/2"
+		help
+			The mtdblock which firmware is.
+
+	config CONFIG_CGIBIN_ARIES_FWUPDATER
+		depends CONFIG_CGIBIN_ARIES_FILELOAD
+		bool "fwupdater"
+		default y
+		help
+			fwup.cgi will not really program the image itself, instead,
+			it will trigger the event 'fwupdate' and this applet will
+			actually program the image.
+
+	comment "UPnP components"
+	config CONFIG_CGIBIN_ARIES_SSDPCGI
+		bool "ssdpcgi"
+		default n
+		help
+			The implementation of SSDP(Simple Service Discovery Protocol) cgi.
+
+	config CONFIG_CGIBIN_ARIES_SOAPCGI
+		bool "soapcgi"
+		default n
+		help
+			The implementation of SOAP(Simple Object Access Protocol) cgi.
+
+	config CONFIG_CGIBIN_ARIES_GENACGI
+		bool "genacgi"
+		default n
+		help
+			The implementation of GENA(Gernral Event Notification Architecture).
+
+	config CONFIG_CGIBIN_ARIES_WFADEV
+		bool "wfadevcgi"
+		default n
+		help
+			The implementation of WFADEV(WFA device).
+
+	config CONFIG_CGIBIN_ARIES_WFANOTIFY
+		bool "wfanotify"
+		default n
+		help
+			The implementation of WFANOTIFY(WFA Notify).
+endmenu
+

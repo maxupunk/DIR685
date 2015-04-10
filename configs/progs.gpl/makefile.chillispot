@@ -1,0 +1,3 @@
+# bpalogin
+
+gsubdir-$(ELBOX_PROGS_GPL_CHILLISPOT)	+= chillispot-1.1.0

@@ -1,0 +1,27 @@
+/* Copyright (c) 2006, Yahoo! Inc. All rights reserved. Code licensed under the BSD License: http://developer.yahoo.net/yui/license.txt version: 0.12.0 */
+body {*font-size:small;*font:x-small;}
+pre, code {*font-size:100%;}
+table {font:100%;}
+/* End Yahoo Code */
+
+#banner {height:50px;}
+#add-options li {width:151px;}
+#add-options li a, #add-options li a:link, #add-options li a:visited {background-image:url("./img/checkbox.gif");}
+#uploadFile p.on {display:inline;}
+
+#tActions {width:480px;}
+#tActions li {display:inline;}
+
+#torrentList th {background-color:#e6f1fa;font-weight:bold;padding-top:8px;overflow:visible;}
+#torrentList th a {line-height:24px;display:block;}
+#torrentList th.tname {background-color:transparent;font-weight:normal;padding-top:0;overflow:hidden;}
+#torrentList th.tname a {line-height:32px;display:inline;}
+
+#appB .tInfo {height:1%;}
+#appB .tInfo h2 {height:1%;}
+#appB #removeCompleted {display:inline;}
+
+/* Hides from IE-mac \*/
+.cl {height:1%;}
+.cl {display:block;}
+/* End hide from IE-mac */

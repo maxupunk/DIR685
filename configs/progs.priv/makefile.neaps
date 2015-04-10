@@ -1,0 +1,3 @@
+# neaps
+
+psubdir-$(ELBOX_PROGS_PRIV_NEAPS)	+= neap

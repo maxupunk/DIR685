@@ -1,0 +1,26 @@
+
+config ELBOX_PROGS_PRIV_CAPWAP
+	bool "Control And Provisioning of Wireless Access Points (CAPWAP)"
+	default n
+	help
+		move access control, including user authentication and authorization,
+		mobility management and radio management from the single access point 
+		to a centralized controler.
+
+menu "CAPWAP configuration"
+	depends ELBOX_PROGS_PRIV_CAPWAP
+
+	config CAPWAP_BIG_ENDIAN
+		bool "To build Big Endian code"
+		default n
+		help
+			This is used to tell capwap to build big endian code.
+
+    config CAPWAP_64_BIT_CPU
+	    bool "To support 64 bits CPU"
+	    default n
+	    help
+	        This is used to tell capwap to support 64 bits CPU
+
+endmenu
+

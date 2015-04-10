@@ -1,0 +1,2 @@
+﻿<h1>Comprobación del sistema</h1>
+La herramienta Comprobación del sistema se puede utilizar para comprobar la conexión física en las interfaces de LAN y de WAN. La herramienta Prueba de Ping se puede utilizar para comprobar el estado de Internet.

@@ -1,0 +1,4 @@
+# alpha_hotplug
+
+psubdir-$(ELBOX_PROGS_PRIV_ALPHA_HOTPLUG)	+= alpha_hotplug
+psubdir-$(ELBOX_PROGS_PRIV_WCN_UFD)   += wcn_ufd

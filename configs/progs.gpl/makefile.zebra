@@ -1,0 +1,3 @@
+# zebra
+
+gsubdir-$(ELBOX_PROGS_GPL_ZEBRA)	+= zebra

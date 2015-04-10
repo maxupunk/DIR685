@@ -1,0 +1,3 @@
+# scheduled
+
+psubdir-$(ELBOX_PROGS_PRIV_SCHEDULED)	+= scheduled

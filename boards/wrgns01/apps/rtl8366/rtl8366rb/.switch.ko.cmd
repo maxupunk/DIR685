@@ -1,0 +1,1 @@
+cmd_/home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/switch.ko := arm-linux-ld -EL  -r -o /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/switch.ko /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/switch.o /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/switch.mod.o

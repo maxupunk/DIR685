@@ -1,0 +1,9 @@
+#
+# igmpproxy
+#
+
+config ELBOX_PROGS_GPL_IGMPPROXY
+	bool "igmpproxy"
+	default n
+	help
+		IGMP proxy

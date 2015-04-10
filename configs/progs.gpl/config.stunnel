@@ -1,0 +1,83 @@
+#
+# stunnel
+#
+
+config ELBOX_PROGS_GPL_STUNNEL
+	depends on ELBOX_OPENSSL
+	bool "Stunnel-4.15"
+	default n
+	help
+		Stunnel is a program that allows you to encrypt arbitrary TCP connections
+		inside SSL (Secure Sockets Layer) available on both Unix and Windows.
+		Stunnel can allow you to secure non-SSL aware daemons and protocols (like
+		POP, IMAP, LDAP, etc) by having Stunnel provide the encryption, requiring
+		no changes to the daemon's code.
+
+
+config ELBOX_PROGS_GPL_STUNNEL_DEBUG
+	depends on ELBOX_PROGS_GPL_STUNNEL
+	bool "Debug Mode"
+	default n
+	help
+		Enable debug flag.
+
+config ELBOX_PROGS_GPL_STUNNEL_EXTERNAL_CERTIFICATE
+	depends on ELBOX_PROGS_GPL_STUNNEL
+	bool "External certificate"
+	default n
+	help
+		This function offers an upload service that allows user to change certificate.
+
+config ELBOX_PROGS_GPL_STUNNEL_EXTERNAL_MTDBLOCK
+	depends on ELBOX_PROGS_GPL_STUNNEL_EXTERNAL_CERTIFICATE
+	string "mtdblock of external certificate"
+	default "/dev/mtdblock/5"
+	help
+		The dev file name of the MTD block for the storage of external certificate.
+
+config ELBOX_PROGS_GPL_STUNNEL_EXTERNAL_OFFSET
+	depends on ELBOX_PROGS_GPL_STUNNEL_EXTERNAL_CERTIFICATE
+	int "offset of mtdblock"
+	default 0
+	help
+		The beginning of the external certificate in the MTD block.
+
+config ELBOX_PROGS_GPL_STUNNEL_EXTERNAL_SIZE
+	depends on ELBOX_PROGS_GPL_STUNNEL_EXTERNAL_CERTIFICATE
+	int "size of external certificate"
+	default 20480
+	help
+		The size of the external certificate. The unit is byte.
+		Not the size of MTD block and should be the smaller or equal to the MTD block.
+
+config ELBOX_PROGS_GPL_STUNNEL_CPATH
+	depends on ELBOX_PROGS_GPL_STUNNEL
+	string "The location of certificate"
+	default "/var/etc/stunnel"
+	help
+		The location of certificate in runtime mode.
+
+config ELBOX_PROGS_GPL_STUNNEL_CERTNAME
+	depends on ELBOX_PROGS_GPL_STUNNEL
+	string "The name of certificate"
+	default "cert.pem"
+	help
+		The file name of certificate. The default certificate's name is cert.pem.
+		If we wanted to use the filename that user uploads, just set the filename "none".
+
+config ELBOX_PROGS_GPL_STUNNEL_KEYNAME
+	depends on ELBOX_PROGS_GPL_STUNNEL
+	string "The name of private key"
+	default "key.pem"
+	help
+		The file name of private key. The default private key's name is key.pem.
+		If we wanted to use the filename that user uploads, just set the filename "none".
+
+config ELBOX_PROGS_GPL_STUNNEL_SINGLE_CERTIFICATE
+	depends on ELBOX_PROGS_GPL_STUNNEL
+	int "Single file include certificate and private key"
+	default 0
+	help
+		The certificate has many types. In our default setting, we use a pair of files to correspond
+		with certificate and private key.
+

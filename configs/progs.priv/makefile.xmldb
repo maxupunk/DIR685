@@ -1,0 +1,4 @@
+# xmldb
+
+psubdir-$(ELBOX_PROGS_PRIV_XMLDB)	+= xmldb
+psubdir-$(ELBOX_PROGS_PRIV_XMLDB3)	+= xmldb3

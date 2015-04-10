@@ -1,0 +1,28 @@
+#
+# wireless driver for Broadcom chip.
+#
+
+config ELBOX_BROADCOM_WIFI
+	bool "BROADCOM_WIFI"
+	default n
+
+choice
+	prompt "Select version"
+	depends ELBOX_BROADCOM_WIFI
+	default ELBOX_PROGS_PRIV_BROADCOM_WIFI
+	help
+		Select the broadcom wireless version.
+
+	config ELBOX_PROGS_PRIV_BROADCOM_WIFI
+		bool "Broadcom BCM4318 802.11 Wireless Controller"
+		help
+			Broadcom BCM4318 802.11 Wireless Controller
+
+endchoice
+
+config ELBOX_PROGS_PRIV_WLXMLPATCH_BROADCOM
+	bool "wlxmlpatch.broadcom"
+	default n
+	depends on ELBOX_BROADCOM_WIFI
+	help
+		wlxmlpatch for broadcom. This daemon updates the runtime info of wireless part.

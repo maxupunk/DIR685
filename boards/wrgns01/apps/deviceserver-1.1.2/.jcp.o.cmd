@@ -1,0 +1,1 @@
+cmd_/home/joely/gpl/dir685-gpl/boards/wrgns01/apps/deviceserver-1.1.2/jcp.o := /opt/storlink_arm_920t_le_uclibc/bin/arm-linux-ld   -r -o /home/joely/gpl/dir685-gpl/boards/wrgns01/apps/deviceserver-1.1.2/jcp.o /home/joely/gpl/dir685-gpl/boards/wrgns01/apps/deviceserver-1.1.2/jcp_core.o

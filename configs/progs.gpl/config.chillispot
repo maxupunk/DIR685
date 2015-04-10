@@ -1,0 +1,8 @@
+# chillispot
+
+config ELBOX_PROGS_GPL_CHILLISPOT
+	bool "HotSpot (chillispot)"
+	default n
+	help
+		Chillispot let the router as hotspot like FON
+

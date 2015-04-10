@@ -1,0 +1,150 @@
+#
+# nsbbox
+#
+
+config ELBOX_PROGS_GPL_NSBBOX
+	bool "Not So Busy Box"
+	default n
+
+menu "NotSoBusyBOX configuration"
+	depends ELBOX_PROGS_GPL_NSBBOX
+
+	config CONFIG_NSBBOX_BASE64
+		bool "base64"
+		default n
+		help
+			base64 encoder/decoder
+
+	config CONFIG_NSBBOX_BRCTL
+		bool "brctl"
+		default n
+		help
+			Bridge Control usermode program
+
+	config CONFIG_NSBBOX_BRCTL_BWCTRL
+		bool "Multicast packet bandwidth control"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Set multicast packet bandwidth in kernel bridge module.
+			CONFIG_BRIDGE_MULTICAST_BWCTRL in kernel configuration must be set.
+
+	config CONFIG_NSBBOX_BRCTL_IOAPNL
+		bool "IO-Data AP Network Limitation"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Access limitation on secondary SSID for IO-Data R3.
+
+	config CONFIG_NSBBOX_BRCTL_PORTFORWARD
+		bool "bridge port forwarding control"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Set bridge port forwarding on/off in kernel bridge module.
+			CONFIG_BRIDGE_PORT_FORWARD in kernel configuration must be set.
+
+	config CONFIG_NSBBOX_BRCTL_PORTDENYLIST
+		bool "bridge port deny list support"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Add/remove port bridge member to.from deny list in kernel bridge module.
+			CONFIG_BRIDGE_REJECT_FORWARD_LIST in kernel configuration must be set.
+
+	config CONFIG_NSBBOX_BRCTL_IGMP
+		bool "IGMP Snooping"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			IGMP Snooping mode in bridge.
+
+	config CONFIG_NSBBOX_BRCTL_AP_OPERATION_MODE
+		bool "Pass AP operation mode to bridge"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Pass AP operation mode to bridge
+
+	config CONFIG_NSBBOX_BRCTL_APC_OPERATION_MODE
+		bool "Pass AP Clinet mode to bridge"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Pass AP Client mode to bridge
+
+	config CONFIG_NSBBOX_BRCTL_DHCP_SERVER_ENABLE
+		bool "Pass DHCP Server Enable message to Bridge "
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Pass DHCP Server Enable message to Bridge
+
+	config CONFIG_NSBBOX_BRCTL_E_PARTITION
+		bool "Ethernet Partition status control"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Ethernet Partition  status control
+
+	config CONFIG_NSBBOX_BRCTL_ETHLINK
+		bool "Ethernet integration status control"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Ethernet integration status control
+
+	config CONFIG_NSBBOX_BRCTL_LIMITED_ADMIN
+		bool "Limited Administration"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Limited user who fits in with administration rules can contrl device
+
+	config CONFIG_NSBBOX_BRCTL_PING_CONTROL
+		bool "Ping Control"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			Reply ping request or not
+
+	config CONFIG_NSBBOX_BRCTL_MULTI_VLAN
+		bool "VLAN"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			VLAN
+
+	config CONFIG_NSBBOX_BRCTL_MAT_STATUS
+		bool "MAT(MAC address translator)"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			MAC address translaor
+
+	config CONFIG_NSBBOX_BRCTL_MAC_CLONE
+		bool "MAC address clone"
+		default n
+		depends on CONFIG_NSBBOX_BRCTL
+		help
+			MAC address clone
+
+	config CONFIG_NSBBOX_NTPCLIENT
+		bool "ntpclient"
+		default n
+		help
+			NTP client (Network Time Protocol)
+
+	config CONFIG_NSBBOX_SMTPCLIENT
+		bool "smtpclient"
+		default n
+		help
+			SMTP client program
+
+	config CONFIG_NSBBOX_VCONFIG
+		bool "vconfig"
+		default n
+		help
+			VLAN (802.1q) configuration program.
+
+endmenu

@@ -1,0 +1,9 @@
+#
+# servd
+#
+
+config ELBOX_PROGS_PRIV_SERVD
+	bool "servd"
+	default n
+	help
+		Service Manager for project seattle.

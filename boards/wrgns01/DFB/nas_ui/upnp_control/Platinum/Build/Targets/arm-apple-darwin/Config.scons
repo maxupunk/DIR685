@@ -1,0 +1,12 @@
+LoadTool('gcc-generic', env, gcc_cross_prefix='arm-apple-darwin')
+
+#env['CXXFLAGS']  = '-E -U__i386__ -U__ppc__ -D__arm__ -isystem /Developer/SDKs/iPhone/include -F/System/Library/Frameworks'
+#env['CC']     = 'arm-apple-darwin-cc'
+#env['AR'] = 'arm-apple-darwin-ar'
+#env['LD']    = 'arm-apple-darwin-ld'
+#env['LINK']    = 'arm-apple-darwin-ld'
+env['LDFLAGS'] = '-Wl,-syslibroot,/usr/local/arm-apple-darwin/heavenly,-framework CoreFoundation -framework Foundation -framework UIKit -framework LayerKit -framework Coregraphics -framework GraphicsServices -framework CoreSurface -larmfp'
+
+### Neptune System Files
+env['NPT_SYSTEM_SOURCES']={'System/StdC':'*.cpp', 'System/Bsd':'*.cpp', 'System/Posix':'*.cpp'}
+

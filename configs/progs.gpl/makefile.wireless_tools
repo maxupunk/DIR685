@@ -1,0 +1,3 @@
+# wireless_tools
+
+gsubdir-$(ELBOX_PROGS_GPL_WIRELESS_TOOLS)	+= wireless_tools

@@ -1,0 +1,49 @@
+#
+# busybox
+#
+
+config ELBOX_BUSYBOX
+	bool "Busybox"
+	default y
+
+config ELBOX_BUSYBOX_DYNAMIC_LINKING
+	depends ELBOX_BUSYBOX
+	bool "Build busybox with dynamic linking"
+	default n
+	help
+		Some toolchain provided by chip vendor does not support static busybox friendly.
+		So this option can make busybox with dynamic linking.
+
+choice
+	prompt "Selection version"
+	depends ELBOX_BUSYBOX
+	default ELBOX_PROGS_GPL_BUSYBOX_1_00
+	help
+		Select BUSYBOX.
+
+	config ELBOX_PROGS_GPL_BUSYBOX_1_00
+		bool "busybox-1.00"
+		help
+			Busybox 1.00
+
+#hendry add '2008/08/28'
+config ELBOX_PROGS_GPL_BUSYBOX_1_00_ADVANCED_CONFIG
+	bool "Use Busybox 1.00 advanced config file "
+	default n
+	depends ELBOX_PROGS_GPL_BUSYBOX_1_00
+	help
+		Advanced config use more additional functions/programs.
+
+config ELBOX_PROGS_GPL_TFTP_FTP_GET_PUT_FW_CONFIG
+		bool "ftp/tftp get/put F/W and config"
+		default n
+	    depends on ELBOX_PROGS_GPL_BUSYBOX_1_00
+		help
+			Busybox 1.00
+
+	config ELBOX_PROGS_GPL_BUSYBOX_1_11_1
+		bool "busybox-1.11.1"
+		help
+			Busybox 1.11.1
+endchoice
+

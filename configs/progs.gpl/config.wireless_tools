@@ -1,0 +1,29 @@
+#
+# wireless_tools
+#
+
+config ELBOX_PROGS_GPL_WIRELESS_TOOLS
+	bool "Wireless Tools for Linux"
+	default y
+	help
+		wireless tools
+
+menu "IWLIST configuration"
+	depends ELBOX_PROGS_GPL_WIRELESS_TOOLS
+
+	config CONFIG_IWLIST_APSCANN
+		bool "Site Survey using iwlist"
+		default n
+		help
+			Site Survey via iwlist scanning mechanism.
+endmenu
+
+menu "IWPRIV configuration"
+	depends ELBOX_PROGS_GPL_WIRELESS_TOOLS
+
+	config CONFIG_IWPRIV_APSCAN
+		bool "Site Survey using iwpriv"
+		default n
+		help
+			Use iwpriv to site survey result.
+endmenu

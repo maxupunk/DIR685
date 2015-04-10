@@ -1,0 +1,11 @@
+#
+# udev
+#
+
+config ELBOX_PROGS_GPL_USB_MODESWITCH
+	bool "usb_modeswitch-0.9.5"
+	default n
+	help
+		usb modeswitch can send message to usb modem + usb storage device
+		so the usb modem mode can be unlocked
+		

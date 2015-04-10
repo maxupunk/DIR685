@@ -1,0 +1,30 @@
+#
+# httpd
+#
+
+config ELBOX_PPPD
+	bool "PPP daemon"
+	default y
+
+choice
+	prompt "Select implementation"
+	depends ELBOX_PPPD
+	default ELBOX_PROGS_GPL_PPPD_ALPHA
+	help
+		Select HTTPD.
+
+	config ELBOX_PROGS_GPL_PPPD_ALPHA
+		bool "pppd.alpha - modified by AlphaNetworks"
+		help
+			ppp daemon, modified by AlphaNetworks,Inc.
+
+endchoice
+
+menu "Accelerate pptp"
+depends ELBOX_PPPD	
+	config ELBOX_PROGS_GPL_PPPD_ACCEL_PPTP
+	bool "Accel-pptp-sf.v.0.7.12"
+	default n
+	help
+		accel-pptp-sf.v0.7.12
+endmenu

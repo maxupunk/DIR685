@@ -1,0 +1,4 @@
+# others
+
+psubdir-$(ELBOX_PROGS_PRIV_COMMON_SCRIPTS)	+= common.scripts
+psubdir-$(ELBOX_PROGS_PRIV_ALPHA3GTOOL) 	+= alpha_3gtool

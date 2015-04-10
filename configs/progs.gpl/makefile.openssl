@@ -1,0 +1,6 @@
+# openssl
+
+gsubdir-$(ELBOX_PROGS_GPL_OPENSSL_098A)	+= openssl-0.9.8a
+gsubdir-$(ELBOX_PROGS_GPL_OPENSSL_098E)	+= openssl-0.9.8e
+gsubdir-$(ELBOX_PROGS_GPL_OPENSSL_098E_GCC_4_2)	+= openssl-0.9.8e_gcc42
+gsubdir-$(ELBOX_PROGS_GPL_OPENSSL_098G)	+= openssl-0.9.8g

@@ -1,0 +1,4 @@
+# wpstools
+
+psubdir-$(ELBOX_PROGS_PRIV_WPA_SUPPLICANT)	+= wpa_supplicant-0.4.9
+psubdir-$(ELBOX_PROGS_PRIV_WPA_SUPPLICANT_0_5)	+= wpa_supplicant-0.5.7

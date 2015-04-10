@@ -1,0 +1,215 @@
+/* Copyright (c) 2006, Yahoo! Inc. All rights reserved. Code licensed under the BSD License: http://developer.yahoo.net/yui/license.txt version: 0.12.0 */
+/*  reset  */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+/*  fonts  */
+body{font:13px arial,helvetica,clean,sans-serif;}table{font-size:inherit;}select,input,textarea {font:99% arial,helvetica,clean,sans-serif;}pre,code{font:115% monospace;}body *{line-height:1.22em;}
+/* End Yahoo Code */
+
+/* Editable Settings - Begin */
+#bt-branding, #container, #footer p {width:95%;max-width:1200px;}
+#tDetails #progressContainer {width:99%;max-width:1186px;} /* container width - 14px */
+/* Editable Settings - End */
+
+body {text-align:center;font-size:12px;line-height:16px;}
+
+a {color:#2e3192;text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+#banner {background:url("./img/bannerback.png") 0 100% repeat-x #202328;min-height:50px;padding-top:5px;}
+#bt-branding {margin:0 auto;}
+#bt-branding a, #bt-branding a:hover {color:#fff;text-decoration:none;font-weight:bold;font-size:24px;line-height:40px;}
+#bt-branding h1 {float:left;height:40px;}
+#bt-branding h1 strong {display:block;position:relative;background:url("./img/bt-logo.png") 0 0 no-repeat transparent;width:164px;height:36px;line-height:36px;float:left;margin-right:10px;}
+#bt-branding h1 strong span {position:absolute;top:0;left:0;background:url("./img/bt-logo.png") 0 0 no-repeat transparent;width:164px;height:36px;line-height:36px;cursor:pointer;}
+#bt-branding form {float:right;width:239px;padding-bottom:10px;}
+#bt-branding input {float:left;border:1px solid #ccc;padding:1px 2px;margin:10px 8px 0 0;width:150px;}
+#bt-branding button {float:left;margin-top:10px;width:75px;height:18px;padding:0;overflow:hidden;background:url("./img/btn-search.png") 0 -54px no-repeat #ccc;cursor:pointer;border:0;text-indent:-999em;}
+#bt-branding button:hover {background-position: 0 -18px;}
+
+#container {margin:0 auto;color:#444;text-align:left;}
+#application, #settings {clear:both;padding-bottom:16px;}
+
+#nav-stats {float:right;width:255px;padding:9px 0 16px 0;}
+#nav {float:right;margin-bottom:16px;}
+#nav li {float:left;border-right:2px solid #444;padding:0 7px;font-size:16px;line-height:16px;font-weight:bold;}
+#nav li.last {border-right:none;padding-right:0;}
+#nav li a {font-weight:bold;line-height:16px;}
+
+#totalStats {float:right;clear:right;width:215px;border:1px solid #c0dcf2;background-color:#e6f1fa;padding:0 7px;}
+#totalStats h2 {font-size:18px;font-weight:bold;line-height:32px;}
+#totalStats ul {height:48px;padding:0 7px;}
+#totalStats li {clear:both;}
+#totalStats h3 {font-size:12px;font-weight:bold;float:left;line-height:20px;clear:left;}
+#totalStats span {text-align:right;line-height:20px;font-weight:bold;float:right;}
+
+#application h1, #settings h1 {font-size:24px;line-height:41px;font-weight:bold;padding-left:7px;}
+
+.notentered {color:#aaa;font-weight:bold;}
+
+#uploadOptions {float:left;width:475px;}
+#uploadUrl {float:left;margin-bottom:1px;}
+#uploadUrl input {border:2px solid #ccc;padding:6px 0 0 5px;height:22px;font-size:16px;margin-right:9px;width:380px;}
+#uploadUrl button {width:71px;height:32px;padding:0;overflow:hidden;background:url("./img/btn-add.png") 0 -96px no-repeat #ccc;cursor:pointer;border:0;text-indent:-999em;}
+#uploadUrl button:hover {background-position: 0 -32px;}
+#uploadFile {margin:1px 0;float:left;}
+#uploadFile p {display:none;float:left;width:35%;padding-left:5px;height:32px;font-size:16px;line-height:32px;margin-right:9px;text-align:left;overflow:hidden;font-weight:bold;color:#aaa;width:227px;}
+#uploadFile p.on {display:block;}
+#uploadFile p.picked {color:#444;}
+#uploadFile .holder {float:left;width:151px;height:32px;background:url("./img/btn-browse.png") 0 -96px no-repeat;display:block;overflow:hidden;cursor:pointer;margin-right:9px;position:relative;}
+#uploadFile .holder:hover {background-position:0 -32px;cursor:pointer;}
+#uploadFile .hideFileInput {position:relative;height:100%;width:auto;opacity:0;-moz-opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);}
+#uploadFile button {width:71px;height:32px;padding:0;overflow:hidden;background:url("./img/btn-add.png") 0 -96px no-repeat #ccc;cursor:pointer;border:0;text-indent:-999em;}
+#uploadFile button:hover {background-position: 0 -32px;}
+
+#add-options {float:left;padding-top:4px;clear:left;}
+#add-options li {float:left;padding-bottom:12px;min-width:151px;margin-right:9px;}
+#add-options li a, #add-options li a:link, #add-options li a:visited {padding-left:18px;background:url("./img/checkbox.png") -2px -48px no-repeat transparent;}
+#add-options li a:hover, #add-options li a:active {background-position:-2px -16px;}
+#add-options li.on a, #add-options li.on a:link, #add-options li.on a:visited, #add-options li.on a:hover, #add-options li.on a:active {background-position:-2px -80px;color:#444;text-decoration:none;}
+
+#tActions {float:left;clear:left;height:48px;min-width:480px;padding-top:16px;}
+#tActions li {float:left;width:71px;text-align:center;margin-right:9px;height:32px;line-height:32px;background:url("./img/btn-grey-71w.png") 0 -160px no-repeat #ccc;color:#777;}
+#tActions li a, #tActions li a:link, #tActions li a:visited {display:block;width:71px;height:32px;line-height:32px;background:url("./img/btn-grey-71w.png") 0 -96px no-repeat #ccc;font-weight:bold;color:#444;text-decoration:none;}
+#tActions li a:hover, #tActions li a:active {background-position:0 -32px;}
+#tActions li.aRemoveCompleted, #tActions li.aRemoveCompleted a, #tActions li.aRemoveCompleted a:link, #tActions li.aRemoveCompleted a:visited {width:151px;background-image:url("./img/btn-grey-151w.png");}
+
+#torrentList {clear:both;width:100%;}
+#torrentList table {border-collapse:separate;border-spacing:9px 0px;width:100%;table-layout:fixed;}
+#torrentList th {padding-left:7px;}
+#torrentList th[scope="col"] {background-color:#e6f1fa;font-weight:bold;padding-top:8px;}
+#torrentList th[scope="col"] a {line-height:24px;display:block;}
+#torrentList th.Name, #torrentList th.tname {overflow:hidden;width:43%;}
+#torrentList th.Progress {width:20%;}
+#torrentList th.Size, #torrentList th.Download, #torrentList th.Upload, #torrentList th.ETA {width:8%;}
+#torrentList th.sortasc {background:url("./img/ascending.png") 100% 0 no-repeat #e6f1fa;}
+#torrentList th.sortdsc {background:url("./img/descending.png") 100% 0 no-repeat #e6f1fa;}
+#torrentList th.tname a, #torrentList th.tname a:link, #torrentList th.tname a:visited {color:#444;}
+#torrentList th.tname a:hover, #torrentList th.tname a:active {text-decoration:none;}
+#torrentList th.tname img {padding-right:4px;}
+#torrentList td {overflow:hidden;text-align:right;padding-right:7px;cursor:pointer;}
+#torrentList td, #torrentList th.tname {line-height:32px;}
+#torrentList td.tprogress {padding-right:0;text-align:left;}
+#torrentList tr.on th, #torrentList tr.on td {font-weight:bold;background-color:#fffde1;background-color:#fff5e4;}
+#torrentList #progressContainer {width:98%;border:1px solid #ccc;}
+#torrentList #progressBar {height:18px;background-color:#ccc;}
+#torrentList #progressContainer em {line-height:20px;top:0;}
+#torrentList tr.on #progressContainer {border:1px solid #c0dcf2;}
+#torrentList tr.on #progressBar {background-color:#e6f1fa;}
+
+#tDetails h2 {font-size:18px;line-height:32px;padding-left:7px;}
+#tDetails h2 em {font-weight:bold;}
+#tDetails ul {float:left;width:24.29%;margin-top:16px;}
+#tDetails li {text-align:right;line-height:16px;padding:0 7px;}
+#tDetails h3 {font-weight:bold;float:left;}
+#tDetails ul#tSeedsAndPeers {margin:16px 13% 0 13%;}
+#tDetails #tFiles {clear:both;padding-top:16px;}
+#tDetails #tFiles h3 {font-weight:bold;float:none;padding-left:7px;}
+#tDetails #tFiles ul {float:none;width:auto;margin-top:0;}
+#tDetails #tFiles li {text-align:left;}
+#tDetails #progressContainer {margin:0 auto;}
+#tDetails #progressBar {height:28px;}
+#tDetails #progressContainer em {line-height:30px;}
+#progressContainer {border:1px solid #c0dcf2;padding:1px;position:relative;}
+#progressBar {background-color:#e6f1fa;width:0;}
+#progressContainer em {position:absolute;left:0;top:1px;color:#444;width:100%;text-align:center;font-weight:bold;}
+
+#settings #nav-stats {padding-bottom:0;}
+#settings #help-link {float:right;clear:right;}
+#edit-settings {width:100%;}
+#edit-settings fieldset {margin:16px 0;clear:both;}
+#edit-settings fieldset#port {margin-top:0;}
+#edit-settings legend {display:none;}
+#edit-settings h2 {font-size:16px;font-weight:bold;line-height:16px;color:#444;float:left;width:226px;margin-bottom:16px;padding-left:7px;}
+#edit-settings ol.set {float:left;width:480px;position:relative;margin-left:7px;}
+#edit-settings li {margin-bottom:16px;position:relative;}
+#edit-settings li li {margin:16px 0 0 0;padding-left:18px;}
+#edit-settings li p {color:#f00;font-weight:bold;line-height:32px;}
+#edit-settings li p#seedRatioError, #edit-settings li p#seedTimeError {padding-left:1.5em;}
+#edit-settings li input.error {border-color:#f00;}
+#edit-settings li span {position:absolute;left:313px;}
+#edit-settings .dflt {color:#999;}
+#edit-settings .help {float:left;padding:0 0 16px 7px;}
+#edit-settings button {float:left;margin-right:9px;width:71px;height:32px;padding:0;overflow:hidden;background:url("./img/btn-cancel.png") 0 -96px no-repeat #ccc;cursor:pointer;border:0;text-indent:-999em;}
+#edit-settings button:hover {background-position: 0 -32px;}
+#edit-settings button#apply {margin-left:240px;background-image:url("./img/btn-save.png");}
+#edit-settings button#apply.disabled {background-position:0 -160px;}
+#btPortField, #maxUlRateField, #maxDlRateField, #seedRatioField, #seedTimeField, #maxUlSeedRateField {position:absolute;left:233px;top:-1px;border:1px solid #ccc;padding:1px 2px;width:65px;text-align:right;}
+#settings-help {margin-top:48px;padding:0 7px;}
+#settings-help h2 {font-size:16px;font-weight:bold;line-height:16px;margin-bottom:16px;}
+#settings-help div {margin-bottom:16px;}
+#settings-help h3 {font-size:12px;font-weight:bold;line-height:16px;margin-bottom:8px;}
+#settings-help p {line-height:16px;margin-bottom:8px;}
+#settings-help p.linkBack {text-align:right;}
+
+#noTorrents {text-align:center;padding:32px 80px;color:#777;font-weight:bold;font-size:16px;}
+
+#vDivider {margin:0pt;padding:0pt;width:100%;height:32px;background:url("./img/dragbarback.png") 0 50% repeat-x transparent;position:relative;}
+
+/***** alt download page styles - begin ****/
+#appB {clear:both;}
+#appB h1 {font-size:24px;line-height:41px;font-weight:bold;padding-left:7px;}
+#appB #removeCompleted {float:right;clear:right;margin:0 28px 16px 7px;width:144px;}
+#appB #removeCompleted a, #appB #removeCompleted a:link, #appB #removeCompleted a:visited {background:url("./img/remove-completed.png") 100% -96px no-repeat transparent;padding-right:32px;display:block;line-height:32px;}
+#appB #removeCompleted a:hover, #appB #removeCompleted a:active {background-position:100% -32px;}
+
+#appB .tInfo {margin-bottom:32px;border-left:7px solid #e6f1fa;border-right:7px solid #e6f1fa;position:relative;padding:0 73px;}
+#appB .tInfo h2 {font-size:18px;line-height:32px;font-weight:bold;padding:0 27px 0 7px;position:relative;}
+#appB .tInfo h2 img {position:absolute;right:7px;top:9px;}
+#appB .tInfo .tProgress {border:1px solid #c0dcf2;padding:1px;position:relative;}
+#appB .tInfo .progressBar {height:28px;background-color:#e6f1fa;width:0;}
+#appB .tInfo .tProgress em {position:absolute;left:0;top:1px;color:#444;width:100%;text-align:center;font-weight:bold;line-height:30px;}
+#appB .tInfo .start, #appB .tInfo .stop {position:absolute;left:7px;top:16px;width:57px;text-align:center;}
+#appB .tInfo .remove {position:absolute;right:7px;top:16px;width:57px;text-align:center;}
+#appB .tInfo .start a, #appB .tInfo .start a:link, #appB .tInfo .start a:visited {background:url("./img/start.png") 50% -96px no-repeat transparent;padding-top:32px;display:block;}
+#appB .tInfo .start a:hover, #appB .tInfo .start a:active {background-position:50% -32px;}
+#appB .tInfo .stop a, #appB .tInfo .stop a:link, #appB .tInfo .stop a:visited {background:url("./img/stop.png") 50% -96px no-repeat transparent;padding-top:32px;display:block;}
+#appB .tInfo .stop a:hover, #appB .tInfo .stop a:active {background-position:50% -32px;}
+#appB .tInfo .remove a, #appB .tInfo .remove a:link, #appB .tInfo .remove a:visited {background:url("./img/remove.png") 50% -96px no-repeat transparent;padding-top:32px;display:block;}
+#appB .tInfo .remove a:hover, #appB .tInfo .remove a:active {background-position:50% -32px;}
+#appB .tInfo .tBigDetails {position:relative;height:32px;width:100%;}
+#appB .tInfo .tBigDetails li {position:absolute;line-height:32px;font-weight:bold;}
+#appB .tInfo .size {left:7px;}
+#appB .tInfo .remaining {right:7px;text-align:right;}
+#appB .tInfo .moreDetails {left:50%;width:40%;margin-left:-20%;text-align:center;}
+#appB .tInfo .moreDetails a {line-height:32px;padding-right:15px;background:url("./img/arrow.png") 100% -36px no-repeat transparent;}
+#appB .tInfo .lessDetails {left:50%;width:40%;margin-left:-20%;text-align:center;}
+#appB .tInfo .lessDetails a {line-height:32px;padding-right:15px;background:url("./img/arrow.png") 100% -12px no-repeat transparent;}
+
+#appB .tInfo .tDetailsCont {border:1px solid #f8be5b;background-color:#fff5e4;padding:7px 0;}
+#appB .tInfo .tDetailsCont ul {float:left;width:29.20%;}
+#appB .tInfo .tDetailsCont ul.tSeedsAndPeers {margin-left:6.19%;}
+#appB .tInfo .tDetailsCont ul.tSpeeds {float:right;}
+#appB .tInfo .tDetailsCont li {text-align:right;line-height:16px;padding:0 7px;}
+#appB .tInfo .tDetailsCont h3 {font-weight:bold;float:left;}
+#appB .tInfo .tDetailsCont .tFiles {clear:both;padding-top:16px;}
+#appB .tInfo .tDetailsCont .tFiles h3 {font-weight:bold;float:none;padding-left:7px;}
+#appB .tInfo .tDetailsCont .tFiles ul {float:none;width:auto;}
+#appB .tInfo .tDetailsCont .tFiles li {text-align:left;}
+/***** alt download page styles - end ****/
+
+#msgAlert div.bg{position:absolute;top:0;left:0;width:100%;height:20000px;z-index:100;-moz-opacity: 0.8;opacity:0.80;filter:alpha(opacity=80);background-color:#eee;}
+#msgAlert div.message {position:absolute;top:35%;left:50%;width:350px;margin-left:-191px;padding:16px;background-color:#fff;border:1px solid #999;font-weight:bold;z-index:150;}
+#msgAlert div[class="message"] {position:fixed;}
+#msgAlert .message p {margin-bottom:16px;font-size:16px;line-height:32px;}
+#msgAlert .message p em {font-weight:bold;text-decoration:underline;}
+#msgAlert a.oButton, #msgAlert a.oButton:link, #msgAlert a.oButton:visited {display:block;width:71px;height:32px;line-height:32px;background:url("./img/btn-grey-71w.png") 0 -96px no-repeat #ccc;font-weight:bold;margin:0 auto;}
+#msgAlert a.oButton:hover, #msgAlert a.oButton:active {background-position:0 -32px;}
+
+#msgAlert.error div.bg{background-color:#000;}
+#msgAlert.error div.message {border:2px solid #f00;}
+
+#removeTorrentAlert div.bg{position:absolute;top:0;left:0;width:100%;height:20000px;z-index:100;-moz-opacity: 0.8;opacity:0.80;filter:alpha(opacity=80);background-color:#eee;}
+#removeTorrentAlert div.message {position:absolute;top:35%;left:50%;width:350px;margin-left:-191px;padding:16px;background-color:#fff;border:2px solid #999;font-weight:bold;z-index:150;}
+#removeTorrentAlert div[class="message"] {position:fixed;}
+#removeTorrentAlert .message p {margin-bottom:16px;font-size:16px;line-height:32px;}
+#removeTorrentAlert .message p em {font-weight:bold;text-decoration:underline;}
+#removeTorrentAlert a.oButton, #removeTorrentAlert a.oButton:link, #removeTorrentAlert a.oButton:visited {display:block;width:71px;height:32px;line-height:32px;background:url("./img/btn-grey-71w.png") 0 -96px no-repeat #ccc;font-weight:bold;margin:0 auto;float:left;}
+#removeTorrentAlert a.oButton:hover, #removeTorrentAlert a.oButton:active {background-position:0 -32px;}
+#removeTorrentAlert .message div {width:151px;margin:0 auto;}
+#removeTorrentAlert .message a.oButton.first {margin-right:9px;}
+
+.cl:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.cl {display:inline-block;}
+/* Hides from IE-mac \*/
+.cl {display:block;}
+/* End hide from IE-mac */

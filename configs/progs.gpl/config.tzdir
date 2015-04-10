@@ -1,0 +1,10 @@
+#
+# telnetd
+#
+
+config ELBOX_PROGS_GPL_TZCOMPILER
+	bool "TZ compiler - modified by AlphaNetworks (tzcode)"
+	default n
+	help
+		TZ compiler (zic), compile Zoneinfo for /etc/localtime.
+

@@ -1,0 +1,12 @@
+#
+# udev
+#
+
+config ELBOX_PROGS_GPL_UDEV
+	bool "udev-100"
+	default n
+	help
+		udev is targeted at Linux kernels 2.6 and beyond to provide a userspace
+		solution for a dynamic /dev directory, with persistent device naming.
+		
+		

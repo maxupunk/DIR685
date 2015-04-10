@@ -1,0 +1,18 @@
+<?
+//+++jana
+
+for("/nat/vrtsrv/entry")
+{
+	echo	"<virtual_server_entry>";
+		echo	"<enable>".get("x","enalbe")."</enable>";
+		echo	"<name>".get("x","description")."</name>";
+		echo	"<protocol_type>".get("x","protocol")."</protocol_type>";
+		echo	"<public_port>".get("x","/external/startport")."</public_port>";
+		echo	"<private_port>".get("x","/internal/startport")."</private_port>";
+		echo	"<ip>".get("x","/internal/ip")."</ip>";
+		echo	"<schedule_name>".get("x","/schedule/id")."</schedule_name>";
+	echo	"</virtual_server_entry>";
+}
+
+//---jana
+?>

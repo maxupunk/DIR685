@@ -1,0 +1,12 @@
+#!/bin/sh
+sleep 1
+case "$1" in
+1)
+rmmod ehci_hcd_FOTG2XX
+insmod /lib/modules/ehci-hcd-FOTG2XX.ko
+;;
+2)
+rmmod ehci_hcd_FOTG2XX_1
+insmod /lib/modules/ehci-hcd-FOTG2XX-1.ko
+;;
+esac

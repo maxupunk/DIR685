@@ -1,0 +1,39 @@
+
+menu "SL2312"
+
+config SL3516_ASIC
+	bool "SL3516 ASIC version"
+	depends on ARCH_SL2312
+	help
+	  This option to select AISC or FPGA
+config PCI
+       bool "SL2312 PCI"
+       depends on ARCH_SL2312
+       help
+         This option to enable Storlink PCI controller
+
+config DUAL_PCI
+	bool "Split PCI slot"
+	depends on GEMINI_IPI && PCI
+	help 
+	  This option enable dual core to handle pci device simultaneously(different slot)
+
+config SL2312_LPC
+       bool "SL2312 LPC"
+       depends on ARCH_SL2312
+       help
+         This option to enable Low Pin Count controller
+
+config SL2312_USB
+       bool "SL2312 USB"
+       depends on ARCH_SL2312
+       help
+         This option to enable USB OTG host contrller
+
+config GEMINI_IPI
+       bool "Gemini IPI test"
+       depends on ARCH_SL2312
+       help
+	 this option Enable dual core function for gemini proj 
+endmenu
+

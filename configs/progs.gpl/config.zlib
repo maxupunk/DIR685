@@ -1,0 +1,25 @@
+#
+# zlib
+#
+
+config ELBOX_ZLIB
+	bool "Zlib"
+	default n
+	help
+		A gernel data compress library.
+
+choice
+	prompt "Selection Version"
+	depends on ELBOX_ZLIB
+	default ELBOX_PROGS_GPL_ZLIB_123
+	help
+		Select the openssl version for the platform
+
+	config ELBOX_PROGS_GPL_ZLIB_123
+		bool "Zlib-1.2.3"
+		depends on ELBOX_ZLIB
+		help
+			Zlib is essential for OpenSSH, and etc.
+
+endchoice
+

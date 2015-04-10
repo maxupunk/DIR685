@@ -1,0 +1,63 @@
+#
+# httpd
+#
+
+config ELBOX_UDHCP
+	bool "Micro DHCP"
+	default y
+menu "Use Unicasting and broadcasting request"
+	config ELBOX_PROGS_GPL_UDHCP_REQUEST_BROADCAST 
+		bool "Use Unicasting and broadcasting request"
+		default n
+		help
+			The feature is both use broadcast request and unicast request.
+endmenu
+
+choice
+	prompt "Select implementation"
+	depends ELBOX_UDHCP
+	default ELBOX_PROGS_GPL_UDHCPCD
+	help
+		Select udhcp.
+
+	config ELBOX_PROGS_GPL_UDHCP_0_9_8
+		bool "udhcp-0.9.8"
+		help
+			udhcp v0.9.8 (Micro DHCP client & server)
+
+	config ELBOX_PROGS_GPL_UDHCPCD
+		bool "udhcpcd - modified by AlphaNetworks"
+		help
+			Micro DHCP client/server, modified by AlphaNetworks,Inc.
+
+	config ELBOX_PROGS_GPL_UDHCP_MULTI_INSTANCE
+		bool "Multi-instance for Multi-SSID support"
+		depends on ELBOX_PROGS_GPL_UDHCPCD && ELBOX_PROGS_PRIV_WLAN_MULTI_SSID
+		default n
+		help
+			The feature is one daemon service one SSID. For example, three SSIDs
+			are corresponeding three dhcp servers.
+
+	config ELBOX_PROGS_GPL_UDHCP_RFC3442
+		bool "RFC3442 - Classless Static Route Option implementation"
+		depends on ELBOX_PROGS_GPL_UDHCPCD
+		default n
+		help 
+			Enable this option to let dhcp client support RFC 3442 Class Static Route Option.
+
+	config ELBOX_PROGS_GPL_UDHCP_RFC2132
+		bool "RFC2132 - Static Route Option implementation"
+		depends on ELBOX_PROGS_GPL_UDHCPCD
+		default n
+		help 
+			Enable this option to let dhcp client support RFC 2132 Static Route Option. 
+	config ELBOX_PROGS_GPL_UDHCP_HOLD_LAN_IP
+		bool "Hold LAN IP"
+		depends on ELBOX_PROGS_GPL_UDHCPCD
+		default n
+		help
+			If the dhcp server distribution range inclide lan's ip then if we enable this option
+			the lan's ip would not be distribute to station.
+
+endchoice
+

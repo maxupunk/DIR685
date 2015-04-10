@@ -1,0 +1,44 @@
+#
+# common scripts
+#
+
+config ELBOX_PROGS_PRIV_COMMON_SCRIPTS
+	bool "Common scripts"
+	default y
+	help
+		Some useful shell scripts.
+
+menu "3g support"
+	depends ELBOX_PROGS_PRIV_COMMON_SCRIPTS
+
+	config ELBOX_PROGS_PRIV_COMMON_SCRIPTS_3G_PLUG_AND_PLAY
+		bool "3g plug and play"
+		depends on ELBOX_PROGS_PRIV_COMMON_SCRIPTS
+		default n
+		help
+			Plug and play script that is required for 3g usb device on router
+
+	config ELBOX_PROGS_PRIV_COMMON_SCRIPTS_UDEV_USB_3G_HOTPLUG
+		bool "udev USB 3g hotplug"
+		depends on ELBOX_PROGS_PRIV_COMMON_SCRIPTS
+		default n
+		help
+			Hotplug script that is designed to be called by udev during hotplug. 
+			Doesn't work with plug and play script.
+
+	config ELBOX_PROGS_GPL_USB_MODESWITCH
+		bool "usb mode switch tool for 3g"
+		depends on ELBOX_PROGS_PRIV_COMMON_SCRIPTS_3G_PLUG_AND_PLAY || ELBOX_PROGS_PRIV_COMMON_SCRIPTS_UDEV_USB_3G_HOTPLUG
+		default n
+		help
+			usb mode switch tool for 3g usb device and scripts
+
+	config ELBOX_PROGS_PRIV_ALPHA3GTOOL
+		bool "alpha database tool for 3g"
+		depends on ELBOX_PROGS_PRIV_COMMON_SCRIPTS_3G_PLUG_AND_PLAY || ELBOX_PROGS_PRIV_COMMON_SCRIPTS_UDEV_USB_3G_HOTPLUG
+		default n
+		help
+			alpha database tool for 3g usb device and scripts
+
+endmenu
+

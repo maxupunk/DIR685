@@ -1,0 +1,8 @@
+# rt2860v2
+
+psubdir-$(ELBOX_PROGS_PRIV_RT2860V2)			+= rt2860v2
+psubdir-$(ELBOX_PROGS_PRIV_RT2860V2_V1900)		+= rt2860v2
+psubdir-$(ELBOX_PROGS_PRIV_RT2860V2_V3200)              += rt2860v2
+psubdir-$(ELBOX_PROGS_PRIV_RT2860V2_V2200)		+= rt2860v2
+
+psubdir-$(ELBOX_PROGS_PRIV_WLXMLPATCH_RALINK)	+= wlxmlpatch.ralink

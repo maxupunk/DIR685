@@ -1,0 +1,10 @@
+<?
+ //+++jana
+	$qos_enable = get("x","/qos/mode");
+		
+	
+	echo "<qos>";
+	echo 	"<qos_enable>".$qos_enable."</qos_enable>";	
+	echo "</qos>";
+//---jana
+?>

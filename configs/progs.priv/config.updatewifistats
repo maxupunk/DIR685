@@ -1,0 +1,58 @@
+#
+# wlxmlpatchv2
+#
+
+config ELBOX_UPDATEWIFISTATS
+	bool "Update Wifi stats"
+	default n
+	help
+		In Project Seattle, we use it to instead of wlxmlpatchv2.
+		The daemon updates the runtime info and stats of wireless.
+
+choice
+	prompt "Select vendor"
+	depends ELBOX_UPDATEWIFISTATS
+	help
+		Select the vendor of wireless.
+
+	#
+	# Ralink
+	#
+	config ELBOX_PROGS_PRIV_UPDATEWIFISTATS_RALINK
+		bool "Ralink"
+
+	#
+	# Atheros
+	#
+	config ELBOX_PROGS_PRIV_UPDATEWIFISTATS_ATHEROS
+		bool "Atheros"
+
+	#
+	# Broadcom
+	#
+	config ELBOX_PROGS_PRIV_UPDATEWIFISTATS_BROADCOM
+		bool "Broadcom"
+
+	#
+	# others
+	#
+
+endchoice
+
+
+# ralink model 
+menu "Ralink model selection"
+	depends ELBOX_UPDATEWIFISTATS
+	depends ELBOX_PROGS_PRIV_UPDATEWIFISTATS_RALINK
+
+	config ELBOX_PROGS_PRIV_UPDATEWIFISTATS_RALINK_RT2800
+		bool "RT2800"
+
+	config ELBOX_PROGS_PRIV_UPDATEWIFISTATS_RALINK_RT2880
+		bool "RT2880 iNIC"
+endmenu
+
+# atheros mdoel
+
+# broadcom model
+

@@ -1,0 +1,11 @@
+#
+# Pure-ftpd
+#
+
+config ELBOX_PROGS_GPL_LIBTORRENT
+	bool "libtorrent"
+	default n
+	help
+		LIBTORRENT, rtorrent and related libraries
+		
+		

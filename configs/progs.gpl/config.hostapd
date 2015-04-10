@@ -1,0 +1,36 @@
+# hostapd
+
+config ELBOX_HOSTAPD
+	bool "HOST AP daemon (hostapd)"
+	default n
+
+choice
+	prompt "Selection Version"
+	depends ELBOX_HOSTAPD
+	default ELBOX_PROGS_GPL_HOSTAPD_0_3_7
+	help
+		Select the version for the implementation
+
+	config ELBOX_PROGS_GPL_HOSTAPD_0_3_7
+		bool "hostapd-0.3.7"
+		help
+			hostapd v 0.3.7
+
+endchoice
+
+config ELBOX_HOSTAPD_CVR_WORKAROUND
+	bool "Workaround CG-CVR54AG bug."
+	depends ELBOX_HOSTAPD
+	default n
+	help
+		The WPA IE in the 2nd packet of 4-way handshake are corrupt when
+		CG-CVR54AG acts as an AP client. This causes it fails to connect our
+		RG with WPA mode.
+		Don't compare WPA IE to work around for this bug. -Edward
+
+config CONFIG_JUMPSTART
+	bool "JumpStart(TM) support"
+	depends ELBOX_HOSTAPD
+	default n
+	help
+		Enable JumpStart support.

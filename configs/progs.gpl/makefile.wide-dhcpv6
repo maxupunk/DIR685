@@ -1,0 +1,4 @@
+# wide-dhcpv6
+
+gsubdir-$(ELBOX_PROGS_GPL_WIDE_DHCPV6)	+= wide-dhcpv6-20080615
+

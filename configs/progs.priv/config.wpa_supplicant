@@ -1,0 +1,191 @@
+#
+# WPA Supplicant
+#
+
+config ELBOX_PROGS_PRIV_WPA_SUPPLICANT
+	bool "wpa_supplicant 0.4.9"
+	default n
+	help
+		WPA Supplicant 0.4.9
+		Note: Hostapd should use shared openssl library.
+
+menu "Wpa_supplicant tools configuration"
+	depends ELBOX_PROGS_PRIV_WPA_SUPPLICANT
+
+	config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_WPS
+		bool "Wpa_supplicant WPS support"
+		default n
+		help
+			This is used by wpa_supplicant and driver to support wps.
+
+    config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_STATUS
+	    bool "Wpa_supplicant Status support"
+	    default n
+	    help
+	        This is used by wpa_supplicant to write now status in xmldb node /runtime/wireless/status.
+
+    config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_ENABLE_BRIDGE_CONFIG
+	    bool "Wpa_supplicant, Add Bridge Config Item"
+	    default n
+	    help
+	        This is used by wpa_supplicant to add bridge config item.
+
+	config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_8021X_EAPOL
+		bool "EAP authentication support"
+		default n
+		help
+			Using EAP authentication.
+
+	menu "Wpa_supplicant EAP authentication Support"
+		depends ELBOX_PROGS_PRIV_WPA_SUPPLICANT_8021X_EAPOL
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_CERTIFICATE
+			bool "EAP authentication certificate download support"
+			default n
+			help
+				EAP authentication certificate download support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TLS
+			bool "EAP authentication TLS support"
+			default n
+			help
+				EAP authentication TLS support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_MD5
+		    bool "EAP authentication TTLS-MD5 support"
+		    default n
+		    help
+		        EAP authentication TTLS-MD5 support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_MSCHAPV2
+		    bool "EAP authentication TTLS MS-Chapv2 support"
+		    default n
+		    help
+		        EAP authentication TTLS MS-CHAPv2 support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_PAP
+		    bool "EAP authentication TTLS PAP support"
+		    default n
+		    help
+		        EAP authentication TTLS PAP support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_CHAP
+		    bool "EAP authentication TTLS CHAP support"
+		    default n
+		    help
+		        EAP authentication TTLS CHAP support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_PEAP_MD5
+			bool "EAP authentication PEAP-MD5 support"
+			default n
+			help
+				EAP authentication PEAP-MD5 support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_PEAP_MSCHAPV2
+			bool "EAP authentication PEAP MS-Chapv2 support"
+			default y
+			help
+				EAP authentication PEAP MS-Chapv2 support
+	endmenu
+
+	config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_USE_STATIC_LINK_OPENSSL
+		bool "Wpa_supplicant, Use Static Linking Openssl"
+		default n
+		help
+			Using Static Linking Openssl.
+
+endmenu
+
+config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_0_5
+	bool "wpa_supplicant 0.5.7"
+	default n
+	help
+		WPA Supplicant 0.5.7
+		Note: Hostapd should use shared openssl library.
+
+menu "Wpa_supplicant tools configuration"
+	depends ELBOX_PROGS_PRIV_WPA_SUPPLICANT_0_5
+
+	config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_WPS
+		bool "Wpa_supplicant WPS support"
+		default n
+		help
+			This is used by wpa_supplicant and driver to support wps.
+
+    config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_STATUS
+	    bool "Wpa_supplicant Status support"
+	    default n
+	    help
+	        This is used by wpa_supplicant to write now status in xmldb node /runtime/wireless/status.
+
+    config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_ENABLE_BRIDGE_CONFIG
+	    bool "Wpa_supplicant, Add Bridge Config Item"
+	    default n
+	    help
+	        This is used by wpa_supplicant to add bridge config item.
+
+	config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_8021X_EAPOL
+		bool "EAP authentication support"
+		default n
+		help
+			Using EAP authentication.
+
+	menu "Wpa_supplicant EAP authentication Support"
+		depends ELBOX_PROGS_PRIV_WPA_SUPPLICANT_8021X_EAPOL
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_CERTIFICATE
+			bool "EAP authentication certificate download support"
+			default n
+			help
+				EAP authentication certificate download support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TLS
+			bool "EAP authentication TLS support"
+			default n
+			help
+				EAP authentication TLS support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_MD5
+		    bool "EAP authentication TTLS-MD5 support"
+		    default n
+		    help
+		        EAP authentication TTLS-MD5 support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_MSCHAPV2
+		    bool "EAP authentication TTLS MS-Chapv2 support"
+		    default n
+		    help
+		        EAP authentication TTLS MS-CHAPv2 support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_PAP
+		    bool "EAP authentication TTLS PAP support"
+		    default n
+		    help
+		        EAP authentication TTLS PAP support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_TTLS_CHAP
+		    bool "EAP authentication TTLS CHAP support"
+		    default n
+		    help
+		        EAP authentication TTLS CHAP support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_PEAP_MD5
+			bool "EAP authentication PEAP-MD5 support"
+			default n
+			help
+				EAP authentication PEAP-MD5 support
+
+		config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_PEAP_MSCHAPV2
+			bool "EAP authentication PEAP MS-Chapv2 support"
+			default y
+			help
+				EAP authentication PEAP MS-Chapv2 support
+	endmenu
+
+	config ELBOX_PROGS_PRIV_WPA_SUPPLICANT_USE_STATIC_LINK_OPENSSL
+		bool "Wpa_supplicant, Use Static Linking Openssl"
+		default n
+		help
+			Using Static Linking Openssl.
+
+endmenu

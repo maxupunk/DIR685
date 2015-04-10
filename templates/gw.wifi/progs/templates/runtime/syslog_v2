@@ -1,0 +1,69 @@
+#!/bin/sh
+usage="Usage: syslog [-g|-s] [xml node] {value}"
+case "$1" in
+-g)
+	echo [$0] get from script is deprecated !! > /dev/console
+	;;
+-s)
+	log_path="/var/log/messages"
+	smtp_msg_path="/var/log/smtp_message.txt"
+	case "$2" in
+	clear)
+		date_time=`date | scut -f2 -n3`
+		echo "$date_time  |  Log message was cleared." > $log_path
+		;;
+	sendmail)
+		mail_server=`rgdb -g /sys/log/mailserver`
+		email_addr=`rgdb -g /sys/log/email`
+		mail_subject="Log Message."
+		mail_port=`rgdb -g /sys/log/mailport`
+		[ "$mail_port" = "" ] && mail_port=25
+		src_host=`rgdb -g /sys/hostName`
+		from=`rgdb -g /sys/log/email`
+		reply=`rgdb -g /sys/log/email`
+
+		/usr/sbin/smtpclient -v -s "$mail_subject" -r "$reply" -f "$from" -H "$src_host" -S "$mail_server" -P "$mail_port" "$email_addr" < $log_path > $smtp_msg_path &
+#		logger -p 192.1 "SYS:004[$email_addr]"
+		;;
+	auth_sendmail)
+		sendmail_pid="/var/run/sendmail.pid"
+		log_mail="/var/log/mail_message"
+		mail_server=`rgdb -g /sys/log/mailserver`
+		mail_port=`rgdb -g /sys/log/mailport`
+		[ "$mail_port" = "" ] && mail_port=25
+		authenable=`rgdb -g /sys/log/emailauthenable`
+		email_addr=`rgdb -g /sys/log/email`
+		mail_subject=`rgdb -g /sys/log/subject`
+		username=`rgdb -g /sys/log/username`
+		password=`rgdb -g /sys/log/pass1`
+		from=`rgdb -g /sys/log/sender`
+
+		if [ -f "$sendmail_pid" ]; then
+			PID=`cat $sendmail_pid`
+			if [ $PID != 0 ]; then
+				kill $PID > /dev/console 2>&1
+			fi
+			rm -f $sendmail_pid
+		fi
+		if [ "$mail_server" != "" -a "$email_addr" != "" ]; then
+			if [ "$authenable" != "0" -a "$username" != "" ]; then
+				cp $log_path $log_mail
+				/usr/sbin/sendmail -s "$mail_subject" -S "$mail_server" -P "$mail_port" -a "$from"  -t "$email_addr" -u "$username" -p "$password" -f "$log_mail" &
+				echo $! > $sendmail_pid
+			else
+				cp $log_path $log_mail
+				/usr/sbin/sendmail -s "$mail_subject" -S "$mail_server" -P "$mail_port" -a "$from"  -t "$email_addr" -f "$log_mail" &
+				echo $! > $sendmail_pid
+			fi
+			logger -p 192.1 "SYS:004[$email_addr]"
+		fi
+		;;
+	*)
+		echo $usage > /dev/console
+		;;
+	esac
+	;;
+*)
+	echo $usage > /dev/console
+	;;
+esac

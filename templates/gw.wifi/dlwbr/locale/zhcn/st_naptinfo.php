@@ -1,0 +1,15 @@
+<?
+$m_context_title="Napt活动会话详细信息";
+$m_active_session_lists="Napt活动会话表";
+$m_protocol="协议";
+$m_sip="源IP";
+$m_sport="源端口";
+$m_dip="目的IP";
+$m_dport="目的端口";
+$m_state="状态";
+$m_priority="优先级";
+$m_timeout="超时";
+$m_dir="方向";
+$m_dir_out="出站";
+$m_dir_in="入站";
+?>

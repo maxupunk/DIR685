@@ -1,0 +1,11 @@
+#
+# xsupplicant
+#
+
+config ELBOX_PROGS_GPL_ITUNES_SERVER
+	bool "ITunes"
+	default n
+	help
+		ITunes server with gdbm-1.8.3, libiconv-1.9.1, libid3tag-0.15.0b, zlib-1.2.1,  mDNSResponder-107.1
+		
+

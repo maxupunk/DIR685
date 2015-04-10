@@ -1,0 +1,5 @@
+# madwifi
+
+psubdir-$(ELBOX_PROGS_PRIV_BROADCOM_WIFI)		+=	
+
+psubdir-$(ELBOX_PROGS_PRIV_WLXMLPATCH_BROADCOM)  += wlxmlpatch.broadcom

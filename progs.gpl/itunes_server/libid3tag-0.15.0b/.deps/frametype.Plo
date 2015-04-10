@@ -1,0 +1,28 @@
+frametype.lo frametype.o: frametype.c config.h global.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/string.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/features.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_arch_features.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/include/stddef.h \
+  id3tag.h frametype.h
+
+config.h:
+
+global.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/string.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/features.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_arch_features.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/include/stddef.h:
+
+id3tag.h:
+
+frametype.h:

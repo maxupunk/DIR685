@@ -1,0 +1,3 @@
+# AP neap
+
+psubdir-$(ELBOX_PROGS_PRIV_AP_NEAP)   += apneap

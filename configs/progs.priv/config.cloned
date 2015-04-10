@@ -1,0 +1,7 @@
+#
+# Clone daemon
+#
+
+config ELBOX_PROGS_PRIV_CLONED
+	bool "Daemon to wait for 1st frame from ethernet"
+	default n

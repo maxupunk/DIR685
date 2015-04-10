@@ -1,0 +1,3 @@
+# stupid-ftpd
+
+gsubdir-$(ELBOX_PROGS_GPL_STUPID_FTPD)	+= stupid-ftpd

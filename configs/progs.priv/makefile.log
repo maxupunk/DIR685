@@ -1,0 +1,3 @@
+# log
+
+psubdir-$(ELBOX_PROGS_PRIV_LOG_ENGLISH)	+= log.english

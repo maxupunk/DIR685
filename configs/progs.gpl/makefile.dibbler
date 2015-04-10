@@ -1,0 +1,3 @@
+# dibbler
+
+gsubdir-$(ELBOX_PROGS_GPL_DIBBLER)	+= dibbler

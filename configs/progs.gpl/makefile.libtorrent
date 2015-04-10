@@ -1,0 +1,3 @@
+# Pure-Ftpd
+
+gsubdir-$(ELBOX_PROGS_GPL_LIBTORRENT)	+= libtorrent

@@ -1,0 +1,12 @@
+#
+# wide-dhcpv6
+#
+
+config ELBOX_PROGS_GPL_WIDE_DHCPV6
+	bool "WIDE DHCPv6 client/server/relay for automatic IPv6 hosts configuration"
+	depends on ELBOX_USE_IPV6
+	default n
+	help
+		DHCPv6 allows prefix delagation and host configuration for the IPv6 network protocol.
+		Multiple network interfaces are supported by this DHCPv6 package.
+

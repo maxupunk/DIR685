@@ -1,0 +1,3 @@
+# madwifi ap83
+
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_AP83)	+= madwifi_ap83

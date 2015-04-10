@@ -1,0 +1,105 @@
+# rt2860v2
+
+config ELBOX_RT2860V2
+	bool "Ralink RT2860v2 driver"
+	default n
+
+choice
+	prompt "Select Version"
+	depends ELBOX_RT2860V2
+	default ELBOX_PROGS_PRIV_RT2860V2
+	help
+		Select the verison of RT2860v2 driver.
+
+	# rt2860v2 SDK2100 0928
+	config ELBOX_PROGS_PRIV_RT2860V2
+		bool "rt2860v2_2100_dpa_0928_01.tar.bz2"
+		help
+			This version is for SDK 2.1.0.0. The source tar ball is rt2860v2_2100_dpa_0928_01.tar.bz2
+			but Ralink did not change the drvier version, even the datecode. The file name of the
+			tar ball package may be different at the next release. They don't have rules for releasing
+			packages.
+
+	# rt2860v2 SDK3000	
+	config ELBOX_PROGS_PRIV_RT2860V2_V1900
+		bool "rt2860v2_SDK3100_v1900.tar.bz2"
+		help
+			This version is coming with Ralink SDK 3.1.0.0 and the version number is 1.9.0.0. It support
+			new soc RT3052
+	# rt2860v2 SDK3000
+	config ELBOX_PROGS_PRIV_RT2860V2_V3200
+		bool "rt2860v2_SDK3200_v2000.tar.bz2"
+		help
+			This version is coming with Ralink SDK 3.2.0.0 and the version number is 2.0.0.0. It support
+			new FCC and DFS fucntion for US,and fix several throughtput issues
+       # rt2860v2 SDK3220
+	   # rt2860v2 SDK3300
+	config ELBOX_PROGS_PRIV_RT2860V2_V2200
+		bool "rt2860v2_SDK3300_v2200.tar.bz2"
+		help
+			This version is coming with Ralink SDK 3.3.0.0 and the version number is 2.2.0.0. It support
+			new soc RT3052 and RT3050.
+endchoice
+
+
+#Control wireless led via driver
+config ELBOX_PROGS_PRIV_RT2860V2_LED_DRIVE
+	bool "Drive the wireless LED via driver"
+	depends ELBOX_RT2860V2
+	default n
+	help
+		Decide who drive the wireless LED according to the hardware layout.
+
+config ELBOX_PROGS_PRIV_WLKLOGDPATCH_RALINK
+	bool "klogd patch"
+	default n
+	depends on ELBOX_RT2860V2
+	help
+		Add klogd patch to cooperate with syslogd and limit auto channel selection between 1~11 for Japan only.
+
+config ELBOX_PROGS_PRIV_WLXMLPATCH_RALINK
+	bool "wlxmlpatch.ralink"
+	default n
+	depends on ELBOX_RT2860V2
+	help
+		wlxmlpatch for ralink. This daemon updates the runtime info of wireless part.
+		
+config ELBOX_PROGS_PRIV_RT2860V2_STA
+	bool "rt2860v2_sta"
+	default n
+	help
+		Build module for RT2860v2 STA mode.
+		
+config ELBOX_PROGS_PRIV_RT2860V2_STA_ONLY
+	bool "rt2860v2_sta only"
+	default n
+	depends on ELBOX_PROGS_PRIV_RT2860V2_STA
+	help
+		Only rt2860v2_sta is supported.(AP clienti only.)
+		
+config ELBOX_PROGS_PRIV_RT2860V2_WLAN_PARTITION
+	bool "rt2860v2_wlan_partition"
+	default n
+	depends on ELBOX_RT2860V2
+	help
+		We use WLAN_PARTITION to block MC/BC traffic from Eth to WLAN.		
+config ELBOX_PROGS_PRIV_RT2860V2_PRIORITYBYPORT
+	bool "rt2860v2_priority_by_port"
+	default n
+	depends on ELBOX_RT2860V2
+	help
+		Build module for RT2860v2 QOS of priority by port.
+		
+config ELBOX_PROGS_PRIV_RT2860V2_MAC_CLONE
+	bool "rt2860v2_mac_clone"
+	default n
+	depends on ELBOX_RT2860V2
+	help
+		Use user define mac addr for Bridge mode.
+
+config ELBOX_PROGS_PRIV_RTL8366S_GREENT_ETHERNET
+	bool "rtl8366s_green_ethernet"
+	default n
+	depends on ELBOX_RT2860V2
+	help
+		Use RTL8366S green ethernet.

@@ -1,0 +1,9 @@
+Using FLAGS      =  -Ilib/replace -D_SAMBA_BUILD_=3 -I./popt -I./iniparser/src -Iinclude -I./include  -I. -I. -I./lib/replace -I./lib/talloc -I./tdb/include -I./libaddns -I./librpc -DHAVE_CONFIG_H     -I./lib -D_SAMBA_BUILD_=3
+      PICFLAG    = -fPIC
+      LIBS       = -lcrypt -lresolv -ldl
+      LDFLAGS    = 
+      DYNEXP     = -Wl,--export-dynamic
+      LDSHFLAGS  = -shared -Wl,-Bsymbolic -Wl,--allow-shlib-undefined 
+      SHLIBEXT   = so
+      SONAMEFLAG = -Wl,-soname=
+Linking bin/smbd

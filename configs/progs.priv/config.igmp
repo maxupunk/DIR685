@@ -1,0 +1,9 @@
+#
+# igmpproxy
+#
+
+config ELBOX_PROGS_PRIV_IGMP
+	bool "igmp snooping"
+	default n
+	help
+		IGMP snooping demon , created by alpha

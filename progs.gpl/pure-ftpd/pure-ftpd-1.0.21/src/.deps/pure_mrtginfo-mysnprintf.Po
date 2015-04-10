@@ -1,0 +1,142 @@
+pure_mrtginfo-mysnprintf.o pure_mrtginfo-mysnprintf.o: mysnprintf.c \
+  ../config.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdio.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/features.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_arch_features.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/include/stddef.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/types.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/wordsize.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/kernel_types.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/typesizes.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/pthreadtypes.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sched.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_stdio.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/wchar.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/wchar.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_mutex.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/pthread.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sched.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/time.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/time.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_clk_tck.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/signal.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sigset.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/initspin.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sigthread.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_pthread.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/include/stdarg.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/stdio_lim.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdlib.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/waitflags.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/waitstatus.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/endian.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/endian.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/types.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/select.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/select.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/sysmacros.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/alloca.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/inttypes.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdint.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/unistd.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/posix_opt.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/environments.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/confname.h \
+  /opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/getopt.h \
+  mysnprintf.h
+
+../config.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdio.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/features.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_arch_features.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/include/stddef.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/types.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/wordsize.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/kernel_types.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/typesizes.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/pthreadtypes.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sched.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_stdio.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/wchar.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/wchar.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_mutex.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/pthread.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sched.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/time.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/time.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_clk_tck.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/signal.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sigset.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/initspin.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/sigthread.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/uClibc_pthread.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/include/stdarg.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/stdio_lim.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdlib.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/waitflags.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/waitstatus.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/endian.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/endian.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/types.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/select.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/select.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/sys/sysmacros.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/alloca.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/inttypes.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/stdint.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/unistd.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/posix_opt.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/environments.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/confname.h:
+
+/opt/storlink_arm_920t_le_uclibc.20080713/lib/gcc/arm-linux-uclibc/3.4.6/../../../../arm-linux-uclibc/sys-include/bits/getopt.h:
+
+mysnprintf.h:

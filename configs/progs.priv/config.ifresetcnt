@@ -1,0 +1,24 @@
+# ifresetcnt
+
+config ELBOX_IFRESETCNT
+	bool "Kernel driver for reset statistics counter of interfaces (ifresetcnt)"
+	default y
+
+choice
+	prompt "Select implementation"
+	depends ELBOX_IFRESETCNT
+	help
+		A Linux Kernel module to reset the statistics counter by interface name.
+
+	config ELBOX_PROGS_PRIV_IFRESETCNT
+		bool "ifresetcnt for linux 2.4.x"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 4
+		help
+			ifresetcnt kernel module (ifresetcnt)
+
+	config ELBOX_PROGS_PRIV_IFRESETCNT_26
+		bool "ifresetcnt for linux 2.6.13"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 6
+		help
+			ifresetcnt kernel module (ifresetcnt)
+endchoice

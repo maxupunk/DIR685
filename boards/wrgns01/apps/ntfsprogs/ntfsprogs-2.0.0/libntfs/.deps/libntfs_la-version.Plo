@@ -1,0 +1,6 @@
+libntfs_la-version.lo libntfs_la-version.o: version.c ../config.h \
+  ../include/ntfs/version.h
+
+../config.h:
+
+../include/ntfs/version.h:

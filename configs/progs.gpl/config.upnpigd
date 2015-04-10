@@ -1,0 +1,64 @@
+# upnpigd
+
+config ELBOX_PROGS_GPL_UPNPIGD
+	bool "UPnP IGD daemon"
+	default n
+	help
+		UPnP IGD
+
+menu "UPNP IGD Service Type configuration"
+	depends ELBOX_PROGS_GPL_UPNPIGD
+
+	config CONFIG_SUPPORT_HNAP
+		bool "HNAP for Pure."
+		help
+			Support HNAP of PureNetworks.
+
+	config CONFIG_UPNPIGD_L3FORWARDING1
+		bool "L3Forwarding1"
+		default y
+		help
+			urn:upnp-org:serviceId:L3Forwading1 for IGD Layer3Forwarding:1.
+
+	config CONFIG_UPNPIGD_WANCOMMONIFC1
+		bool "WANCommonIFC1"
+		default y
+		help
+			urn:upnp-org:serviceId:WANCommonIFC1 for UPNP IGD WANCommonInterfaceConfig:1.
+
+	config CONFIG_UPNPIGD_WANETHLINKC1
+		bool "WANEthLinkC1"
+		default y
+		help
+			urn:upnp-org:serviceId:WANEthLinkC1 for UPNP IGD WANEthernetLinkConfig:1.
+
+	config CONFIG_UPNPIGD_WANIPCONN1
+		bool "WANIPConn1"
+		default y
+		help
+			urn:upnp-org:serviceId:WANIPConn1 for UPNP IGD WANIPConnection:1.
+
+	config CONFIG_UPNPIGD_WANIPCONN2
+		bool "WANIPConn2"
+		default n
+		help
+			urn:upnp-org:serviceId:WANIPConn2 for UPNP IGD WANIPConnection:1.
+
+	config CONFIG_UPNPIGD_WANPPPCONN1
+		bool "WANPPPConn1"
+		default n
+		help
+			urn:upnp-org:serviceId:WANPPPConn1 for UPNP IGD WANPPPConnection:1.
+
+	config CONFIG_UPNPIGD_WANPPPCONN2
+		bool "WANPPPConn2"
+		default n
+		help
+			urn:upnp-org:serviceId:WANPPPConn2 for UPNP IGD WANPPPConnection:1.
+
+	config CONFIG_UPNPIGD_COREGAROUTERCFG1
+		bool "CoregaRouterCfg1"
+		default n
+		help
+			urn:corega-com:serviceId:CoregaRouterCfg1 for UPNP IGD CoregaRouterConfig:1.
+endmenu

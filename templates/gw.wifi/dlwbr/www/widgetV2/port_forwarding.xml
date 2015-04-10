@@ -1,0 +1,21 @@
+<?
+//+++jana
+
+//$port_forward_entry =
+//$enable =
+//$name =
+//$tcp_port =
+//$udp_port =
+//$ip =
+//$schedule_name =
+
+echo	"<port_forward_entry>".$port_forward_entry."</port_forward_entry>";
+echo	"<enable>".$enable."</enable>";
+echo	"<name>".$name."</name>";
+echo	"<tcp_port>".$tcp_port."</tcp_port>";
+echo	"<udp_port>".$udp_port."</udp_port>";
+echo	"<ip>".$ip."</ip>";
+echo	"<schedule_name>".$schedule_name."</schedule_name>";
+
+//---jana
+?>

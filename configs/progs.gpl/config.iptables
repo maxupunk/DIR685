@@ -1,0 +1,42 @@
+#
+# iptables
+#
+
+config ELBOX_IPTABLES
+	bool "iptables"
+	default y
+
+choice
+	prompt "Selection Version"
+	depends ELBOX_IPTABLES
+	default ELBOX_PROGS_GPL_IPTABLES_1_3_5
+	help
+		Select the iptables version for the platform
+
+	config ELBOX_PROGS_GPL_IPTABLES_1_2_6A
+		bool "itpables-1.2.6a"
+		help
+			iptables v1.2.6a
+
+	config ELBOX_PROGS_GPL_IPTABLES_1_2_7A
+		bool "iptables-1.2.7a"
+		help
+			iptables v1.2.7a
+
+	config ELBOX_PROGS_GPL_IPTABLES_1_2_9
+		bool "iptables-1.2.9"
+		help
+			iptables v1.2.9
+
+	config ELBOX_PROGS_GPL_IPTABLES_1_3_5
+		bool "iptables-1.3.5"
+		help
+			iptables v1.3.5, this version is added for 2.6 kernel.
+endchoice
+
+config ELBOX_IPTABLES_L7_EXT
+	bool "Layer 7 extention to iptables"
+	depends on ELBOX_IPTABLES
+	default n
+	help
+		Layer 7 extention to iptables.  Please note you also require kernel's Layer 7 option or Layer 7 porting to kernel to use this feature.

@@ -1,0 +1,53 @@
+#
+# syslogd
+#
+config ELBOX_USE_SYSLOG
+	bool "Syslog daemon"
+	default y
+
+choice
+	prompt "Selection Syslog daemon modified by AlphaNetworks (syslogd)"
+	depends on ELBOX_USE_SYSLOG
+	default ELBOX_PROGS_GPL_SYSLOGD
+	help
+		Select the syslog daemon for the platform
+
+	config ELBOX_PROGS_GPL_SYSLOGD
+		bool "Syslog daemon - modified by AlphaNetworks (syslogd)"
+		help
+			Syslog daemon
+
+	config ELBOX_PROGS_GPL_SYSLOGD_V2
+		bool "syslog daemon V2 (remotelog enabled by default)"
+		help
+			Syslog daemon V2
+endchoice
+
+config ELBOX_PROGS_GPL_SYSLOGD_REMOTELOG
+	bool "Remote Log - in Syslog daemon"
+	depends on ELBOX_USE_SYSLOG
+	default n
+	help
+		Enable Remote log in Syslog daemon.
+
+config ELBOX_PROGS_GPL_SYSLOGD_SMTP
+	bool "SMTP - in Syslog daemon"
+	depends on ELBOX_USE_SYSLOG
+	default n
+	help
+		Enable SMTP in Syslog daemon.
+
+config ELBOX_PROGS_GPL_SYSLOGD_SMTP_SCHEDULE
+	bool "SMTP_SCHEDULE - in schedule_smtp daemon"
+	depends on ELBOX_PROGS_GPL_SYSLOGD_SMTP
+	default n
+	help
+		Enable SMTP in schedule_smtp daemon.
+
+config ELBOX_PROGS_GPL_SYSLOGD_AP
+	bool "AP style and Timestamp synchronization"
+	depends on ELBOX_USE_SYSLOG
+	default n
+	help
+		Enable SMTP in Syslog daemon.
+

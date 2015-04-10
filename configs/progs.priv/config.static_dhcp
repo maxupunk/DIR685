@@ -1,0 +1,6 @@
+config ELBOX_PROGS_PRIV_STATIC_DHCP
+	bool "show static dhcp server list"
+	default n
+	help
+		Show clinet info in dhcp server when it in static mode.
+

@@ -1,0 +1,8 @@
+#
+# dnrd
+#
+
+config ELBOX_PROGS_GPL_LPRNG_3_8_27
+	bool "LPRng-3.8.27 for printing"
+	default n
+

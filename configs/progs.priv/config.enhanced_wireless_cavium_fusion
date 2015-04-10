@@ -1,0 +1,102 @@
+#
+# Enhanced Wireless Feature
+#
+
+## ASSOC_LIMIT Dennis
+# Conditional_Compiler_Flag_20080103 Dennis
+menu "Enhanced Wireless Feature Configuration in Cavium"
+
+        depends ELBOX_PROGS_PRIV_MADWIFI_FUSION_CAVIUM
+
+        config ELBOX_PROGS_PRIV_WLAN_ASSOC_LIMIT
+                bool "Association Limitation"
+                default n
+                help
+                        This feature can limit the maximum number that STA can associate.
+						
+        config ELBOX_PROGS_PRIV_WLAN_ALPHA_WDS
+                bool "ALPHA Wireless Distrbution System  (Alpha-WDS)"
+                default n
+                help
+                        This feature can include the ALPHA Wireless Distrbution System .
+        
+        config ELBOX_PROGS_PRIV_WLAN_MULTI_SSID
+                bool "MULTI SSID System"
+                default n
+                help
+                        This feature can include the MULTI SSID System .
+	# dennis-2006-06-13 start							
+		config ELBOX_PROGS_PRIV_WLAN_W_PRATITION
+				bool "WLAN_WIRELESS_PARTITION"
+				default n
+				help
+						This feature can include the Wlan Wireless Partition System .
+	# dennis-2006-06-13 end			
+	    config ELBOX_PROGS_PRIV_WLAN_AP_BAND
+				bool "WLAN_AP_BAND"
+				default n
+				help
+					This feature can disapper the Wlan Wireless in 5G OR 2.4G BAND .
+		config ELBOX_PROGS_PRIV_WLAN_ROGUE_AP
+				bool "Rouge AP "
+				default n
+				help
+						This feature can indicate which ap was rogue ap .
+	 #	config ELBOX_PROGS_PRIV_WLAN_SITE_SURVEY
+	#			bool "Wlan Site Survey"
+	#			default n
+	#			help
+	#				This feature can include the Wlan Site Survey .
+#	/* dennis auto channel mode change extoffset vaule 2008-05-15 start */				
+		config ELBOX_PROGS_PRIV_WLAN_EXTOFFSET
+				bool "Wlan Channel Extoffset"
+				default n
+				help
+					This feature can change extoffset .
+# /* dennis auto channel mode change extoffset vaule 2008-05-15 end */
+# /* 2008-02-13 dennis fixedrate start */
+		config ELBOX_PROGS_PRIV_WLAN_FIXEDRATE
+				bool "Wlan Fixed Rate"
+				default n
+				help
+					This feature can change WLAN Tx Rate .
+# /* 2008-02-13 dennis fixedrate end */		
+	#	config ELBOX_PROGS_PRIV_WLAN_WTPATTACKMAC
+	#			bool "WTP ATTACK AP"
+	#			default n
+	#			help
+	#			This feature for wtp use .
+		
+		config ELBOX_PROGS_PRIV_WLAN_UTILIZ
+				bool "Wlan Utilization"
+				default n
+				help
+					This feature can set wlan utilization limit .
+
+		
+		config CONFIG_RGBIN_BRCTL_BRIDGE_ENTRY_LIMIT
+				bool "BRIDGE ENTRY LIMIT"
+				default n
+				help
+					This feature can set bridge entry limit .
+
+        config ELBOX_PROGS_PRIV_WLAN_MULTI_VLAN_NAP
+                bool "NAP (Network Access Protection) in wireless"
+                default n
+                help
+                        This feature can enable NAP function in wireless.
+		
+        config ELBOX_PROGS_PRIV_ENABLE_FCC_DFS2_CHANNELS
+                bool "Enable FCC DFS2 Channels "
+                default n
+                help
+                        This feature can enable FCC DFS2 Channels.
+		
+	config ELBOX_PROGS_PRIV_WLAN_MULTI_SSID_Priority
+                bool "MULTI SSID Priority"
+                default n
+                help
+                        This feature can include the MULTI SSID Priority .
+
+endmenu
+

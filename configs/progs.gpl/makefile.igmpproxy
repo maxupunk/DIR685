@@ -1,0 +1,3 @@
+# igmpproxy
+
+gsubdir-$(ELBOX_PROGS_GPL_IGMPPROXY)	+= igmpproxy

@@ -1,0 +1,11 @@
+#
+# ipt-string
+#
+
+config ELBOX_PROGS_GPL_IPT_STRING
+	bool "iptables string support - modified by AlphaNetworks (ipt-string)"
+	default y
+	depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 4
+	help
+		iptables string support, linux kernel module
+

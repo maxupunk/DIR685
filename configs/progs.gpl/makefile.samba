@@ -1,0 +1,4 @@
+# samba
+
+gsubdir-$(ELBOX_PROGS_GPL_SAMBA_3_0_7)	+=  samba-3.0.7
+gsubdir-$(ELBOX_PROGS_GPL_SAMBA_3_0_25a)  += samba

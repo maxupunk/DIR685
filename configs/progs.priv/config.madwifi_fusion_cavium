@@ -1,0 +1,10 @@
+config ELBOX_PROGS_PRIV_MADWIFI_FUSION_CAVIUM
+	bool "MADWIFI_FUSION_CAVIUM"
+	default n
+	help
+		CAVIUM Wireless module.
+
+source configs/progs.priv/config.enhanced_wireless_cavium_fusion
+
+
+

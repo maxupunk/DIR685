@@ -1,0 +1,3 @@
+# tinylogin
+
+gsubdir-$(ELBOX_PROGS_GPL_TINYLOGIN)	+= tinylogin-1.4

@@ -1,0 +1,30 @@
+#
+# telnetd
+#
+
+config ELBOX_PROGS_GPL_TELNETD
+	bool "Telnet daemon - modified by AlphaNetworks (telnetd)"
+	default y
+	help
+		telnet daemon, modified for manufacturing purpose.
+
+config ELBOX_PROGS_GPL_TELNETD_CLIENT_CONNECTION_TIMEOUT
+	bool "Connection timeout support"
+	default n
+	depends on ELBOX_PROGS_GPL_TELNETD
+	help
+		in default situation,the timeout value indicates the server timeout self.
+		If you want server to keep running and client has timeout, say 'Y'.  
+
+config ELBOX_PROGS_GPL_TELNETD_CLIENT_NCONNECTIONS
+	int "Restricted the number of connections support"
+	default 1
+	depends on ELBOX_PROGS_GPL_TELNETD && ELBOX_PROGS_GPL_TELNETD_CLIENT_CONNECTION_TIMEOUT
+	help
+		Limited the number of connections
+
+config ELBOX_PROGS_GPL_TELNETD_GET_DATABASE
+	bool "Get username and password from database"
+	default n
+	depends on ELBOX_PROGS_GPL_TELNETD
+	help

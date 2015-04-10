@@ -1,0 +1,76 @@
+#
+# WPS tools
+#
+
+config ELBOX_PROGS_PRIV_WPSTOOLS
+	bool "wpstools"
+	default n
+	help
+		WPS tools
+
+menu "WPS tools configuration"
+	depends ELBOX_PROGS_PRIV_WPSTOOLS
+
+	config CONFIG_WPSTOOLS_BIG_ENDIAN
+		bool "Generate Big Endian Code"
+		default n
+		help
+			This is used by the program of WPS tools for telling the endian.
+
+	config CONFIG_WPSTOOLS_PROFILE_HELPER
+		bool "Use external helper to save AP setting."
+		default n
+		help
+			The original design is to save the AP setting in the fixed xml nodes.
+			The AP setting will be saved under /runtime/wps/setting when this function is turned on,
+			the external helper will be responsible to set the AP setting to the appropriate xml nodes.
+			The new implementation should turn this option on.
+
+	config CONFIG_WPSTOOLS_USE_SHARED_OPENSSL
+		bool "Use shared openssl library."
+		default n
+		help
+			If more daemons use openssl, we should use this option and select one openssl from progs.gpl.
+
+	config CONFIG_WPSTOOLS_STA_SUPPORT
+		bool "Add STA/AP Client Mode Support in WPS"
+		default n
+		help
+			This item should be selected if we support AP Client Mode an use WPS.
+
+	config CONFIG_WPSTOOLS_ALPHA_BACKUP_RADIUS_SERVER
+		bool "Use the new backup radius server rule"
+		default n
+		help
+			The new rule is for radius packet and accounting packet.
+			If there is any radius packet waiting to send to radius server, we will try five times on the same radius.
+			If one radius server connection timeouts, we jump to another radius server, and continue connecting until 
+			this new radius server connection timeouts.
+			The original rule counts per one packet not per overall packet in queue.
+
+	config CONFIG_WPSTOOLS_ALPHA_NAP_SERVER_SUPPORT
+		bool "Add a parser for Tunnel-Private-Group-ID attribute from NAP Server"
+		default n
+		help
+			Add Dynamic VLAN ID support based on NAP Server.
+
+	config CONFIG_WPSTOOLS_ALPHA_UNSUPPORT_PRAGMA_PACK
+		bool "Use traditional __attribute__ pack instead of pragma pack"
+		default n
+		help
+			For compilers that doesn't support pragma pack, check this option to use traditional __attribute__ pack.
+
+	config CONFIG_WPSTOOLS_RADIUS_SERVER_ON_BOARD
+		bool "Enable Integrated EAP server"
+		default n
+		help
+			This functionality can be used both as a local authentication server for IEEE 802.1X/EAPOL 
+			and as a RADIUS server for other devices.
+
+	config CONFIG_WPSTOOLS_DISABLE_HOSTAPD
+		bool "Disable Hostapd"
+		default n
+		help
+			This item can be used to down size the firmware image if hostapd is not used.
+
+endmenu

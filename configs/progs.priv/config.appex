@@ -1,0 +1,11 @@
+#
+# appex
+#
+
+config ELBOX_PROGS_PRIV_APX
+	bool "appex"
+	default n
+	help
+		config file for Appex WAN Acceleration module(if exist).
+		This selection is only a config, and the real module is put in 
+		prog.board.

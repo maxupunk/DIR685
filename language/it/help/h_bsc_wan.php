@@ -1,0 +1,3 @@
+<strong>Suggerimenti utili</strong><br><br>
+&nbsp;&#149;&nbsp; Connessione Internet: quando si configura il router per l'accesso a Internet, assicurarsi di scegliere il tipo di connessione Internet corretto dal menu a discesa. Se non si ии certi dell'opzione da selezionare, contattare l'ISP (Internet Service Provider).<br><br>
+&nbsp;&#149;&nbsp; Supporto: in caso di problemi di accesso a Internet con il router, controllare attentamente le impostazioni immesse in questa pagina e, se necessario, verificarle con l'ISP.

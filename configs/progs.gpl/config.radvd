@@ -1,0 +1,27 @@
+#
+# radvd
+#
+
+config ELBOX_PROGS_GPL_RADVD
+	bool "Linux IPv6 Router Advertisement Daemon (radvd)"
+	default n
+	help
+		Linux IPv6 Router Advertisement Daemon (radvd)	
+
+menu "Linux IPv6 Router Advertisement Daemon (radvd) configuration"
+        depends ELBOX_PROGS_GPL_RADVD
+
+        config ELBOX_PROGS_GPL_RADVD_NOUSER_ALPHA
+                bool "Disable user and group name support"
+                default y
+                help
+			ignore user name and group check.
+
+        config ELBOX_PROGS_GPL_RADVD_NOLIBFL
+                bool "No libfl support"
+                default y
+                help
+			no libfl.a support	
+
+endmenu
+

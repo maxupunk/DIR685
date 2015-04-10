@@ -1,0 +1,3 @@
+# stunnel
+
+gsubdir-$(ELBOX_PROGS_GPL_STUNNEL)	+= stunnel-4.15

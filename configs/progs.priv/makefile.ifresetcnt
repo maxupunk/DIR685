@@ -1,0 +1,4 @@
+# ifresetcnt
+
+psubdir-$(ELBOX_PROGS_PRIV_IFRESETCNT)		+= ifresetcnt
+psubdir-$(ELBOX_PROGS_PRIV_IFRESETCNT_26)	+= ifresetcnt

@@ -1,0 +1,93 @@
+#
+# xmldb
+#
+
+config ELBOX_RALINK_WIFI
+	bool "RALINK_WIFI"
+	default n
+
+choice
+	prompt "Select version"
+	depends ELBOX_RALINK_WIFI
+	default ELBOX_PROGS_PRIV_RALINK_WIFI_EWC
+	help
+		Select the RALINK wireless driver version.
+
+	#
+	# Ralink wireless for EWC(RT2860)
+	#
+	config ELBOX_PROGS_PRIV_RALINK_WIFI_EWC
+		bool "Ralink wireless for EWC(RT2860) Driver 1.2.0.0"
+		help
+			Ralink EWC driver for RT2860, version 1.2.0.0
+
+	config ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1400
+		bool "Ralink wireless for EWC(RT2860) Driver 1.4.0.0"
+		help
+			Ralink EWC driver for RT2860, version 1.4.0.0
+
+	config ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1500
+		bool "Ralink wireless for EWC(RT2860) Driver 1.5.0.0"
+		help
+			Ralink EWC driver for RT2860, version 1.5.0.0
+
+	config ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1600
+		bool "Ralink wireless for EWC(RT2860) Driver 1.6.0.0"
+		help
+			Ralink EWC driver for RT2860, version 1.6.0.0
+	config ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1810
+		bool "Ralink wireless for EWC(RT2860) Driver 1.8.1.0"
+		help
+			Ralink EWC driver for RT2860, version 1.8.1.0
+	config ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1850
+                bool "Ralink wireless for EWC(RT2860) Driver 1.8.5.0"
+                help
+                        Ralink EWC driver for RT2860, version 1.8.5.0
+	
+endchoice
+
+	
+menu "WFADevice information"
+	depends ELBOX_RALINK_WIFI
+		
+	config ELBOX_PROGS_PRIV_RALINK_WPS_MANUFACTURE_NAME
+	depends ELBOX_RALINK_WIFI
+	string "Manufacture Name"
+	help
+		Manufacture Name of WFADevice
+
+	config ELBOX_PROGS_PRIV_RALINK_WPS_MODEL_NAME
+		string "Model Name"
+		help
+			Model Name of WFADevice
+
+	config ELBOX_PROGS_PRIV_RALINK_WPS_MODEL_NUMBER
+		string "Model Number"
+		help
+			Model Number of WFADevice
+
+	config ELBOX_PROGS_PRIV_RALINK_WPS_MODEL_SERIAL
+		string "Model Serial"
+		help
+			Model Serail of WFADevice
+
+	config ELBOX_PROGS_PRIV_RALINK_WPS_DEVICE_NAME
+		string "Device Name"
+		help
+			Device Name of WFADevice.
+
+endmenu
+
+config ELBOX_PROGS_PRIV_WLXMLPATCH_RALINK
+	bool "wlxmlpatch.ralink"
+	default n
+	depends on ELBOX_RALINK_WIFI
+	help
+		wlxmlpatch for ralink. This daemon updates the runtime info of wireless part.
+
+config ELBOX_PROGS_PRIV_WLKLOGDPATCH_RALINK
+	bool "Ralink Wireless klogd patch"
+	default n
+	depends on ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1600 || ELBOX_PROGS_PRIV_RALINK_WIFI_EWC_1810
+	help
+		Add klogd patch to cooperate with syslogd and limit auto channel selection between 1~11 for Japan only.

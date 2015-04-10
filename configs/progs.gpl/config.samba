@@ -1,0 +1,23 @@
+# samba
+
+config ELBOX_SAMBA
+	bool "SAMBA"
+	default n
+
+choice
+	prompt "Selection Version"
+	depends ELBOX_SAMBA
+	default ELBOX_PROGS_GPL_SAMBA_3_0_7
+	help
+		Select the version for the implementation
+
+	config ELBOX_PROGS_GPL_SAMBA_3_0_7
+		bool "samba-3.0.7"
+		help
+			samba v 3.0.7
+
+	 config ELBOX_PROGS_GPL_SAMBA_3_0_25a
+		 bool "samba-3.0.25a"
+		 help
+		    samba v 3.0.25a modifly by storlink
+endchoice

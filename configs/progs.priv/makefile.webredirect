@@ -1,0 +1,3 @@
+# ehtlink
+
+psubdir-$(CONFIG_RGBIN_BRCTL_WEB_REDIRECT)	+= webredirect

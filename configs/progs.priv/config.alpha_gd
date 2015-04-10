@@ -1,0 +1,10 @@
+#
+# alpha_gd
+#
+
+config ELBOX_PROGS_PRIV_VERIFICATION_CODE
+	bool "Generate verification code(WEB Login)"
+	default n
+	help
+		Use verification code when web login
+		

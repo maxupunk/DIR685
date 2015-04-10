@@ -1,0 +1,13 @@
+#
+# alpha_xgi
+#
+
+config ELBOX_PROGS_PRIV_ALPHA_HOTPLUG
+	bool "AlphaNetwors hotplug for printer or usb drive."
+	default n
+
+config ELBOX_PROGS_PRIV_WCN_UFD
+	bool "Windows Connect Now - UFD(Usb Flash Disk)"
+	default n
+	
+

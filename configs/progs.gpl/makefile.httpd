@@ -1,0 +1,5 @@
+# httpd
+
+gsubdir-$(ELBOX_PROGS_GPL_MATHOPD)	+= mathopd
+gsubdir-$(ELBOX_PROGS_GPL_MATHOPD_STANDARD)	+= mathopd_s
+gsubdir-$(ELBOX_PROGS_GPL_MATHOPD_16)	+= mathopd-1.6

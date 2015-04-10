@@ -1,0 +1,4 @@
+# 5VT ARM 926ejs little endian
+export TPATH_UC=/opt/storlink_arm_920t_le_uclibc/
+export TPATH_KC=/opt/storlink_arm_920t_le_uclibc/
+export PATH=/opt/storlink_arm_920t_le_uclibc/bin:$PATH

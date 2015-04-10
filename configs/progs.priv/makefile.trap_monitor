@@ -1,0 +1,3 @@
+# trap_monitor
+
+psubdir-$(ELBOX_PROGS_PRIV_TRAP_MONITOR)	+= trap_monitor

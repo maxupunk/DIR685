@@ -1,0 +1,97 @@
+#
+# xmldb
+#
+
+config ELBOX_MADWIFI
+	bool "MADWIFI"
+	default y
+
+choice
+	prompt "Select version"
+	depends ELBOX_MADWIFI
+	default ELBOX_PROGS_PRIV_MADWIFI_50246
+	help
+		Select the madwifi version.
+
+	#
+	# LSDK-WLAN RC 5.0.1.20
+	#
+	config ELBOX_PROGS_PRIV_MADWIFI_50120
+		bool "LSDK-WLAN RC 5.0.1.20"
+		help
+			Atheros Madwifi LSDK-WLAN RC 5.0.1.20 driver.
+
+
+	#
+	# LSDK-WLAN RC 5.0.2.46
+	#
+	config ELBOX_PROGS_PRIV_MADWIFI_50246
+		bool "LSDK-WLAN RC 5.0.2.46"
+		help
+			Atheros Madwifi LSDK-WLAN RC 5.0.2.46 driver.
+
+
+	#
+	# LSDK-WLAN RC 5.2.0.112
+	#
+	config ELBOX_PROGS_PRIV_MADWIFI_520112
+		bool "LSDK-WLAN RC 5.2.0.112"
+		help
+			Atheros Madwifi LSDK-WLAN RC 5.2.0.112 driver.
+	#
+	# LSDK-WLAN RC 5.3.1.45
+	#
+	config ELBOX_PROGS_PRIV_MADWIFI_53145
+		bool "LSDK-WLAN RC 5.3.1.45"
+		help
+			Atheros Madwifi LSDK-WLAN RC 5.3.1.45 driver.
+
+	#
+	# LSDK-WLAN 6.0.0.x
+	#
+	config ELBOX_PROGS_PRIV_MADWIFI_EWC
+		bool "LSDK-WLAN 6.0.0.x beta for EWC"
+		help
+			Atheros Madwifi LSDK-WLAN 6.0.0.x beta driver for EWC.
+
+	#
+	# LSDK-WLAN For WPS implementation
+	#
+	config ELBOX_PROGS_PRIV_MADWIFI_WPS
+		bool "LSDK-WLAN WPS implementation"
+		help
+			This folder contains the implementation of WPS on madwifi.
+			HOSTAPD is included in this package, please uncheck the hostapd package in GPL code.
+
+endchoice
+
+# dennis-2006-06-13 start              
+		config ELBOX_MADWIFI_WLAN_W_PARTITION
+			bool "WLAN_WIRELESS_PARTITION"
+			default n
+			depends on ELBOX_PROGS_PRIV_MADWIFI_520112
+			help
+				This feature can include the Wlan Wireless Partition System .
+# dennis-2006-06-13 end  
+
+choice
+	prompt "Config File"
+	depends ELBOX_MADWIFI
+	default ELBOX_MADWIFI_AP51
+
+	config ELBOX_MADWIFI_AP51
+		bool "config.ap51"
+	config ELBOX_MADWIFI_AP61
+		bool "config.ap61"
+	config ELBOX_MADWIFI_AP71
+		bool "config.ap71"
+
+endchoice
+
+
+config ELBOX_PROGS_PRIV_WLXMLPATCH_MADWIFI
+	bool "wlxmlpatch.madwifi"
+	default n
+	depends on ELBOX_MADWIFI
+	help
+		wlxmlpatch for madwifi. This daemon updates the runtime info of wireless part.

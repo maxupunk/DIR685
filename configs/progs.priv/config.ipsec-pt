@@ -1,0 +1,28 @@
+#
+# ipsec-pt
+#
+
+config ELBOX_IPSEC_PT
+	bool "IPSEC passthrough kernel module"
+
+choice
+	prompt "Select implementation"
+	default ELBOX_PROGS_PRIV_IPSEC_PT
+	depends ELBOX_IPSEC_PT
+	help
+		IPSEC passthrough kernel module (ipsec_pt)
+
+	config ELBOX_PROGS_PRIV_IPSEC_PT
+		bool "ipsec_pt for linux 2.4.x"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 4
+		help
+			IPSEC conntrack support.
+
+	config ELBOX_PROGS_PRIV_IPSEC_PT_26
+		bool "ipsec_pt for linux 2.6.13"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 6
+		help
+			IPSEC conntrack support.
+
+endchoice
+

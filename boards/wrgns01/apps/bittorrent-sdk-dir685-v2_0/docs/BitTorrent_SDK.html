@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.4.1: http://docutils.sourceforge.net/" />
+<title>BitTorrent Software Development Kit</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div class="title document" id="bittorrent-software-development-kit">
+<h1 class="title">BitTorrent Software Development Kit</h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="table-of-contents" name="table-of-contents">Table of contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#overview" id="id2" name="id2">Overview</a><ul>
+<li><a class="reference" href="#introduction" id="id3" name="id3">Introduction</a></li>
+<li><a class="reference" href="#features" id="id4" name="id4">Features</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#getting-started" id="id5" name="id5">Getting Started</a><ul>
+<li><a class="reference" href="#sdk-usage" id="id6" name="id6">SDK Usage</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#api-documentation" id="id7" name="id7">API Documentation</a><ul>
+<li><a class="reference" href="#id1" id="id8" name="id8">Overview</a></li>
+<li><a class="reference" href="#api-calls" id="id9" name="id9">API calls</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#web-ui" id="id10" name="id10">Web UI</a><ul>
+<li><a class="reference" href="#installing-the-reference-ui" id="id11" name="id11">Installing the Reference UI</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#application-settings" id="id12" name="id12">Application Settings</a><ul>
+<li><a class="reference" href="#internal-settings" id="id13" name="id13">Internal Settings</a></li>
+<li><a class="reference" href="#regular-settings" id="id14" name="id14">Regular Settings</a></li>
+</ul>
+</li>
+<li><a class="reference" href="#legal-notices" id="id15" name="id15">Legal Notices</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a id="overview" name="overview">Overview</a></h1>
+<div class="section">
+<h2><a id="introduction" name="introduction">Introduction</a></h2>
+<p>The BitTorrent Software Development Kit (SDK) is designed for use in
+embedded systems, including: network-area storage devices (NASs) and
+set-top boxes.  It provides a state-of-the-art implementation of the
+BitTorrent protocol and a full-featured web-based user interface in a
+small footprint.  In addition, the BitTorrent SDK aims to be
+highly-portable to a large number of devices and be easy to use
+both for integrators and end-users.</p>
+</div>
+<div class="section">
+<h2><a id="features" name="features">Features</a></h2>
+<p>The BitTorrent SDK is a full implementation of the official BitTorrent
+protocol.  Features include:</p>
+<blockquote>
+<ul class="simple">
+<li>Distributed hash table (DHT)</li>
+<li>UPnP port mapping</li>
+<li>NAT-PMP port mapping</li>
+<li>Upload rate limiting</li>
+<li>Download rate limiting</li>
+<li>Configurable limit on number of simultaneously uploading peers</li>
+<li>Incremental file allocation</li>
+<li>Block level piece picking</li>
+<li>Separate threads for file-check and download</li>
+<li>Single thread and single port for multiple torrent downloads</li>
+<li>BitTorrent extension protocol</li>
+<li>Multitracker extension support</li>
+<li>Fair trade extension</li>
+<li>Compact tracker extension</li>
+<li>Fast resume</li>
+<li>Queuing of torrent file-check if fast resume not possible</li>
+<li>HTTP seed support</li>
+<li>Resumption of partial downloads from other BitTorrent clients</li>
+<li>File-sizes greater than 2GB</li>
+<li>Selective download of multi-file torrents</li>
+<li>IPv6</li>
+<li>High performance network stack</li>
+</ul>
+</blockquote>
+<p>Additionally, the BitTorrent SDK inludes a full-featured web-based
+user interface that is fully customizable and extensible by licencees.</p>
+</div>
+</div>
+<div class="section">
+<h1><a id="getting-started" name="getting-started">Getting Started</a></h1>
+<p>The BitTorrent SDK consist of:</p>
+<blockquote>
+<ul class="simple">
+<li>an executable daemon (<tt class="docutils literal"><span class="pre">bt</span></tt>) that implements BitTorrent services
+and is used through an HTTP-based application programming
+interface (API);</li>
+<li>a <tt class="docutils literal"><span class="pre">btdog</span></tt> watchdog process that monitors <tt class="docutils literal"><span class="pre">bt</span></tt> process and
+restarts it in case it crashes. This improves reliability of the
+system.</li>
+<li>a reference implementation of a web-based user interface (UI) for
+managing BitTorrent downloads through a web browser.</li>
+</ul>
+</blockquote>
+<p>In order to integrate the SDK into your product, you must:</p>
+<blockquote>
+<ul class="simple">
+<li>make sure that the <tt class="docutils literal"><span class="pre">bt</span></tt> process is always running;</li>
+<li>install the web-based user interface, which consists of HTML, CSS
+and JavaScript files to be served either by a stand-alone web
+server (like Apache) or directly from the <tt class="docutils literal"><span class="pre">bt</span></tt> process.</li>
+</ul>
+</blockquote>
+<p>The web-based UI is provided as a reference implementation.  You may
+use it as-is, customize its look-and-feel by modifying CSS styles, or
+extend it to provide new functionality or tighter integration with
+your device or other applications.</p>
+<p>Alternatively, you may build a completely new UI using the BitTorrent
+SDK API.</p>
+<div class="section">
+<h2><a id="sdk-usage" name="sdk-usage">SDK Usage</a></h2>
+<p>There are 2 ways to deploy SDK on the device:</p>
+<blockquote>
+<ul class="simple">
+<li>run <tt class="docutils literal"><span class="pre">bt</span></tt> process under <tt class="docutils literal"><span class="pre">btdog</span></tt> supervision as:
+<tt class="docutils literal"><span class="pre">btdog</span> <span class="pre">bt</span> <span class="pre">-daemon-loop</span></tt> (where <tt class="docutils literal"><span class="pre">bt</span></tt> is the name of
+the process to launch and <tt class="docutils literal"><span class="pre">-daemon-loop</span></tt> is the argument
+to <tt class="docutils literal"><span class="pre">bt</span></tt> process). <tt class="docutils literal"><span class="pre">btdog</span></tt> is a watchdog process that will
+restart <tt class="docutils literal"><span class="pre">bt</span></tt> process in case it exits for any reson.</li>
+<li>run <tt class="docutils literal"><span class="pre">bt</span> <span class="pre">-daemon</span></tt> which starts <tt class="docutils literal"><span class="pre">bt</span></tt> process in Unix daemon mode.</li>
+</ul>
+</blockquote>
+<p>For the reason of reliability, we strongly recommend using <tt class="docutils literal"><span class="pre">btdog</span></tt>.</p>
+<p>At startup the <tt class="docutils literal"><span class="pre">bt</span></tt> executable looks for <tt class="docutils literal"><span class="pre">btsettings.txt</span></tt> which
+allows the behaviour of the SDK to be customized by changing the
+values of certain settings.  The format of this file is as follows:</p>
+<blockquote>
+<ul class="simple">
+<li>each setting is on a separate line;</li>
+<li>each line consists of colon-separated name of the setting and its
+value;</li>
+<li>any line whose first non-whitespace character is <tt class="docutils literal"><span class="pre">#</span></tt> is a comment.</li>
+</ul>
+</blockquote>
+<p>For example, a file that sets two values and includes one comment
+might look like:</p>
+<pre class="literal-block">
+# This is a comment
+bind_port: 9388
+max_total_connections: 600
+</pre>
+<p>For a complete list of application settings, see <a class="reference" href="#application-settings">Application Settings</a>.</p>
+</div>
+</div>
+<div class="section">
+<h1><a id="api-documentation" name="api-documentation">API Documentation</a></h1>
+<div class="section">
+<h2><a id="id1" name="id1">Overview</a></h2>
+<p>The API provides a simple remote procedure call (RPC) interface to the
+BitTorrent SDK.  All API calls are HTTP GET or POST requests.  Some
+API calls return nothing, others return a result.  When a result is
+returned, it may be returned in any one of three formats selectable at
+call time:</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference" href="http://json.org">JSON</a></li>
+<li><a class="reference" href="http://www.w3.org/XML/">XML</a></li>
+<li><a class="reference" href="http://wiki.theory.org/BitTorrentSpecification#bencoding">bencoded</a></li>
+</ul>
+</blockquote>
+<p>JSON format is recommended for JavaScript applications and is the
+default return type; XML is a widely-used, standards-based markup
+language, and finally, bencoded results are small and easy to parse
+and, therefore, suitable for low-level languages like C, C++, C#, and
+Java.</p>
+<p>JSON is the default return type.  Other formats can be requested by
+appending the <tt class="docutils literal"><span class="pre">format</span></tt> argument to the query, with value equal to
+<tt class="docutils literal"><span class="pre">xml</span></tt> (for XML format) or <tt class="docutils literal"><span class="pre">benc</span></tt> (for bencoded format).</p>
+<p>For example, the query <tt class="docutils literal"><span class="pre">/api/app-settings-get</span></tt> returns the current
+settings in JSON format, while the query
+<tt class="docutils literal"><span class="pre">/api/app-settings-get?format=xml</span></tt> returns them in XML format.</p>
+<p>All results are returned as a dictionaries of key-value pairs.  Future
+versions of the BitTorrent SDK may extend API results with new
+key-value pairs.  Consequently, applications built upon the SDK should
+ignore unknown keys.</p>
+<p>Successful API calls return 200 (OK) HTTP status response.</p>
+<!-- TODO: for API calls that return a result, formally define the format
+of the response and how it's serialized to benc, json, xml. -->
+</div>
+<div class="section">
+<h2><a id="api-calls" name="api-calls">API calls</a></h2>
+<div class="section">
+<h3><a id="getting-application-settings" name="getting-application-settings">Getting Application Settings</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/app-settings-get[?format=$format]</span></tt></p>
+<blockquote>
+Returns application settings. For a complete list of settings see
+<a class="reference" href="#application-settings">Application Settings</a>.</blockquote>
+<p>Sample JSON result:</p>
+<pre class="literal-block">
+{&quot;settings&quot; :
+ {&quot;auto_bandwidth_management&quot; : 1,
+  &quot;bind_port&quot; : 6881,
+  &quot;conns_per_torrent&quot; : 30,
+  &quot;max_dl_rate&quot; : -1,
+  &quot;max_total_connections&quot; : 400,
+  &quot;max_ul_rate&quot; : -1,
+  &quot;max_ul_rate_seed&quot; : -1,
+  &quot;seed_ratio&quot; : 0,
+  &quot;seed_time&quot; : 0,
+  &quot;ul_slots_per_torrent&quot; : 4}}
+</pre>
+<p>Sample XML result:</p>
+<pre class="literal-block">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;result&gt;
+&lt;settings&gt;
+ &lt;auto_bandwidth_management&gt;1&lt;/auto_bandwidth_management&gt;
+ &lt;bind_port&gt;6881&lt;/bind_port&gt;
+ &lt;conns_per_torrent&gt;30&lt;/conns_per_torrent&gt;
+ &lt;max_dl_rate&gt;-1&lt;/max_dl_rate&gt;
+ &lt;max_total_connections&gt;400&lt;/max_total_connections&gt;
+ &lt;max_ul_rate&gt;-1&lt;/max_ul_rate&gt;
+ &lt;max_ul_rate_seed&gt;-1&lt;/max_ul_rate_seed&gt;
+ &lt;seed_ratio&gt;0&lt;/seed_ratio&gt;
+ &lt;seed_time&gt;0&lt;/seed_time&gt;
+ &lt;ul_slots_per_torrent&gt;4&lt;/ul_slots_per_torrent&gt;
+&lt;/settings&gt;
+&lt;/result&gt;
+</pre>
+</div>
+<div class="section">
+<h3><a id="setting-application-settings" name="setting-application-settings">Setting Application Settings</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/app-settings-set?$name1=$val1[&amp;$name2=$val2...]</span></tt></p>
+<blockquote>
+<p>Sets one or more <a class="reference" href="#application-settings">application settings</a>. Silently ignores unknown
+setting names and invalid setting values.</p>
+<p>Returns: nothing.</p>
+</blockquote>
+</div>
+<div class="section">
+<h3><a id="getting-information-about-managed-torrents" name="getting-information-about-managed-torrents">Getting Information About Managed Torrents</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrents-get[?format=$format][&amp;hash=$infohash1][&amp;hash=$infohash]</span></tt></p>
+<blockquote>
+<p>Returns a list of torrents and information about them.  If no
+<tt class="docutils literal"><span class="pre">hash</span></tt> argument is provided, returns information for all torrents.
+If one or more <tt class="docutils literal"><span class="pre">hash</span></tt> arguments are provided, returns information
+only for torrents with those infohashes.  Invalid <tt class="docutils literal"><span class="pre">hash</span></tt> arguments
+are silently ignored.</p>
+<p>Returns an empty result if there are no torrents or none of the
+<tt class="docutils literal"><span class="pre">hash</span></tt> arguments is valid.</p>
+</blockquote>
+<!-- TODO: describe meaning of each setting. -->
+<p>The information that is returned for each torrent is as follows:</p>
+<dl class="docutils">
+<dt><strong>hash</strong> (<em>string</em>):</dt>
+<dd>Infohash of the torrent.</dd>
+<dt><strong>caption</strong> (<em>string</em>):</dt>
+<dd>Name of the torrent.</dd>
+<dt><strong>size</strong> (<em>integer</em>):</dt>
+<dd>Size (in bytes) of the torrent (combined size of all files in the torrent).</dd>
+<dt><strong>done</strong> (<em>integer</em>):</dt>
+<dd>Number of bytes downloaded so far. If <tt class="docutils literal"><span class="pre">done</span></tt> is equal to
+<tt class="docutils literal"><span class="pre">size</span></tt>, the torrent has been downloaded completely.</dd>
+<dt><strong>dl_rate</strong> (<em>integer</em>):</dt>
+<dd>Current download rate in bytes per second.</dd>
+<dt><strong>ul_rate</strong> (<em>integer</em>):</dt>
+<dd>Current upload rate in bytes per second.</dd>
+<dt><strong>payload_download</strong> (<em>integer</em>):</dt>
+<dd>Total number of bytes downloaded in a current session (since starting the application).</dd>
+<dt><strong>payload_upload</strong> (<em>integer</em>):</dt>
+<dd>Total number of bytes uploaded in a current session (since starting the application).</dd>
+<dt><strong>peers_total</strong> (<em>integer</em>):</dt>
+<dd>Total number of peers for this torrent.</dd>
+<dt><strong>peers_connected</strong> (<em>integer</em>):</dt>
+<dd>Number of peers to which we are connected.</dd>
+<dt><strong>seeds_connected</strong> (<em>integer</em>):</dt>
+<dd>Total number of seeds (peers that have the complete torrent) for this torrent.</dd>
+<dt><strong>seeds_total</strong> (<em>integer</em>):</dt>
+<dd>Number of seeds to which we are connected.</dd>
+<dt><strong>private</strong> (<em>Boolean</em>):</dt>
+<dd>1 (true) if this is a private torrent, 0 (false) otherwise.</dd>
+<dt><strong>state</strong> (<em>string</em>):</dt>
+<dd>State can be one of the following: &quot;queued_for_checking&quot;,
+&quot;checking_files&quot;, &quot;connecting_to_tracker&quot;, &quot;downloading&quot;,
+&quot;finished&quot;, &quot;seeding&quot;, or &quot;allocating&quot;.</dd>
+<dt><strong>stopped</strong> (<em>Boolean</em>):</dt>
+<dd>1 (true) if the torrent is stopped, 0 (false) otherwise.</dd>
+<dt><strong>distributed_copies</strong> (<em>string</em>):</dt>
+<dd>String representation of a floating point number representing the total number
+of distributed copies. Values lower than 1.0 mean that a torrent
+cannot be fully download from current peers.</dd>
+<dt><strong>max_dl_rate</strong> (<em>integer</em>):</dt>
+<dd>Maximum download rate for this torrent in kilobytes per second. -1
+means unlimited. Default value: -1.</dd>
+<dt><strong>max_ul_rate</strong> (<em>integer</em>):</dt>
+<dd>Maximum upload rate for this torrent in kilobytes per second. -1
+means unlimited. Default value: -1.</dd>
+<dt><strong>max_uploads</strong> (<em>integer</em>):</dt>
+<dd>Maximum number of uploads (peers that can download at the same
+time) for this torrent. -1 means unlimited. Default value: 4.</dd>
+<dt><strong>max_connections</strong> (<em>integer</em>):</dt>
+<dd>Default value: 60.</dd>
+</dl>
+<p>An example JSON output:</p>
+<pre class="literal-block">
+{
+  &quot;torrents&quot; : [ {
+      &quot;caption&quot; : &quot;Fedora-8-Live-KDE-i686&quot;,
+      &quot;distributed_copies&quot; : &quot;-1&quot;,
+      &quot;dl_rate&quot; : 0,
+      &quot;done&quot; : 732189042,
+      &quot;hash&quot; : &quot;5de112084598ee6b93f3b0602477d7efd1b47632&quot;,
+      &quot;max_connections&quot; : 60,
+      &quot;max_dl_rate&quot; : -1,
+      &quot;max_ul_rate&quot; : -1,
+      &quot;max_uploads&quot; : 4,
+      &quot;payload_download&quot; : 0,
+      &quot;payload_upload&quot; : 0,
+      &quot;peers_connected&quot; : 0,
+      &quot;peers_total&quot; : 230,
+      &quot;private&quot; : 0,
+      &quot;seeds_connected&quot; : 0,
+      &quot;seeds_total&quot; : 198,
+      &quot;size&quot; : 732189042,
+      &quot;state&quot; : &quot;seeding&quot;,
+      &quot;stopped&quot; : 1,
+      &quot;ul_rate&quot; : 0
+  }, {
+      &quot;caption&quot; : &quot;mspevack-ohio-linux-fest-2007.ogg&quot;,
+      &quot;distributed_copies&quot; : &quot;-1&quot;,
+      &quot;dl_rate&quot; : 0,
+      &quot;done&quot; : 351013357,
+      &quot;hash&quot; : &quot;d6e183d38da44d03ba56bb3018fb5c75d4de9917&quot;,
+      &quot;max_connections&quot; : 60,
+      &quot;max_dl_rate&quot; : -1,
+      &quot;max_ul_rate&quot; : -1,
+      &quot;max_uploads&quot; : 4,
+      &quot;payload_download&quot; : 0,
+      &quot;payload_upload&quot; : 0,
+      &quot;peers_connected&quot; : 0,
+      &quot;peers_total&quot; : 11,
+      &quot;private&quot; : 0,
+      &quot;seeds_connected&quot; : 0,
+      &quot;seeds_total&quot; : 10,
+      &quot;size&quot; : 351013357,
+      &quot;state&quot; : &quot;seeding&quot;,
+      &quot;stopped&quot; : 0,
+      &quot;ul_rate&quot; : 0
+  } ]
+}
+</pre>
+<p>An example XML output:</p>
+<pre class="literal-block">
+&lt;result&gt;
+&lt;torrents&gt;
+ &lt;item&gt;
+   &lt;caption&gt;Fedora-8-Live-KDE-i686&lt;/caption&gt;
+   &lt;distributed_copies&gt;-1&lt;/distributed_copies&gt;
+   &lt;dl_rate&gt;0&lt;/dl_rate&gt;
+   &lt;done&gt;732189042&lt;/done&gt;
+   &lt;hash&gt;5de112084598ee6b93f3b0602477d7efd1b47632&lt;/hash&gt;
+   &lt;max_connections&gt;60&lt;/max_connections&gt;
+   &lt;max_dl_rate&gt;-1&lt;/max_dl_rate&gt;
+   &lt;max_ul_rate&gt;-1&lt;/max_ul_rate&gt;
+   &lt;max_uploads&gt;4&lt;/max_uploads&gt;
+   &lt;payload_download&gt;0&lt;/payload_download&gt;
+   &lt;payload_upload&gt;114688&lt;/payload_upload&gt;
+   &lt;peers_connected&gt;2&lt;/peers_connected&gt;
+   &lt;peers_total&gt;228&lt;/peers_total&gt;
+   &lt;private&gt;0&lt;/private&gt;
+   &lt;seeds_connected&gt;0&lt;/seeds_connected&gt;
+   &lt;seeds_total&gt;195&lt;/seeds_total&gt;
+   &lt;size&gt;732189042&lt;/size&gt;
+   &lt;state&gt;seeding&lt;/state&gt;
+   &lt;stopped&gt;0&lt;/stopped&gt;
+   &lt;ul_rate&gt;1638&lt;/ul_rate&gt;&lt;/item&gt;
+ &lt;item&gt;
+   &lt;caption&gt;mspevack-ohio-linux-fest-2007.ogg&lt;/caption&gt;
+   &lt;distributed_copies&gt;-1&lt;/distributed_copies&gt;
+   &lt;dl_rate&gt;0&lt;/dl_rate&gt;
+   &lt;done&gt;351013357&lt;/done&gt;
+   &lt;hash&gt;d6e183d38da44d03ba56bb3018fb5c75d4de9917&lt;/hash&gt;
+   &lt;max_connections&gt;60&lt;/max_connections&gt;
+   &lt;max_dl_rate&gt;-1&lt;/max_dl_rate&gt;
+   &lt;max_ul_rate&gt;-1&lt;/max_ul_rate&gt;
+   &lt;max_uploads&gt;4&lt;/max_uploads&gt;
+   &lt;payload_download&gt;0&lt;/payload_download&gt;
+   &lt;payload_upload&gt;0&lt;/payload_upload&gt;
+   &lt;peers_connected&gt;0&lt;/peers_connected&gt;
+   &lt;peers_total&gt;9&lt;/peers_total&gt;
+   &lt;private&gt;0&lt;/private&gt;
+   &lt;seeds_connected&gt;0&lt;/seeds_connected&gt;
+   &lt;seeds_total&gt;8&lt;/seeds_total&gt;
+   &lt;size&gt;351013357&lt;/size&gt;
+   &lt;state&gt;seeding&lt;/state&gt;
+   &lt;stopped&gt;0&lt;/stopped&gt;
+   &lt;ul_rate&gt;0&lt;/ul_rate&gt;&lt;/item&gt;
+ &lt;/torrents&gt;
+&lt;/result&gt;
+</pre>
+</div>
+<div class="section">
+<h3><a id="setting-the-properties-of-a-torrent" name="setting-the-properties-of-a-torrent">Setting the Properties of a Torrent</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-set-props?hash=$infohash&amp;$name1=$val1[&amp;$name2=$val2...]</span></tt></p>
+<blockquote>
+<p>Set one or more properties of a given torrent.  Invalid properties
+and invalid values are silently ignored.</p>
+<p>Returns: nothing.</p>
+</blockquote>
+<p>The torrent properties that may be set are:</p>
+<dl class="docutils">
+<dt><strong>max_dl_rate</strong> (<em>integer</em>):</dt>
+<dd>Maximum download rate for this torrent in kilobytes per second. -1
+means unlimited. Default value: -1.</dd>
+<dt><strong>max_ul_rate</strong> (<em>integer</em>):</dt>
+<dd>Maximum upload rate for this torrent in kilobytes per second. -1
+means unlimited. Default value: -1.</dd>
+<dt><strong>max_uploads</strong> (<em>integer</em>):</dt>
+<dd>Maximum number of uploads (peers that can download at the same
+time) for this torrent. -1 means unlimited. Default value: 4.</dd>
+<dt><strong>max_connections</strong> (<em>integer</em>):</dt>
+<dd>Default value: 60.</dd>
+</dl>
+</div>
+<div class="section">
+<h3><a id="starting-a-torrent" name="starting-a-torrent">Starting a Torrent</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-start?hash=$infohash</span></tt></p>
+<blockquote>
+<p>Starts the torrent with the given infohash.  Infohashes can be
+obtained with the <tt class="docutils literal"><span class="pre">/api/torrents-get</span></tt> call.  Does nothing if the
+torrent is already started.</p>
+<p>Returns: nothing.</p>
+</blockquote>
+</div>
+<div class="section">
+<h3><a id="stopping-a-torrent" name="stopping-a-torrent">Stopping a Torrent</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-stop?hash=$infohash</span></tt></p>
+<blockquote>
+<p>Stops the torrent with the given infohash. Infohashes can be
+obtained with the <tt class="docutils literal"><span class="pre">/api/torrents-get</span></tt> call. Does nothing if the
+torrent is already stopped.</p>
+<p>Returns: nothing.</p>
+</blockquote>
+</div>
+<div class="section">
+<h3><a id="adding-a-torrent-via-url" name="adding-a-torrent-via-url">Adding a Torrent via URL</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-add?url=$url[&amp;start=yes]</span></tt></p>
+<blockquote>
+<p>Adds the torrent with the given URL, where <tt class="docutils literal"><span class="pre">url</span></tt> is a link to a
+torrent file accessible via HTTP.  Invalid or inaccessible URLs are
+silently ignored.</p>
+<p>If the optional <tt class="docutils literal"><span class="pre">start</span></tt> argument is <tt class="docutils literal"><span class="pre">yes</span></tt>, the torrent will
+start downloading automatically. Otherwise it must started
+explicitly with the <tt class="docutils literal"><span class="pre">/api/torrent-start</span></tt> API call.</p>
+<p>Returns: nothing.</p>
+</blockquote>
+<p>This call is asynchronous.  It will return immediately without waiting
+to finish downloading the torrent file. This means that there might be
+a lag between when the <tt class="docutils literal"><span class="pre">/api/torrent-add</span></tt> call finishes and when the
+torrent appears in the list returned by <tt class="docutils literal"><span class="pre">api/torrents-get</span></tt>.</p>
+<p>Example:</p>
+<blockquote>
+<tt class="docutils literal"><span class="pre">/api/torrent-add?url=http://torrent.fedoraproject.org/torrents/Fedora-8-Live-i686.torrent</span></tt></blockquote>
+</div>
+<div class="section">
+<h3><a id="adding-a-torrent-file" name="adding-a-torrent-file">Adding a Torrent File</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-add[&amp;start=yes]</span></tt></p>
+<blockquote>
+<p>Add the torrent file provided by HTTP POST data.  The POSTed torrent
+file data are expected in multipart/form-data encoded format.  This
+call is synchronous.</p>
+<p>Returns: a short HTML document invoking JavaScript functions to
+support web-based user interfaces (see below).</p>
+</blockquote>
+<p>If the torrent file was valid, returns:</p>
+<pre class="literal-block">
+&lt;html&gt;
+  &lt;body&gt;
+  &lt;script type=\&quot;text/javascript\&quot;&gt;
+  if (window.parent.apiTorrentAddFinishedOk) window.parent.apiTorrentAddFinishedOk();
+  &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>If the torrent file was invalid, returns:</p>
+<pre class="literal-block">
+&lt;html&gt;
+  &lt;body&gt;
+  &lt;script type=\&quot;text/javascript\&quot;&gt;
+  if (window.parent.apiTorrentAddFailed) window.parent.apiTorrentAddFailed();
+  &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>These responses may be ignored but help in building web-based
+interfaces. By implementing <tt class="docutils literal"><span class="pre">apiTorrentAddFailed()</span></tt> and
+<tt class="docutils literal"><span class="pre">apiTorrentAddFinishedOk()</span></tt> JavaScript functions, a web-based UI can
+notify the user if the call failed or succeeded.</p>
+<p>In a web-based UI, it is necessary to use a hidden IFRAME in the
+invoking page to capture the response.  This is shown in the following
+example:</p>
+<pre class="literal-block">
+&lt;form id=&quot;uploadFile&quot; method=&quot;POST&quot; action=&quot;/api/torrent-add&quot; target=&quot;uploadFrame&quot; enctype=&quot;multipart/form-data&quot;&gt;
+        &lt;input id=&quot;uploadFile&quot; type=&quot;file&quot; size=&quot;50&quot; name=&quot;fileEl&quot;&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;/&gt;
+&lt;/form&gt;
+&lt;iframe id=&quot;uploadFrame&quot; name=&quot;uploadFrame&quot; style=&quot;width:0px; height:0px; border: 0px&quot;&gt;&lt;/iframe&gt;
+</pre>
+</div>
+<div class="section">
+<h3><a id="removing-a-torrent" name="removing-a-torrent">Removing a Torrent</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-remove?hash=$infohash[&amp;delete-torrent=yes][&amp;delete-data=yes]</span></tt></p>
+<blockquote>
+<p>Removes the torrent with the given infohash. If the optional
+<tt class="docutils literal"><span class="pre">delete-torrent</span></tt> argument is <tt class="docutils literal"><span class="pre">yes</span></tt>, also deletes the torrent
+file.  If the optional <tt class="docutils literal"><span class="pre">delete-data</span></tt> argument is <tt class="docutils literal"><span class="pre">yes</span></tt>, also
+deletes the data for this torrent.</p>
+<p>Returns: nothing.</p>
+</blockquote>
+<p>It is recommended that <tt class="docutils literal"><span class="pre">delete-torrent</span></tt> and <tt class="docutils literal"><span class="pre">delete-data</span></tt> always
+be set to <tt class="docutils literal"><span class="pre">yes</span></tt> if the torrent has not yet been fully downloaded.</p>
+</div>
+<div class="section">
+<h3><a id="getting-a-list-of-files-in-a-torrent" name="getting-a-list-of-files-in-a-torrent">Getting a List of Files in a Torrent</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-get-files?[?format=$format][&amp;hash=$infohash1][&amp;hash=$infohash]</span></tt></p>
+<blockquote>
+<p>Returns a list of files in a torrent and their properties.  If no
+<tt class="docutils literal"><span class="pre">hash</span></tt> argument is provided, returns information for all torrents.
+If one or more <tt class="docutils literal"><span class="pre">hash</span></tt> arguments are provided, returns information
+only for torrents with those infohashes.  Invalid <tt class="docutils literal"><span class="pre">hash</span></tt> arguments
+are silently ignored.</p>
+<p>Returns an empty result if there are no torrents or none of the
+<tt class="docutils literal"><span class="pre">hash</span></tt> arguments is valid.</p>
+<p>The properties returned for each file are:</p>
+<dl class="docutils">
+<dt><strong>id</strong> (<em>integer</em>):</dt>
+<dd>A unique id for the file (needed for some other API calls).</dd>
+<dt><strong>name</strong> (<em>string</em>):</dt>
+<dd>Name of the file (might include a directory).</dd>
+<dt><strong>size</strong> (<em>integer</em>):</dt>
+<dd>Size of the file.</dd>
+<dt><strong>done</strong> (<em>integer</em>):</dt>
+<dd>How much of the file has been downloaded.</dd>
+<dt><strong>pri</strong> (<em>integer</em>):</dt>
+<dd><p class="first">Download priority of the file.  Files with higher priority might
+be downloaded faster than other files.</p>
+<p class="last">0 means low, 1 means default (medium), 2 means high. -1 means: do
+not download at all.</p>
+</dd>
+</dl>
+</blockquote>
+<p>Example JSON response:</p>
+<pre class="literal-block">
+{
+  &quot;torrents&quot; : {
+      &quot;1606c977d334534b1bf12149399529a4c89b33d0&quot; : [ {
+          &quot;done&quot; : 719859712,
+          &quot;id&quot; : 0,
+          &quot;name&quot; : &quot;Fedora-7-KDE-Live-i686\\Fedora-7-KDE-Live-i686.iso&quot;,
+          &quot;pri&quot; : 1,
+          &quot;size&quot; : 719859712
+      }, {
+          &quot;done&quot; : 370,
+          &quot;id&quot; : 1,
+          &quot;name&quot; : &quot;Fedora-7-KDE-Live-i686\\SHA1SUM&quot;,
+          &quot;pri&quot; : 1,
+          &quot;size&quot; : 370
+      } ],
+      &quot;37a721f52791ddd0eac551e380e4716690cee6f9&quot; : [ {
+          &quot;done&quot; : 732942336,
+          &quot;id&quot; : 0,
+          &quot;name&quot; : &quot;Fedora-8-Live-ppc\\Fedora-8-Live-ppc.iso&quot;,
+          &quot;pri&quot; : 1,
+          &quot;size&quot; : 732942336
+      }, {
+          &quot;done&quot; : 300,
+          &quot;id&quot; : 1,
+          &quot;name&quot; : &quot;Fedora-8-Live-ppc\\SHA1SUM&quot;,
+          &quot;pri&quot; : 1,
+          &quot;size&quot; : 300
+      } ]
+  }
+}
+</pre>
+<p>Example XML response:</p>
+<pre class="literal-block">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;result&gt;
+&lt;torrents&gt;
+ &lt;1606c977d334534b1bf12149399529a4c89b33d0&gt;
+   &lt;item&gt;
+     &lt;done&gt;719859712&lt;/done&gt;
+     &lt;id&gt;0&lt;/id&gt;
+     &lt;name&gt;Fedora-7-KDE-Live-i686%5CFedora-7-KDE-Live-i686.iso&lt;/name&gt;
+     &lt;pri&gt;0&lt;/pri&gt;
+     &lt;size&gt;719859712&lt;/size&gt;&lt;/item&gt;
+   &lt;item&gt;
+     &lt;done&gt;370&lt;/done&gt;
+     &lt;id&gt;1&lt;/id&gt;
+     &lt;name&gt;Fedora-7-KDE-Live-i686%5CSHA1SUM&lt;/name&gt;
+     &lt;pri&gt;0&lt;/pri&gt;
+     &lt;size&gt;370&lt;/size&gt;&lt;/item&gt;
+ &lt;/1606c977d334534b1bf12149399529a4c89b33d0&gt;
+ &lt;37a721f52791ddd0eac551e380e4716690cee6f9&gt;
+   &lt;item&gt;
+     &lt;done&gt;732942336&lt;/done&gt;
+     &lt;id&gt;0&lt;/id&gt;
+     &lt;name&gt;Fedora-8-Live-ppc%5CFedora-8-Live-ppc.iso&lt;/name&gt;
+     &lt;pri&gt;0&lt;/pri&gt;
+     &lt;size&gt;732942336&lt;/size&gt;&lt;/item&gt;
+   &lt;item&gt;
+     &lt;done&gt;300&lt;/done&gt;
+     &lt;id&gt;1&lt;/id&gt;
+     &lt;name&gt;Fedora-8-Live-ppc%5CSHA1SUM&lt;/name&gt;
+     &lt;pri&gt;0&lt;/pri&gt;
+     &lt;size&gt;300&lt;/size&gt;&lt;/item&gt;
+  &lt;/37a721f52791ddd0eac551e380e4716690cee6f9&gt;
+&lt;/torrents&gt;
+&lt;/result&gt;
+</pre>
+</div>
+<div class="section">
+<h3><a id="setting-the-download-priority-of-a-file" name="setting-the-download-priority-of-a-file">Setting the Download Priority of a File</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-file-set-priority?hash=$infohash&amp;id=$id&amp;pri=$pri</span></tt></p>
+<blockquote>
+<p>Set the download priority of the file specified by the given
+infohash and file id.  The priority argument may be:</p>
+<blockquote>
+<blockquote>
+<p><strong>-1</strong>: do not download the file</p>
+<p><strong>0</strong>: low priority</p>
+<p><strong>1</strong>: default (medium) priority</p>
+<p><strong>2</strong>: high priority</p>
+</blockquote>
+<p>Silently ignores invalid <tt class="docutils literal"><span class="pre">hash</span></tt> or <tt class="docutils literal"><span class="pre">id</span></tt> or <tt class="docutils literal"><span class="pre">pri</span></tt>.</p>
+<p>Returns: nothing.</p>
+</blockquote>
+</blockquote>
+</div>
+<div class="section">
+<h3><a id="get-file-content" name="get-file-content">Get File Content</a></h3>
+<p><tt class="docutils literal"><span class="pre">/api/torrent-file-get?hash=$infohash&amp;id=$id</span></tt></p>
+<blockquote>
+<p>Returns the content of the file specified by the given infohash and
+file <tt class="docutils literal"><span class="pre">id</span></tt>.  File <tt class="docutils literal"><span class="pre">id</span></tt> may be obtained from the
+<tt class="docutils literal"><span class="pre">/api/torrent-get-files</span></tt> call.</p>
+<p>If a <tt class="docutils literal"><span class="pre">hash</span></tt> or <tt class="docutils literal"><span class="pre">id</span></tt> argument is invalid, returns 404 HTTP
+response.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="section">
+<h1><a id="web-ui" name="web-ui">Web UI</a></h1>
+<p>The web-based UI is provided as a reference implementation.  You may
+use it as-is, customize its look-and-feel by modifying CSS styles, or
+extend it to provide new functionality or tighter integration with
+your device.</p>
+<p>Alternatively, you may build a completely new UI on top of the
+BitTorrent SDK API.</p>
+<p>The BitTorrent SDK provides a Downloads view, from which torrent
+downloads may be managed, and a Settings page, where several settings
+may be customized.</p>
+<p>The BitTorrent SDK actually comes with two alternative Download views:</p>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">fe01.html</span></tt></dt>
+<dd>a power-user view similar to PC-based clients such as uTorrent.</dd>
+<dt><tt class="docutils literal"><span class="pre">fe02.html</span></tt></dt>
+<dd>a simpler user interface, hiding most detail, appropriate for new
+or non-technical users</dd>
+</dl>
+</blockquote>
+<div class="section">
+<h2><a id="installing-the-reference-ui" name="installing-the-reference-ui">Installing the Reference UI</a></h2>
+<p>The reference UI consists of HTML, CSS, JavaScript and image
+files. The files can be served by the <tt class="docutils literal"><span class="pre">bt</span></tt> process or a standard
+HTTP server (e.g. Apache).</p>
+<p>BitTorrent does not provide end-user customer support for the SDK.
+The support link that appears on the web UI is initially set to
+<tt class="docutils literal"><span class="pre">http://sdk_licencee_support_page/</span></tt> and must be changed by licencees
+to a customer support site or knowledge-base operated by the licencee.</p>
+<div class="section">
+<h3><a id="serving-files-directly-from-the-bt-process" name="serving-files-directly-from-the-bt-process">Serving Files Directly from the <tt class="docutils literal"><span class="pre">bt</span></tt> Process</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">bt</span></tt> process can serve as an embedded HTTP server and serve all
+the HTML, CSS and JavaScript files. The advantage of this scenario is
+that no other software is required; you need only configured the
+<tt class="docutils literal"><span class="pre">bt</span></tt> process properly.  The disadvantage is that, if you already
+have an HTTP server running, the <tt class="docutils literal"><span class="pre">bt</span></tt> process must use a different
+HTTP port.</p>
+</div>
+<div class="section">
+<h3><a id="serving-files-from-an-http-server" name="serving-files-from-an-http-server">Serving Files from an HTTP Server</a></h3>
+<p>If you already have an HTTP server running, the HTTP server can serve
+all HTML, CSS and JavaScript files, while the <tt class="docutils literal"><span class="pre">bt</span></tt> process provides
+data and functionality via its HTTP API.</p>
+<p>One problem with this approach is that the requests to the <tt class="docutils literal"><span class="pre">bt</span></tt>
+process are done via JavaScript <tt class="docutils literal"><span class="pre">XMLHTTPRequest</span></tt> calls which are
+restricted by the same-origin policy of most browsers. That means that
+an <tt class="docutils literal"><span class="pre">XMLHTTPRequest</span></tt> call can only issue requests to exactly the same
+server from which HTML pages are served. Since the HTTP server
+(serving HTTP files) runs on a different port than the <tt class="docutils literal"><span class="pre">bt</span></tt> process
+responding to the <tt class="docutils literal"><span class="pre">XMLHTTPRequest</span></tt> calls, this violates same-origin
+policy.</p>
+<p>There are several possible workarounds. One workaround, specific to
+the Apache HTTP server, is to configure the server to proxy
+<tt class="docutils literal"><span class="pre">XMLHTTPRequest</span></tt> calls in a way that is invisible to the HTTP server.</p>
+<p>First, you must make sure that Apache is compiled with
+<tt class="docutils literal"><span class="pre">mod_rewrite</span></tt>, <tt class="docutils literal"><span class="pre">mod_proxy</span></tt> and <tt class="docutils literal"><span class="pre">mod_proxy_http</span></tt>. These modules
+also must be loaded, which is done by adding the following to
+<tt class="docutils literal"><span class="pre">httpd.conf</span></tt>:</p>
+<pre class="literal-block">
+LoadModule rewrite_module modules/mod_rewrite.so
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+</pre>
+<p>Assuming that both the HTTP server and the <tt class="docutils literal"><span class="pre">bt</span></tt> process are running
+on localhost (127.0.0.1) and the <tt class="docutils literal"><span class="pre">bt</span></tt> process is serving HTTP
+requests on port 8080, the following lines in <tt class="docutils literal"><span class="pre">.htaccess</span></tt> file will
+correctly configure proxying:</p>
+<pre class="literal-block">
+RewriteEngine On
+RewriteBase /
+RewriteRule ^api/(.*)$ http://127.0.0.1:8080/api/$1 [P]
+</pre>
+</div>
+<div class="section">
+<h3><a id="using-the-first-reference-ui-fe01-html" name="using-the-first-reference-ui-fe01-html">Using the First Reference UI (<tt class="docutils literal"><span class="pre">fe01.html</span></tt>)</a></h3>
+<p>First reference web UI consists of following files:</p>
+<blockquote>
+<ul class="simple">
+<li>fe01.html</li>
+<li>btbase.css</li>
+<li>btlteIE6.css</li>
+<li>btsettings.html</li>
+<li>btfe00.css</li>
+<li>btsdk.js</li>
+<li>btuicommon.js</li>
+<li>img</li>
+</ul>
+</blockquote>
+<p>You need to rename <tt class="docutils literal"><span class="pre">fe01.html</span></tt> to <tt class="docutils literal"><span class="pre">index.html</span></tt> and change href
+references in <tt class="docutils literal"><span class="pre">btsettings.html</span></tt> from <tt class="docutils literal"><span class="pre">./fe01.html</span></tt> to
+<tt class="docutils literal"><span class="pre">index.html</span></tt></p>
+</div>
+<div class="section">
+<h3><a id="using-the-second-reference-ui-fe02-html" name="using-the-second-reference-ui-fe02-html">Using the Second Reference UI (<tt class="docutils literal"><span class="pre">fe02.html</span></tt>)</a></h3>
+<p>Second reference web UI consists of following files:</p>
+<blockquote>
+<ul class="simple">
+<li>fe02.html</li>
+<li>btbase.css</li>
+<li>btlteIE6.css</li>
+<li>btsettings.html</li>
+<li>btfe00.css</li>
+<li>btsdk.js</li>
+<li>btuicommon.js</li>
+<li>img</li>
+</ul>
+</blockquote>
+<p>You need to rename <tt class="docutils literal"><span class="pre">fe02.html</span></tt> to <tt class="docutils literal"><span class="pre">index.html</span></tt> and change href
+references in <tt class="docutils literal"><span class="pre">btsettings.html</span></tt> from <tt class="docutils literal"><span class="pre">./fe01.html</span></tt> to
+<tt class="docutils literal"><span class="pre">index.html</span></tt></p>
+</div>
+</div>
+</div>
+<div class="section">
+<h1><a id="application-settings" name="application-settings">Application Settings</a></h1>
+<p>Settings fall into two categories:</p>
+<blockquote>
+<ul class="simple">
+<li>internal settings, whose values can only be set through
+<tt class="docutils literal"><span class="pre">btsettings.txt</span></tt> file;</li>
+<li>regular settings, whose values can be set through
+<tt class="docutils literal"><span class="pre">btsettings.txt</span></tt> file or the <tt class="docutils literal"><span class="pre">/api/app-settings-set</span></tt> RPC API
+call.</li>
+</ul>
+</blockquote>
+<p>A setting can be of one of three types:</p>
+<blockquote>
+<ul class="simple">
+<li><em>string</em></li>
+<li><em>integer</em></li>
+<li><em>Boolean</em> value (<tt class="docutils literal"><span class="pre">1</span></tt> for true and <tt class="docutils literal"><span class="pre">0</span></tt> for false)</li>
+</ul>
+</blockquote>
+<div class="section">
+<h2><a id="internal-settings" name="internal-settings">Internal Settings</a></h2>
+<dl class="docutils">
+<dt><strong>bind_ip</strong> (<em>string</em>):</dt>
+<dd>IP address to use for socket connections. If not provided, a
+default IP address will be used. We do not recommend changing this value.</dd>
+<dt><strong>webui_port</strong> (<em>integer</em>):</dt>
+<dd>Default value: 8080. Port number where the <tt class="docutils literal"><span class="pre">bt</span></tt> process accepts
+HTTP RPC API calls.  If the <tt class="docutils literal"><span class="pre">bt</span></tt> process also serves HTML files (see
+<tt class="docutils literal"><span class="pre">webui_server_files</span></tt> setting), also the port of HTTP server.</dd>
+<dt><strong>webui_serve_files</strong> (<em>boolean</em>):</dt>
+<dd>Default value: true. If true, the <tt class="docutils literal"><span class="pre">bt</span></tt> process will act as an HTTP
+server and serve HTML, CSS and JavaScript files needed for
+webui. When set to false, the web UI files will be served by a stand-alone
+HTTP server (like Apache).</dd>
+<dt><strong>webui_dir_files</strong> (<em>string</em>):</dt>
+<dd>Default value: &quot;webui&quot;. Name of the directory with HTML, CSS and
+JavaScript files that constitute web UI. It can be an absolute path
+(recommended) or set relative to current directory of <tt class="docutils literal"><span class="pre">bt</span></tt> process.</dd>
+<dt><strong>webui_root</strong> (<em>string</em>):</dt>
+<dd>Default value: &quot;/&quot;. If the <tt class="docutils literal"><span class="pre">bt</span></tt> process also acts as an HTTP server,
+prefix for web UI. E.g. if <tt class="docutils literal"><span class="pre">webui_root</span></tt> is &quot;/foo/&quot;, a
+request for &quot;/foo/bar.html&quot; will make <tt class="docutils literal"><span class="pre">bt</span></tt> process return
+<tt class="docutils literal"><span class="pre">bar.html</span></tt> from <tt class="docutils literal"><span class="pre">webui_dir_files</span></tt> directory.</dd>
+<dt><strong>dir_active</strong> (<em>string</em>):</dt>
+<dd>Default value: &quot;./&quot;. Directory in which currently downloaded data
+is saved. Can be an absolute path or a relative path. If it is a
+relative path, the value is relative to <tt class="docutils literal"><span class="pre">dir_root</span></tt> or the current
+working directory if <tt class="docutils literal"><span class="pre">dir_root</span></tt> is not defined or an empty
+string. It is recommended that this directory be hidden from users
+(i.e. not exported through Samba).</dd>
+<dt><strong>dir_completed</strong> (<em>string</em>):</dt>
+<dd>Default value: &quot;&quot;. Directory where a completed downloads are
+stored. If empty string, value of <tt class="docutils literal"><span class="pre">dir_active</span></tt> is used. This must
+be a path that is accesible to users (e.g. exported through
+Samba). It also has to be on the same volume as <tt class="docutils literal"><span class="pre">dir_active</span></tt>.</dd>
+<dt><strong>dir_torrent_files</strong> (<em>string</em>):</dt>
+<dd>Default value: &quot;&quot;. Directory where torrent files are stored. If
+empty string, value of <tt class="docutils literal"><span class="pre">dir_active</span></tt> is used.  It is recommended
+that this directory be hidden from users (i.e. not exported through
+Samba).</dd>
+<dt><strong>upnp</strong> (<em>boolean</em>):</dt>
+<dd>Default value: true. If true, UPNP functionality for mapping ports
+is used by <tt class="docutils literal"><span class="pre">bt</span></tt>. We recommend setting its value to true.</dd>
+<dt><strong>natpmp</strong> (<em>boolean</em>):</dt>
+<dd>If true, NAT-PMP functionality for mapping ports is used by
+<tt class="docutils literal"><span class="pre">bt</span></tt>. Default value: true. We recommend settings its value to
+true.</dd>
+<dt><strong>lsd</strong> (<em>boolean</em>):</dt>
+<dd>Default value: true. If true, Local Service Discovery is
+enabled. We recommend settings its value to true.</dd>
+<dt><strong>dht</strong> (<em>boolean</em>):</dt>
+<dd>Default value: true. If true, Distributed Hash Table extension is
+enabled. We recommend settings its value to true.</dd>
+<dt><strong>pex</strong> (<em>boolean</em>):</dt>
+<dd>Default value: true. If true, Peer Exchange extension is
+enabled. We recommend settings its value to true.</dd>
+<dt><strong>dir_root</strong> (<em>string</em>):</dt>
+<dd>Default value: &quot;&quot;. If not empty, <strong>dir_active</strong>, <strong>dir_completed</strong>,
+and <strong>dir_torrent_files</strong> are relative to this directory.</dd>
+</dl>
+</div>
+<div class="section">
+<h2><a id="regular-settings" name="regular-settings">Regular Settings</a></h2>
+<dl class="docutils">
+<dt><strong>bind_port</strong> (<em>integer</em>):</dt>
+<dd>Default value: 6881. Port used for BitTorrent protocol. This can be
+any value in the range 1025-65000.</dd>
+<dt><strong>max_ul_rate</strong> (<em>integer</em>):</dt>
+<dd>Default value: -1. Maximum total upload rate in bytes per
+second. -1 means unlimited. We recommend setting it to -1.</dd>
+<dt><strong>max_ul_rate_seed</strong> (<em>integer</em>):</dt>
+<dd>Default value: -1. Maximum per-torrent upload rate when seeding, in
+bytes per second. -1 means unlimited. We recomment setting it to -1.</dd>
+<dt><strong>ul_slots_per_torrent</strong> (<em>integer</em>):</dt>
+<dd>Default value: 4. Maximum number of peers that can download a given
+torrent at the same time.</dd>
+<dt><strong>conns_per_torrent</strong> (<em>integer</em>):</dt>
+<dd>Default value: 50. Maximium number of connections for a given torrent.</dd>
+<dt><strong>max_total_connections</strong> (<em>integer</em>):</dt>
+<dd>Default value: 200. Maximum number of connection opened at the same time.</dd>
+<dt><strong>auto_bandwidth_management</strong> (<em>boolean</em>):</dt>
+<dd>Default value: true. If true, upload bandwidth is automatically
+throttled in order to not impact other applications using TCP/IP.</dd>
+<dt><strong>max_dl_rate</strong> (<em>integer</em>):</dt>
+<dd>Default value: -1. Maximum total download rate in bytes per
+second. -1 means unlimited. We recommend setting it to -1.</dd>
+<dt><strong>seed_ratio</strong> (<em>integer</em>):</dt>
+<dd>Default value: 0. Seed ratio in percent (%) (e.g. 100 means
+100%). If not 0, seeding will stop after reaching this
+upload/download ratio.</dd>
+<dt><strong>seed_time</strong> (<em>integer</em>):</dt>
+<dd>Default value: 0. Time after which seeding will stop, in seconds. 0
+means it wont stop.</dd>
+</dl>
+</div>
+</div>
+<div class="section">
+<h1><a id="legal-notices" name="legal-notices">Legal Notices</a></h1>
+<p>Copyright (c) 2007 BitTorrent Inc. All rights reserved.</p>
+<p>BitTorrent is a trademark or registered trademark of BitTorrent, Inc. used
+only under license.</p>
+<p>This SDK contains the libtorrent library, which is subject to the following:</p>
+<blockquote>
+<p>Original libtorrent library, Copyright (c) 2007, Arvid Norberg. All rights reserved.
+Modifications to libtorrent library Copyright (c) 2007, BitTorrent, Inc. All rights reserved.</p>
+<p>Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:</p>
+<blockquote>
+<ul class="simple">
+<li>Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in
+the documentation and/or other materials provided with the distribution.</li>
+<li>Neither the name of the author nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.</li>
+</ul>
+</blockquote>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.</p>
+</blockquote>
+</div>
+</div>
+</body>
+</html>

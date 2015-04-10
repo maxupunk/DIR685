@@ -1,0 +1,9 @@
+#
+# IO DATA Quick Copy for Client Device (Convertor)
+#
+
+config ELBOX_PROGS_PRIV_IODATA_QUICKCOPY_CLIENT
+	bool "IO DATA Quick Copy for Client Device"
+	default n
+	help
+		IO DATA Quick Copy for Client Device

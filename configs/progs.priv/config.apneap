@@ -1,0 +1,55 @@
+#
+# AP Neap
+#
+
+config ELBOX_PROGS_PRIV_AP_NEAP 
+	bool "AP Neap"
+	default n
+
+	config ELBOX_PROGS_PRIV_AP_NEAPS
+	depends ELBOX_PROGS_PRIV_AP_NEAP
+		bool "AP Neap Server"
+		default n
+
+	config ELBOX_PROGS_PRIV_AP_NEAPS_DCC
+	depends ELBOX_PROGS_PRIV_AP_NEAPS
+		bool "AP Neap Server DCC"
+		default n
+
+			config ELBOX_PROGS_PRIV_AP_NEAPS_RGDB_LOC
+	    depends ELBOX_PROGS_PRIV_AP_NEAPS_DCC
+		  bool "AP Neap Server RGDB Location"
+		  default n
+
+menu "AP Neap Server Class Configuration"
+	depends ELBOX_PROGS_PRIV_AP_NEAPS
+	config CONFIG_AP_NEAPS_INTERNET
+		bool "internet"
+		default n
+		help
+			The internet function.
+
+	config CONFIG_AP_NEAPS_WIRELESS
+		bool "wireless"
+		default n
+		help
+			The wirelsee function.
+
+	config CONFIG_AP_NEAPS_RESIDENTIAL_GATEWAY 
+		bool "residential gateway"
+		default n
+		help
+			The residential gateway function.
+
+	config CONFIG_AP_NEAP_AP_ARRAY
+		bool "ap array"
+		default n
+		help
+			The ap array function.
+
+endmenu
+
+	config ELBOX_PROGS_PRIV_AP_NEAPC
+	depends ELBOX_PROGS_PRIV_AP_NEAP
+		bool "AP Neap Client"
+		default n

@@ -1,0 +1,3 @@
+# upnp-av
+
+psubdir-$(ELBOX_PROGS_PRIV_VERIFICATION_CODE)	+= alpha_gd

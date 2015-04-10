@@ -1,0 +1,5 @@
+# wlxmlpatchv2
+
+psubdir-$(ELBOX_PROGS_PRIV_UPDATEWIFISTATS_RALINK)		+= updatewifistats
+psubdir-$(ELBOX_PROGS_PRIV_UPDATEWIFISTATS_ATHEROS)		+= updatewifistats
+psubdir-$(ELBOX_PROGS_PRIV_UPDATEWIFISTATS_BROADCOM)	+= updatewifistats

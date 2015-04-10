@@ -1,0 +1,40 @@
+#
+# main Config.in file for ELBOX configuration
+#
+
+mainmenu "ELBOX Configuration"
+
+config ELBOX_HAVE_DOT_CONFIG
+	bool
+	default y
+
+config ELBOX_FIRMWARE_VERSION
+	string "Customized F/W version"
+	default "N/A"
+
+config ELBOX_FIRMWARE_REVISION
+	string "Customized F/W revision"
+	default "N/A"
+
+comment "Device Configuration"
+config ELBOX_FIRMWARE_SIGNATURE
+	string 'Customized F/W signature'
+	default "N/A"
+
+source configs/boards/Config.in
+source configs/templates/Config.in
+
+comment "Programs Configuration"
+
+source configs/progs.gpl/Config.in
+source configs/progs.priv/Config.in
+
+menu "Common library configuration"
+config ELBOX_COMLIB_MEM_HELPER_DISABLE
+	bool "Disable mem_helper"
+	default y
+	help
+		The main purpose of the mem_helper module is for debuggin.
+		Recommanded to disable mem_helper in the release version.
+endmenu
+

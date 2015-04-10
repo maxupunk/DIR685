@@ -1,0 +1,38 @@
+#
+# turbonat
+#
+
+config ELBOX_TURBONAT
+	bool "Turbo NAT support"
+	default y
+
+choice
+	prompt "Select implementation"
+	default ELBOX_PROGS_PRIV_TURBONAT
+	depends ELBOX_TURBONAT
+	help
+		Fast NAT kernel module selection.
+
+	config ELBOX_PROGS_PRIV_TURBONAT
+		bool "sw_tcp for kernel 2.4.x"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 4
+	config ELBOX_PROGS_PRIV_TURBONAT_26
+		bool "sw_tcp for kernel 2.6.13"
+		depends ELBOX_LINUX_MAJOR = 2 && ELBOX_LINUX_MINOR = 6
+endchoice
+
+config ELBOX_PROGS_PRIV_TURBONAT_QOS
+	bool "  QOS on Fast NAT support"
+	depends ELBOX_TURBONAT
+	default n
+	help
+		QOS on Fast NAT kernel module selection.
+
+config ELBOX_PROGS_PRIV_TURBONAT_UBCOM
+	bool "  Auto Bandwidth Detection on Fast Nat support"
+	depends ELBOX_TURBONAT && ELBOX_PROGS_PRIV_TURBONAT_QOS
+	default n
+	help
+		UBCOM on Fast NAT kernel module selection.
+
+

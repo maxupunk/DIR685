@@ -1,0 +1,7 @@
+config ELBOX_PROGS_PRIV_ART_AP83
+	bool "ART_AP83"
+	default n
+	help
+		AP83 Wireless ART.
+
+

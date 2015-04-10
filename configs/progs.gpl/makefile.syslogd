@@ -1,0 +1,4 @@
+# syslogd
+
+gsubdir-$(ELBOX_PROGS_GPL_SYSLOGD)		+= syslogd
+gsubdir-$(ELBOX_PROGS_GPL_SYSLOGD_V2)	+= syslogd_v2

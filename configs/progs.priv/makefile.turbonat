@@ -1,0 +1,4 @@
+# turbonat
+
+psubdir-$(ELBOX_PROGS_PRIV_TURBONAT)	+= turbonat
+psubdir-$(ELBOX_PROGS_PRIV_TURBONAT_26)	+= turbonat.26

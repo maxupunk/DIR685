@@ -1,0 +1,1 @@
+cmd_/home/joely/gpl/dir685-gpl/boards/wrgns01/apps/deviceserver-1.1.2/sxuptp_generic.ko := arm-linux-ld -EL  -r -o /home/joely/gpl/dir685-gpl/boards/wrgns01/apps/deviceserver-1.1.2/sxuptp_generic.ko /home/joely/gpl/dir685-gpl/boards/wrgns01/apps/deviceserver-1.1.2/sxuptp_generic.o /home/joely/gpl/dir685-gpl/boards/wrgns01/apps/deviceserver-1.1.2/sxuptp_generic.mod.o

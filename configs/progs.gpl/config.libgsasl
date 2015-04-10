@@ -1,0 +1,21 @@
+#
+# GNU SASL Library
+#
+
+config ELBOX_PROGS_GPL_LIB_GSASL
+	bool "GNU SASL-Library"
+	default n
+
+choice
+	prompt "version selection"
+	depends ELBOX_PROGS_GPL_LIB_GSASL
+	default ELBOX_PROGS_GPL_LIB_GSASL_0_2_6
+	help
+		Select the GNU SASL-Library version for the platform
+
+	config ELBOX_PROGS_GPL_LIB_GSASL_0_2_6
+		bool "libgsasl-0.2.6"
+		help
+			GNU SASL-Library: libgsasl-0.2.6
+endchoice
+

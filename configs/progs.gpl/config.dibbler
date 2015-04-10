@@ -1,0 +1,16 @@
+#
+# dibbler 
+#
+
+config ELBOX_PROGS_GPL_DIBBLER
+	bool "DHCPv6: Dibbler - a portable DHCPv6"
+	default n
+	help
+		Dibbler is a portable DHCPv6 implementation. It supports stateful (i.e. IPv6 address granting)
+		as well as stateless (i.e. option granting) autoconfiguration for IPv6. 
+		Currently Linux 2.4/2.6 and Windows XP and Windows 2003 ports are available. It features easy
+		to use install packages (Clickable Windows installer and RPM and DEB packages for Linux) and 
+		extensive documentation (both for users as well as developers).
+		Dibbler is developed under GNU GPL licence. 
+		It means that it is free for all, including commercial usage.
+

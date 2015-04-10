@@ -1,0 +1,9 @@
+#
+# ip personality(netsniper)
+#
+
+config ELBOX_PROGS_GPL_IPPERSONALITY
+	bool "ip personality(netsniper)"
+	default n
+	help
+		ip personality(netsniper)

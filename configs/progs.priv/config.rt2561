@@ -1,0 +1,22 @@
+# rt2860v2
+
+config ELBOX_RT2561
+	bool "Ralink RT2561(RT61) driver"
+	default n
+
+choice
+	prompt "Select Version"
+	depends ELBOX_RT2561
+	default ELBOX_PROGS_PRIV_RT2561
+	help
+		Select the verison of RT2561 driver.
+
+	# rt28561 20071011
+	config ELBOX_PROGS_PRIV_RT2561
+		bool "2007_1011_RT61_Linux_SoftAP_Drv1.1.2.0.bz2"
+		help
+			The source tar ball is 2007_1011_RT61_Linux_SoftAP_Drv1.1.2.0.bz2
+			The tar ball package may be different at the next release.
+			Ralink don't have rules for releasing packages.
+
+endchoice

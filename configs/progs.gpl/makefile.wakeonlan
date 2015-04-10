@@ -1,0 +1,2 @@
+#wake on lan
+gsubdir-$(ELBOX_PROGS_GPL_WOL)				+= wakeonlan

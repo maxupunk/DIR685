@@ -1,0 +1,154 @@
+#
+# other private programs
+#
+
+config ELBOX_PROGS_PRIV_DHCPXMLPATCH
+	bool "DHCP server helper - dhcpxmlpatch"
+	default y
+	help
+		Sync dhcp leases file to xml node.
+
+config ELBOX_PROGS_PRIV_UPDATELEASES
+	bool "DHCP server helper - updateleases(for project Seattle)"
+	default n
+	help
+		Sync dhcp leases file to xml node(for project Seattle).
+
+config ELBOX_PROGS_PRIV_MTDTEST
+	bool "MTD tester for debugging (mtdtest)"
+	default n
+	help
+		A usermode program for mtd testing. A debug tool.
+
+config ELBOX_PROGS_PRIV_PORTT
+	bool "User mode port trigger (portt)"
+	default y
+	help
+		Port trigger implementation. This require klogd and iptables.
+
+config ELBOX_PROGS_PRIV_NETSTAR
+	bool "Netstar service"
+	default n
+	help
+		Netstar URL blocking service
+
+config ELBOX_PROGS_PRIV_RESOLVED
+	bool "Resolve names service"
+	default n
+	help
+		A simple daemon to resolve and update name from file /var/etc/names to address.
+
+config ELBOX_PROGS_PRIV_PROXYD
+	bool "Proxyd"
+	default n
+	help
+		Proxy daemon for url blocking
+
+config ELBOX_DDNS
+	bool "Dynamic DNS"
+	default	y
+
+menu	"Select DDNS updater implementation"
+	depends ELBOX_DDNS 
+
+	config ELBOX_PROGS_PRIV_DYNDNS
+		bool "Dynamic DNS updater (dyndns)"
+		default y
+		help
+			DynDNS updater. This version is copied from dyndns of rgbin.
+			Now this program run as daemon, and update DNS periodically.
+			If you select this program, please remember to remove dyndns
+			from rgbin.
+
+	config ELBOX_PROGS_PRIV_PEANUT
+		bool "Dynamic DNS updater (peanut, Mainland China)"
+		default n
+		help
+			Peanut(Oray.net) DDNS updater for Mainland, China
+
+endmenu
+
+config ELBOX_PROGS_PRIV_BDTOOL
+	bool "bdtool"
+	default n
+	help
+		bdtool - Board Config Data tool for Atheros AP51.
+		This tool is used to manipulate the board config data of AP51.
+
+config ELBOX_PROGS_PRIV_BDCFG
+	bool "bdcfg"
+	default n
+	help
+		bdtool - Generic Redboot Board Config Data tool.
+		This tool is used to manipulate the board config data of Redboot.
+
+config ELBOX_PROGS_PRIV_LLD2D
+	bool "lld2d"
+	default n
+	help
+		The implementation of Link Layer Topology Discovery (LLTD).
+
+config ELBOX_PROGS_PRIV_CMCGI
+	bool "Configuration Manager(cm.cgi)"
+	default n
+	help
+		Configuration Manager CGI program. A program for settings data to XMLDB.
+
+config ELBOX_PROGS_PRIV_ART 
+	bool "Atheros Radio Test"
+	default n
+	help
+		The tool is used to test the board configure and radio configure for Atheros.
+
+config ELBOX_PROGS_PRIV_WIDGET
+	bool "Yahoo!Widget"
+	default n
+	help
+		Support Yahoo!Widget.
+
+config ELBOX_PROGS_PRIV_STARSPEED
+	bool "Star Speed (Mainland,CHINA)"
+	default n
+	help
+		This tool is for Star Speed PPPoE support.
+
+config ELBOX_PROGS_PRIV_TR069_CLIENT
+        bool "TR069 Client"
+        default n
+        help
+		 The implementation of TR069 Client.
+
+menu	"Select other protocols and options"
+	depends ELBOX_PROGS_PRIV_TR069_CLIENT
+
+	config CONFIG_TR069_USE_SHARED_OPENSSL
+		bool "Use shared openssl library."
+		default n
+		help
+			If more daemons use openssl, we should use this option and select one openssl from progs.gpl.
+
+	#
+	#tr111 
+	#
+	config ELBOX_PROGS_PRIV_TR111
+		bool "TR111"
+		depends ELBOX_PROGS_PRIV_TR069_CLIENT
+		default n
+
+	#
+	#tr104 
+	#
+	config ELBOX_PROGS_PRIV_TR104
+		bool "TR104"
+		depends ELBOX_PROGS_PRIV_TR069_CLIENT
+		default n
+
+endmenu
+
+config ELBOX_PROGS_PRIV_TRAFFICCTRL
+	bool "Traffic Control"
+	default n
+	help
+		Traffic control for ap, include QOS and Traffic Manager.
+
+

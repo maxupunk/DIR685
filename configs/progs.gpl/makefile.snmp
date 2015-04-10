@@ -1,0 +1,3 @@
+# snmp
+
+gsubdir-$(ELBOX_PROGS_GPL_NET_SNMP)	+= net-snmp

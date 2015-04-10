@@ -1,0 +1,12 @@
+#
+# upnp_av
+#
+
+config ELBOX_PROGS_PRIV_UPNP_AV
+	bool "upnp-av"
+	default n
+	help
+		UPNP-AV server with libiconv-1.9.1, libid3tag-0.15.0b, media_type, prescan
+		sqlite-3.5.8 and zlib-1.2.1
+		
+		

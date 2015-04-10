@@ -1,0 +1,11 @@
+#madwifi
+
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_50120)	+= madwifi.LSDK-WLAN5.0.1.20
+
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_50246)	+= madwifi.LSDK-WLAN5.0.2.46
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_520112)	+= madwifi.LSDK-WLAN5.2.0.112
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_53145)  += madwifi.LSDK-WLAN5.3.1.45
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_EWC)		+= madwifi.ewc
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_WPS)		+= madwifi.WPS
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI) += madwifi
+psubdir-$(ELBOX_PROGS_PRIV_WLXMLPATCH_MADWIFI)	+= wlxmlpatch.madwifi

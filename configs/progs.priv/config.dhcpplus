@@ -1,0 +1,10 @@
+#
+# Netbios
+#
+
+config ELBOX_PROGS_PRIV_DHCPPLUS
+	bool "dhcpplus"
+	default n
+	help
+		DHCPPLUS
+

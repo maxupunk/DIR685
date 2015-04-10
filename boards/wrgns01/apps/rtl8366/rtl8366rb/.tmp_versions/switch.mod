@@ -1,0 +1,2 @@
+/home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/switch.ko
+/home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/rtl8366rb.o /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/gpio.o /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/smi.o /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/rtl8366rb_api.o /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/rtl8368s_asicdrv.o /home/jana/20090522/boards/wrgns01/apps/rtl8366/rtl8366rb/alpha_igmp_snoop.o

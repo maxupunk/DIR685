@@ -1,0 +1,18 @@
+<?
+/* Created by Kwest Wan 20071009 
+*  to support D-Link Widget 
+*/
+if(query("/widget/version")=="v2")
+{
+require("/www/widgetV2/xml_head.xml");
+require("/www/widgetV2/".$section.".xml");
+require("/www/widgetV2/xml_tail.xml");
+	
+}
+else
+{
+require("/www/widget/xml_head.xml");
+require("/www/widget/".$section.".xml");
+require("/www/widget/xml_tail.xml");
+}
+?>

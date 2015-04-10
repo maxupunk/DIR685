@@ -1,0 +1,3 @@
+# hostapd
+
+gsubdir-$(ELBOX_PROGS_GPL_HOSTAPD_0_3_7)	+= hostapd-0.3.7

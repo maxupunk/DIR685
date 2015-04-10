@@ -1,0 +1,53 @@
+#
+# Config.in for progs.gpl
+#
+menu "GPL Programs"
+
+source configs/progs.gpl/config.arptables
+source configs/progs.gpl/config.bpalogin
+source configs/progs.gpl/config.busybox
+source configs/progs.gpl/config.chillispot
+source configs/progs.gpl/config.dibbler
+source configs/progs.gpl/config.dns
+source configs/progs.gpl/config.hostapd
+source configs/progs.gpl/config.httpd
+source configs/progs.gpl/config.igmpproxy
+source configs/progs.gpl/config.ippersonality
+source configs/progs.gpl/config.iproute2
+source configs/progs.gpl/config.ipt-string
+source configs/progs.gpl/config.iptables
+source configs/progs.gpl/config.itunes_server
+source configs/progs.gpl/config.klogd
+source configs/progs.gpl/config.lprng
+source configs/progs.gpl/config.nsbbox
+source configs/progs.gpl/config.openssh
+source configs/progs.gpl/config.pppd
+source configs/progs.gpl/config.pure_ftpd
+source configs/progs.gpl/config.quota
+source configs/progs.gpl/config.radvd
+source configs/progs.gpl/config.samba
+source configs/progs.gpl/config.snmp
+source configs/progs.gpl/config.stunnel
+source configs/progs.gpl/config.stupid_ftpd
+source configs/progs.gpl/config.syslogd
+source configs/progs.gpl/config.telnetd
+source configs/progs.gpl/config.tinylogin
+source configs/progs.gpl/config.tzdir
+source configs/progs.gpl/config.udev
+source configs/progs.gpl/config.udhcp
+source configs/progs.gpl/config.upnpigd
+source configs/progs.gpl/config.usb_modeswitch
+source configs/progs.gpl/config.wakeonlan
+source configs/progs.gpl/config.wide-dhcpv6
+source configs/progs.gpl/config.wireless_tools
+source configs/progs.gpl/config.xsupplicant
+source configs/progs.gpl/config.zebra
+source configs/progs.gpl/config.radiusclient
+comment "------------------------ Libraries ------------------------ ---"
+source configs/progs.gpl/config.libgsasl
+source configs/progs.gpl/config.openssl
+source configs/progs.gpl/config.libtorrent
+source configs/progs.gpl/config.zlib
+source configs/progs.gpl/config.email
+
+endmenu

@@ -1,0 +1,5 @@
+# klogd
+
+gsubdir-$(ELBOX_PROGS_GPL_KLOGD)	+= klogd
+gsubdir-$(ELBOX_PROGS_GPL_KLOGD_AP)    += klogd.ap
+

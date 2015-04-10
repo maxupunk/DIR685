@@ -1,0 +1,62 @@
+#
+# Makefile.in for progs.priv
+#
+
+psubdir-y :=
+psubdir-n :=
+psubdir-  :=
+
+-include configs/progs.priv/makefile.xmldb
+-include configs/progs.priv/makefile.rgbin
+-include configs/progs.priv/makefile.alphaxgi
+-include configs/progs.priv/makefile.ipsec-pt
+-include configs/progs.priv/makefile.ifresetcnt
+-include configs/progs.priv/makefile.stun_nat
+-include configs/progs.priv/makefile.turbonat
+-include configs/progs.priv/makefile.log
+-include configs/progs.priv/makefile.madwifi
+-include configs/progs.priv/makefile.art_ap83
+-include configs/progs.priv/makefile.madwifi_ap83
+-include configs/progs.priv/makefile.madwifi_cavium
+-include configs/progs.priv/makefile.madwifi_fusion_cavium
+-include configs/progs.priv/makefile.ralink_wifi
+-include configs/progs.priv/makefile.ralink_iNIC
+-include configs/progs.priv/makefile.rt2860v2
+-include configs/progs.priv/makefile.rt2561
+-include configs/progs.priv/makefile.broadcom_wifi
+-include configs/progs.priv/makefile.upnpkits
+-include configs/progs.priv/makefile.neaps
+-include configs/progs.priv/makefile.apneap
+-include configs/progs.priv/makefile.igmp
+-include configs/progs.priv/makefile.igmpproxy
+-include configs/progs.priv/makefile.scheduled
+-include configs/progs.priv/makefile.common_scripts
+-include configs/progs.priv/makefile.others
+-include configs/progs.priv/makefile.alpha_hotplug
+-include configs/progs.priv/makefile.madwifi_dband
+-include configs/progs.priv/makefile.alpha_nls_drv
+-include configs/progs.priv/makefile.wpstools
+-include configs/progs.priv/makefile.wpa_supplicant
+-include configs/progs.priv/makefile.capwap
+-include configs/progs.priv/makefile.cli
+-include configs/progs.priv/makefile.wlxmlpatchv2
+-include configs/progs.priv/makefile.updatewifistats
+-include configs/progs.priv/makefile.netbios
+-include configs/progs.priv/makefile.ethlink
+-include configs/progs.priv/makefile.sendmail
+-include configs/progs.priv/makefile.static_dhcp
+-include configs/progs.priv/makefile.servd
+-include configs/progs.priv/makefile.cgibin.aries
+-include configs/progs.priv/makefile.upnp_av_server
+-include configs/progs.priv/makefile.alpha_gd
+-include configs/progs.priv/makefile.cloned
+-include configs/progs.priv/makefile.logd
+-include configs/progs.priv/makefile.iodata_quickcopy
+-include configs/progs.priv/makefile.iodata_quickcopy_client
+-include configs/progs.priv/makefile.ddnsd
+-include configs/progs.priv/makefile.dhcpplus
+-include configs/progs.priv/makefile.ubcom
+-include configs/progs.priv/makefile.trap_monitor
+-include configs/progs.priv/makefile.autorekey
+-include configs/progs.priv/makefile.webredirect
+PROGS_PRIV_SUBDIRS=$(psubdir-y)

@@ -1,0 +1,23 @@
+#
+# iproute2
+#
+
+config ELBOX_PROGS_GPL_IPROUTE2_2_6_8
+	bool "iproute2 v2.6.8 (iproute2)"
+	default n
+	help
+		iproute2 (ip/tc) utilities
+
+config ELBOX_PROGS_GPL_TC_FOR_AP
+	bool "Enable TC for AP"
+	depends on ELBOX_PROGS_GPL_IPROUTE2_2_6_8
+	default n
+	help
+		Enable tc in iproute2 for AP.
+
+config ELBOX_PROGS_GPL_TC_U32_IP_PORT_RANGE
+	bool "U32 filter uses range mappimg instead of mask for IP and PORT"
+	depends on ELBOX_PROGS_GPL_IPROUTE2_2_6_8
+	default n
+	help
+		U32 filter uses range mappimg instead of mask for IP and PORT.

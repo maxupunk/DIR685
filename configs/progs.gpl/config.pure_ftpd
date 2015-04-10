@@ -1,0 +1,11 @@
+#
+# Pure-ftpd
+#
+
+config ELBOX_PROGS_GPL_PURE_FTPD
+	bool "Pure-Ftpd"
+	default n
+	help
+		Pure-ftpd server with libiconv
+		
+		

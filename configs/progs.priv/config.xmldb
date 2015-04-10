@@ -1,0 +1,33 @@
+#
+# xmldb
+#
+
+config ELBOX_XMLDB
+	bool "XMLDB"
+	default y
+
+choice
+	prompt "Select implementation"
+	depends ELBOX_XMLDB
+	default ELBOX_PROGS_PRIV_XMLDB
+	help
+		Select the xmldb to use as the core database.
+
+	config ELBOX_PROGS_PRIV_XMLDB
+		bool "xmldb"
+		help
+			The second version of XMLDB implementation.
+
+	config ELBOX_PROGS_PRIV_XMLDB3
+		bool "xmldb3"
+		help
+			The 3rd version of XMLDB implementation.
+
+endchoice
+
+config ELBOX_CREATE_RGDB_LINK_TO_XMLDBC
+	bool "Create rgdb symbolic link to xmldbc"
+	depends ELBOX_PROGS_PRIV_XMLDB
+	help
+		The xmldbc is a new client program for xmldb.
+		It is used to replace rgdb (in rgbin).

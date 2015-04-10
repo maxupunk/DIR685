@@ -1,0 +1,50 @@
+#
+# openssl
+#
+
+config ELBOX_OPENSSL
+	bool "OpenSSL Library"
+	default n
+
+config ELBOX_PROGS_GPL_OPENSSL_USE_STATIC_LINK
+	bool "OpenSSL Library , statically linked"
+	depends ELBOX_OPENSSL
+	default n
+	help
+		A SSLeay library.
+		Openssl is builded in program by static linking.
+
+choice
+	prompt "Selection Version"
+	depends ELBOX_OPENSSL
+	default ELBOX_PROGS_GPL_OPENSSL_098A
+	help
+		Select the openssl version for the platform
+
+	config ELBOX_PROGS_GPL_OPENSSL_098A
+		bool "OpenSSL Library (0.9.8a)"
+		help
+			A SSLeay library.
+			Openssl is essential for stunnel, openssh, snmp and etc.
+
+	config ELBOX_PROGS_GPL_OPENSSL_098E
+		bool "OpenSSL Library (0.9.8e)"
+		help
+			A SSLeay library.
+			Openssl is essential for stunnel, openssh, snmp and etc.
+
+	config ELBOX_PROGS_GPL_OPENSSL_098E_GCC_4_2
+		bool "OpenSSL Library (0.9.8e) gcc-4.2 patched"
+		help
+			A SSLeay library.
+			Openssl is essential for stunnel, openssh, snmp and etc.
+			The reference url, http://unix.derkeiler.com/Mailing-Lists/FreeBSD/current/2007-05/msg00754.html
+
+	config ELBOX_PROGS_GPL_OPENSSL_098G
+		bool "OpenSSL Library (0.9.8g)"
+		help
+			A SSLeay library.
+			Openssl is essential for stunnel, openssh, snmp and etc.
+
+endchoice
+

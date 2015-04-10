@@ -1,0 +1,7 @@
+#
+# ar7100 madwifi
+#
+
+config ELBOX_PROGS_PRIV_MADWIFI_DUALBAND
+	bool "The ar7100 wireless module 11 a/g/n"
+	default n

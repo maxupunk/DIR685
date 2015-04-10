@@ -1,0 +1,4 @@
+# rt2860v2
+
+psubdir-$(ELBOX_PROGS_PRIV_RALINK_INIC)			+= ralink_RT2880_iNIC
+

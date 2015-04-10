@@ -1,0 +1,67 @@
+#
+# UPnP kits
+#
+
+config ELBOX_PROGS_PRIV_UPNPKITS
+	bool "UPnP kits"
+	default n
+
+menu "UPnP kits configuration"
+	depends ELBOX_PROGS_PRIV_UPNPKITS
+
+	config CONFIG_UPNPKITS_HNAP
+		bool "hnap"
+		default n
+		help
+			The implementation of HNAP protocol for Pure Networks.
+
+	config CONFIG_UPNPKITS_UPNPKITS
+		bool "upnpkits"
+		default n
+		help
+			The common tools for both UPnP device and control point.
+
+	config CONFIG_UPNPKITS_UPNPDEV
+		bool "upnpdev"
+		default n
+		help
+			The CGI program for UPnP device.
+
+	config CONFIG_UPNPKITS_WFADEV
+		bool "wfapdev"
+		default n
+		help
+			The CGI program for UPnP WFA device.
+
+	config CONFIG_UPNPKITS_WFANOTIFY
+		bool "wfanotify"
+		default n
+		help
+			The helper program to send UPnP notify message for WFADevice.
+
+    config CONFIG_UPNPKITS_WFANOTIFY_SERVICE_ROOT_NODE
+        depends CONFIG_UPNPKITS_WFANOTIFY
+        string "the root node of the service"
+        default "/runtime/upnpdev/root:2/service:1"
+        help
+            The root node of the service.
+
+	config CONFIG_UPNPKITS_UPNPCP
+		bool "upnpcp"
+		default n
+		help
+			The CGI program for UPnP control point.
+
+	config CONFIG_UPNPKITS_COREGA_ROUTER
+		bool "corega_router"
+		default n
+		help
+			The CGI program for the service of Corega router configure.
+
+	config CONFIG_UPNPKITS_GENUUID
+		bool "genuuid"
+		default n
+		help
+			The utility to generate the UUID.
+
+endmenu

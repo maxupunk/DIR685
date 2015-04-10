@@ -1,0 +1,42 @@
+#
+# openssh
+#
+
+config ELBOX_PROGS_GPL_OPENSSH_4_3P2
+	bool "OpenSSH-4.3p2"
+	depends on ELBOX_ZLIB && ELBOX_OPENSSL
+	default n if ELBOX_OPENSSL!=n
+	help
+		OpenSSH provides secure tunneling capabilities and several
+		authentication methods, and supports all SSH protocol versions.
+
+config ELBOX_PROGS_GPL_OPENSSH_4_3P2_MANUAL
+	bool "Configure username and password manually"
+	default n
+	depends on ELBOX_PROGS_GPL_OPENSSH_4_3P2
+	help
+
+config ELBOX_PROGS_GPL_OPENSSH_4_3P2_USERNAME
+	string "Username"
+	default "admin"
+	depends on ELBOX_PROGS_GPL_OPENSSH_4_3P2 && ELBOX_PROGS_GPL_OPENSSH_4_3P2_MANUAL
+	help
+
+config ELBOX_PROGS_GPL_OPENSSH_4_3P2_PASSWORD
+	string "password"
+	default "admin"
+	depends on ELBOX_PROGS_GPL_OPENSSH_4_3P2 && ELBOX_PROGS_GPL_OPENSSH_4_3P2_MANUAL
+	help
+
+config ELBOX_PROGS_GPL_OPENSSH_4_3P2_GET_DATABASE
+	bool "Get username and password from database"
+	default y
+	depends on ELBOX_PROGS_GPL_OPENSSH_4_3P2
+	help
+
+config ELBOX_PROGS_GPL_OPENSSH_DEBUG
+	bool "Debug mode"
+	default n
+	depends on ELBOX_PROGS_GPL_OPENSSH_4_3P2
+	help
+

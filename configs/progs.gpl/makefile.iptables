@@ -1,0 +1,6 @@
+# iptables
+
+gsubdir-$(ELBOX_PROGS_GPL_IPTABLES_1_2_6A)	+= iptables-1.2.6a
+gsubdir-$(ELBOX_PROGS_GPL_IPTABLES_1_2_7A)	+= iptables-1.2.7a
+gsubdir-$(ELBOX_PROGS_GPL_IPTABLES_1_2_9)	+= iptables-1.2.9
+gsubdir-$(ELBOX_PROGS_GPL_IPTABLES_1_3_5)	+= iptables-1.3.5

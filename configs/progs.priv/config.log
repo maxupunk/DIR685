@@ -1,0 +1,20 @@
+#
+# logs
+#
+
+config ELBOX_LOG_MESSAGE
+	bool "log message"
+	default n
+
+choice
+	prompt "Select Language"
+	depends ELBOX_LOG_MESSAGE
+	default ELBOX_PROGS_PRIV_LOG_ENGLISH
+	help
+		Log Message selection
+
+	config ELBOX_PROGS_PRIV_LOG_ENGLISH
+		bool "English"
+		help
+			English Version of log message
+endchoice

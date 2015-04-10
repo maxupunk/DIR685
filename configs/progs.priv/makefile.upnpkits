@@ -1,0 +1,3 @@
+# upnpkits
+
+psubdir-$(ELBOX_PROGS_PRIV_UPNPKITS)	+= upnpkits

@@ -1,0 +1,4 @@
+# openssh
+
+gsubdir-$(ELBOX_PROGS_GPL_OPENSSH_4_3P2)	+= openssh-4.3p2
+

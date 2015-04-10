@@ -1,0 +1,24 @@
+#!/bin/sh
+usage="Usage: diskinfo [-g|-s] [xml node]"
+case "$1" in
+-g)
+	echo [$0] get from script is deprecated !! > /dev/console
+	;;
+-s)
+	case "$2" in
+	status)
+		devname=`rgdb -i -g /runtime/nas/store_dev/devname`
+		if [ "$devname" != "" ]; then
+			/usr/sbin/smartmon /dev/$devname
+		fi
+		;;
+	*)
+		echo $usage > /dev/console
+		;;
+	esac
+	;;
+*)
+	echo $usage > /dev/console
+	;;
+esac
+exit 0

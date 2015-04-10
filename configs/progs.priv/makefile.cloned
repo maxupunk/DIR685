@@ -1,0 +1,3 @@
+# cloned
+
+psubdir-$(ELBOX_PROGS_PRIV_CLONED)	+= cloned

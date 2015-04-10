@@ -1,0 +1,3 @@
+# madwifi fusion cavium
+
+psubdir-$(ELBOX_PROGS_PRIV_MADWIFI_FUSION_CAVIUM)	+= madwifi_fusion_cavium
