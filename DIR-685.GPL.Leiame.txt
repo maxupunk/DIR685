@@ -1,0 +1,33 @@
+Como compilar o codigo fonte:
+
+indico o uso do fedora, pois todas as tntativas com o Debian tive problemas.
+
+1. Descompactar o condigo fonte
+	tar zxvf dir685.gpl.source.tgz
+	
+2. steup the toolchain
+
+~$ su
+~$ Password:
+~# cd dir685
+~# cp -rf storlink_arm_920t_le_uclibc.20080713 /opt/storlink_arm_920t_le_uclibc.20080713
+~# cd /opt && ln -s storlink_arm_920t_le_uclibc.20080713 storlink_arm_920t_le_uclibc
+
+3 - Criando a imagem
+
+~$ cd dir685
+~$ source boards/wrgns01/setup_env 
+~$ make
+~$ make
+
+Depois a imagem fica em ./images/.
+
+Atualizar o firmeware apartir da interface web do roteador.
+
+
+NOTE: se der algum erro você deve verificar as libs develop e o make deve ser o 3.8X.
+
+Para fazer no fedora o downgrade do make:
+su -c 'yum downgrade make --nogpgcheck --releasever=13'
+
+
